@@ -4,6 +4,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod
 import su.sonoma.subcraftica.Subcraftica.MODID
+import su.sonoma.subcraftica.entity.BoomerangEntity
 import su.sonoma.subcraftica.entity.ModEntity
 import su.sonoma.subcraftica.entity.PeeperEntity
 
@@ -14,6 +15,7 @@ class ModEvents {
         @SubscribeEvent
         fun entityAttributeEvent(event: EntityAttributeCreationEvent) {
             event.put(ModEntity.PEEPER.get(), PeeperEntity.setAttributes())
+            event.put(ModEntity.BOOMERANG.get(), BoomerangEntity.setAttributes())
         }
     }
 }

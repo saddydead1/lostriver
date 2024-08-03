@@ -1,5 +1,8 @@
 package su.sonoma.subcraftica.item
 
+import net.minecraft.world.effect.MobEffectInstance
+import net.minecraft.world.effect.MobEffects
+import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.item.Item
 import net.minecraftforge.eventbus.api.IEventBus
 import net.minecraftforge.registries.DeferredRegister
@@ -12,7 +15,10 @@ object ModItems {
 
     val PEEPER: RegistryObject<Item> = ITEMS.register("peeper") {
         Item(
-            Item.Properties().stacksTo(1)
+            Item.Properties().stacksTo(64)
+                    .food(FoodProperties.Builder().nutrition(5).saturationMod(0.2f)
+                    .effect(MobEffectInstance(MobEffects.HUNGER, 400, 1), 1.0f)
+                    .build())
         )
     }
 

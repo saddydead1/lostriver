@@ -11,13 +11,17 @@ import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import software.bernie.example.registry.EntityRegistry
 import su.sonoma.subcraftica.Subcraftica.MODID
+import su.sonoma.subcraftica.entity.ModEntity.ENTITY_TYPES
 
 
 object ModEntity {
     val ENTITY_TYPES: DeferredRegister<EntityType<*>> =
         DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MODID)
 
-    val PEEPER: RegistryObject<EntityType<PeeperEntity>> = registerMob("peeper", ::PeeperEntity, 0.5F, 0.2F, 2039583, 855309);
+    val PEEPER: RegistryObject<EntityType<PeeperEntity>> =
+        registerMob("peeper", ::PeeperEntity, 0.5F, 0.2F, 2039583, 855309)
+    val BOOMERANG: RegistryObject<EntityType<BoomerangEntity>> =
+        registerMob("boomerang", ::BoomerangEntity, 0.5F, 0.4F, 2079543, 855309)
 
     fun <T : Mob> registerMob(
         name: String,
@@ -34,5 +38,4 @@ object ModEntity {
         }
         return entityType
     }
-
 }

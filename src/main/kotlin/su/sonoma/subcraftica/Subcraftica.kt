@@ -46,7 +46,6 @@ object Subcraftica {
         Sounds.SOUNDS.register(modEventBus)
         ModEntity.ENTITY_TYPES.register(modEventBus)
 
-
         CREATIVE_MODE_TABS.register(modEventBus)
 
         MinecraftForge.EVENT_BUS.register(this)
