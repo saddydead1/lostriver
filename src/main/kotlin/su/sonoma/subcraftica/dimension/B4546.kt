@@ -1,6 +1,8 @@
 package su.sonoma.subcraftica.dimension
 
 import com.mojang.datafixers.util.Pair
+import net.minecraft.core.Holder
+import net.minecraft.core.HolderOwner
 import net.minecraft.core.RegistrySetBuilder
 import net.minecraft.core.registries.Registries
 import net.minecraft.data.worldgen.BootstapContext
@@ -37,9 +39,13 @@ object B4546 {
 
     val B4546_TYPE: ResourceKey<DimensionType> = ResourceKey.create(
         Registries.DIMENSION_TYPE,
-        ResourceLocation(MODID, "b4546_type")
+        ResourceLocation(MODID, "b4546")
     )
 
+    val B4546_NOISE_SETTINGS: ResourceKey<NoiseGeneratorSettings> = ResourceKey.create(
+        Registries.NOISE_SETTINGS,
+        ResourceLocation(MODID, "b4546")
+    )
 
     fun bootstapType(context: BootstapContext<DimensionType>) {
         context.register(B4546_TYPE, DimensionType(
@@ -95,7 +101,11 @@ object B4546 {
             )
                 )
             ),
-            noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED)
+            Holder.Reference.createStandAlone(object: HolderOwner<NoiseGeneratorSettings> {
+                override fun canSerializeIn(p_255875_: HolderOwner<NoiseGeneratorSettings>): Boolean {
+                    return true
+                }
+            }, B4546_NOISE_SETTINGS),
         )
 
         val stem = LevelStem(dimTypes.getOrThrow(B4546_TYPE), noiseBasedChunkGenerator)

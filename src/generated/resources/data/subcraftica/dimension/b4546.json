@@ -1,14 +1,14 @@
 {
-  "type": "subcraftica:b4546_type.json",
+  "type": "subcraftica:b4546",
   "generator": {
     "type": "minecraft:noise",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "minecraft:ocean",
+          "biome": "minecraft:deep_ocean",
           "parameters": {
-            "continentalness": 1.0E-4,
+            "continentalness": 0.1,
             "depth": 0.0,
             "erosion": 0.1,
             "humidity": 0.6,
@@ -31,6 +31,6 @@
         }
       ]
     },
-    "settings": "minecraft:amplified"
+    "settings": "subcraftica:b4546"
   }
 }

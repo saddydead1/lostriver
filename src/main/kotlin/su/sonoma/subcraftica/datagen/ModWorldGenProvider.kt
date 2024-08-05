@@ -25,7 +25,7 @@ class ModWorldGenProvider(
 
     companion object {
         val BUILDER: RegistrySetBuilder = RegistrySetBuilder()
-            .add<DimensionType>(Registries.DIMENSION_TYPE, B4546::bootstapType)
-            .add<LevelStem>(Registries.LEVEL_STEM, B4546::bootstrapStem)
+            .add(Registries.DIMENSION_TYPE, B4546::bootstapType)
+            .add(Registries.LEVEL_STEM, B4546::bootstrapStem)
     }
 }
