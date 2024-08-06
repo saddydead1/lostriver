@@ -1,3 +1,5 @@
-// 1.20.1	2024-08-06T04:59:51.755338	Registries
-320b370022c1d3f331179a6b7754239e305be675 data/lostriver/dimension/b4546.json
-e241e971aacde6f4d0236c622c99d6c9caeb981e data/lostriver/dimension_type/b4546.json
+// 1.20.1	2024-08-06T22:59:26.034312	Registries
+7f840054fd5dc00c3cca8c3525248195ac87a28c data/lostriver/dimension/b4546.json
+fec2875e15e2e652e10af61a94a06150eb25d85f data/lostriver/dimension_type/b4546.json
+e8f9c475ee29aa3cbed7719e6b8f5f50ff00ce50 data/lostriver/worldgen/biome/islands.json
+4acb9dce12acaef7099b7dc290feb4290d4601d2 data/lostriver/worldgen/biome/safe_shallows.json

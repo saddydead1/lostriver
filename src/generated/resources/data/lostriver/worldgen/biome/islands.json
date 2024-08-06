@@ -1,0 +1,78 @@
+{
+  "carvers": {},
+  "downfall": 0.0,
+  "effects": {
+    "fog_color": 59110,
+    "foliage_color": 5373696,
+    "grass_color": 6749952,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 27571,
+    "water_color": 3386879,
+    "water_fog_color": 59110
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_iron_small",
+      "minecraft:ore_gold",
+      "minecraft:ore_gold_lower",
+      "minecraft:ore_redstone",
+      "minecraft:ore_redstone_lower",
+      "minecraft:ore_diamond",
+      "minecraft:ore_diamond_large",
+      "minecraft:ore_diamond_buried",
+      "minecraft:ore_lapis",
+      "minecraft:ore_lapis_buried",
+      "minecraft:ore_copper",
+      "minecraft:underwater_magma",
+      "minecraft:ore_gold_extra"
+    ],
+    [],
+    [],
+    [
+      "minecraft:seagrass_simple",
+      "minecraft:patch_grass_badlands",
+      "minecraft:trees_savanna"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": [
+      {
+        "type": "lostriver:peeper",
+        "maxCount": 30,
+        "minCount": 10,
+        "weight": 50
+      },
+      {
+        "type": "lostriver:boomerang",
+        "maxCount": 20,
+        "minCount": 10,
+        "weight": 50
+      }
+    ]
+  },
+  "temperature": 0.7
+}

@@ -8,18 +8,17 @@ import net.minecraft.data.worldgen.BootstapContext
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.BlockTags
-import net.minecraft.util.valueproviders.ConstantInt
+import net.minecraft.util.valueproviders.UniformInt
 import net.minecraft.world.level.Level
-import net.minecraft.world.level.biome.Biomes
-import net.minecraft.world.level.biome.Climate
+import net.minecraft.world.level.biome.*
 import net.minecraft.world.level.biome.Climate.ParameterList
-import net.minecraft.world.level.biome.MultiNoiseBiomeSource
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes
 import net.minecraft.world.level.dimension.DimensionType
 import net.minecraft.world.level.dimension.LevelStem
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings
 import su.sonoma.lostriver.Lostriver.MODID
+import su.sonoma.lostriver.biome.surface.ModBiomes
 import java.util.*
 
 
@@ -54,17 +53,18 @@ object B4546 {
             false,
             1.0,
             true,
-            false,
-            0,
-            256,
-            256,
+            true,
+            -64,
+            512,
+            512,
             BlockTags.INFINIBURN_OVERWORLD,
             BuiltinDimensionTypes.OVERWORLD_EFFECTS,
             1.0f,
-            DimensionType.MonsterSettings(false, false, ConstantInt.of(0), 0)
+            DimensionType.MonsterSettings(false, false, UniformInt.of(0, 7), 0)
         ))
 
     }
+
 
     fun bootstrapStem(context: BootstapContext<LevelStem?>) {
         val biomeRegistry = context.lookup(Registries.BIOME)
@@ -79,23 +79,24 @@ object B4546 {
                             0.3F,
                             0.6F,
                             0.1F,
+                            0.5F,
+                            0.0F,
                             0.1F,
-                            0.0F,
-                            0.0F,
-                            0.0F),
-                        biomeRegistry.getOrThrow(Biomes.DEEP_OCEAN)
+                            0.1F),
+                        biomeRegistry.getOrThrow(ModBiomes.SAFE_SHALLOWS)
                         ),
                         Pair.of(
                         Climate.parameters(
                             0.3F,
                             0.6F,
                             2F,
-                            0.1F,
+                            0.5F,
                             0.0F,
                             0.0F,
-                            0.0F),
-                    biomeRegistry.getOrThrow(Biomes.DESERT)
+                            0.1F),
+                    biomeRegistry.getOrThrow(ModBiomes.ISLANDS)
                 )
+
             )
                 )
             ),
