@@ -1,0 +1,36 @@
+{
+  "type": "lostriver:b4546",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "minecraft:deep_ocean",
+          "parameters": {
+            "continentalness": 0.1,
+            "depth": 0.0,
+            "erosion": 0.1,
+            "humidity": 0.6,
+            "offset": 0.0,
+            "temperature": 0.3,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:desert",
+          "parameters": {
+            "continentalness": 2.0,
+            "depth": 0.0,
+            "erosion": 0.1,
+            "humidity": 0.6,
+            "offset": 0.0,
+            "temperature": 0.3,
+            "weirdness": 0.0
+          }
+        }
+      ]
+    },
+    "settings": "lostriver:b4546"
+  }
+}
