@@ -21,7 +21,8 @@ jobs:
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           files: |
-            build/libs/lostriver-${{ github.event.release.tag_name }}.jar
+            build/libs/!(*-@(dev|sources|javadoc)).jar
+            build/libs/*-@(dev|sources|javadoc).jar
 
           loaders: |
             forge
