@@ -3,6 +3,7 @@ package su.sonoma.lostriver.item
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.food.FoodProperties
+import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.SwordItem
 import net.minecraft.world.item.Tiers
@@ -10,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import su.sonoma.lostriver.Lostriver.MODID
+import su.sonoma.lostriver.block.ModBlocks
 
 object ModItems {
     val ITEMS: DeferredRegister<Item> = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
@@ -38,6 +40,12 @@ object ModItems {
             2,
             0.1f,
             Item.Properties().stacksTo(1)
+        )
+    }
+
+    val SAND: RegistryObject<Item> = ITEMS.register("sand") {
+        BlockItem( ModBlocks.SAND.get(),
+            Item.Properties().stacksTo(64)
         )
     }
 }

@@ -14,7 +14,7 @@
     }
   },
   "noise": {
-    "min_y": -64,
+    "min_y": 0,
     "height": 512,
     "size_horizontal": 1,
     "size_vertical": 2
@@ -66,7 +66,7 @@
       "type": "minecraft:squeeze",
       "argument": {
         "type": "minecraft:mul",
-        "argument1": 0.64,
+        "argument1": 0.65,
         "argument2": {
           "type": "minecraft:interpolated",
           "argument": {
@@ -93,7 +93,7 @@
                       "type": "minecraft:mul",
                       "argument1": {
                         "type": "minecraft:y_clamped_gradient",
-                        "from_y": 100,
+                        "from_y": 300,
                         "to_y": 0,
                         "from_value": 1,
                         "to_value": 0
@@ -136,10 +136,10 @@
           "type": "minecraft:vertical_gradient",
           "random_name": "minecraft:bedrock_floor",
           "true_at_and_below": {
-            "absolute": -58
+            "absolute": 0
           },
           "false_at_and_above": {
-            "absolute": -54
+            "absolute": 3
           }
         },
         "then_run": {
@@ -161,7 +161,7 @@
                 "absolute": -1
               },
               "false_at_and_above": {
-                "absolute": 5
+                "absolute": 150
               }
             },
             "then_run": {
@@ -197,9 +197,9 @@
             "type": "minecraft:condition",
             "if_true": {
               "type": "minecraft:vertical_gradient",
-              "random_name": "subcraftica:detritus_sandstone_layer",
+              "random_name": "lostriver:detritus_stone_layer",
               "true_at_and_below": {
-                "absolute": 49
+                "absolute": 10
               },
               "false_at_and_above": {
                 "absolute": 56
@@ -216,18 +216,18 @@
             "type": "minecraft:condition",
             "if_true": {
               "type": "minecraft:vertical_gradient",
-              "random_name": "subcraftica:sandstone_layer",
+              "random_name": "lostriver:stone_layer",
               "true_at_and_below": {
-                "absolute": 58
+                "absolute": 200
               },
               "false_at_and_above": {
-                "absolute": 64
+                "absolute": 50
               }
             },
             "then_run": {
               "type": "minecraft:block",
               "result_state": {
-                "Name": "minecraft:sandstone"
+                "Name": "minecraft:stone"
               }
             }
           },
@@ -235,18 +235,18 @@
             "type": "minecraft:condition",
             "if_true": {
               "type": "minecraft:vertical_gradient",
-              "random_name": "subcraftica:seabed_layer",
+              "random_name": "lost_river:seabed_layer",
               "true_at_and_below": {
-                "absolute": 270
+                "absolute": 280
               },
               "false_at_and_above": {
-                "absolute": 280
+                "absolute": 300
               }
             },
             "then_run": {
               "type": "minecraft:block",
               "result_state": {
-                "Name": "minecraft:coarse_dirt"
+                "Name": "lostriver:sand"
               }
             }
           },
@@ -290,7 +290,7 @@
                                 "then_run": {
                                   "type": "minecraft:block",
                                   "result_state": {
-                                    "Name": "minecraft:sand",
+                                    "Name": "minecraft:grass_block",
                                     "Properties": {
                                       "snowy": "false"
                                     }
@@ -331,7 +331,7 @@
                           {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:sandstone"
+                              "Name": "minecraft:dirt"
                             }
                           }
                         ]

@@ -15,23 +15,27 @@ object ModEntity {
         DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MODID)
 
     val PEEPER: RegistryObject<EntityType<PeeperEntity>> =
-        registerMob("peeper", ::PeeperEntity, 0.5F, 0.2F, 2039583, 855309)
+        registerMob("peeper", ::PeeperEntity, 0.5F, 0.2F, MobCategory.WATER_AMBIENT)
+
     val BOOMERANG: RegistryObject<EntityType<BoomerangEntity>> =
-        registerMob("boomerang", ::BoomerangEntity, 0.5F, 0.4F, 2079543, 855309)
+        registerMob("boomerang", ::BoomerangEntity, 0.5F, 0.4F, MobCategory.WATER_AMBIENT)
+
+    val STALKER: RegistryObject<EntityType<StalkerEntity>> =
+        registerMob("stalker", ::StalkerEntity,4F, 2F, MobCategory.WATER_AMBIENT)
 
     fun <T : Mob> registerMob(
         name: String,
         entity: EntityFactory<T>,
         width: Float,
         height: Float,
-        primaryEggColor: Int,
-        secondaryEggColor: Int,
+        category: MobCategory
     ): RegistryObject<EntityType<T>> {
         val entityType = ENTITY_TYPES.register(
             name
         ) {
-            EntityType.Builder.of(entity, MobCategory.WATER_CREATURE).sized(width, height).build(name)
+            EntityType.Builder.of(entity, category).sized(width, height).build(name)
         }
         return entityType
     }
+
 }

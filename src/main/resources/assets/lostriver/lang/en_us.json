@@ -1,10 +1,14 @@
 {
-  "lostriver.subtab": "Subcraftica",
+  "lostriver.subtab": "Lost River",
 
   "item.lostriver.peeper": "Peeper",
   "item.lostriver.boomerang": "Boomerang",
   "item.lostriver.knife": "Knife",
+  "item.lostriver.sand": "Sand",
+
+  "block.lostriver.sand": "Sand",
 
   "entity.lostriver.peeper": "Peeper",
-  "entity.lostriver.boomerang": "Boomerang"
+  "entity.lostriver.boomerang": "Boomerang",
+  "entity.lostriver.stalker": "Stalker"
 }
