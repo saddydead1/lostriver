@@ -29,7 +29,6 @@ jobs:
           name: Lost River
           version: ${{ github.event.release.tag_name }}
           version-type: alpha
-          changelog-file: ${{ github.event.release.body }}
 
           game-versions: |
             1.20.1
