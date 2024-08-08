@@ -26,7 +26,7 @@ jobs:
           files: |
             ./build/libs/lostriver-1.0.0-alpha.jar
           dependencies: 8BmcQJ2H:required, ordsPcFz:required
-          changelog: ${{ github.event.release.body }}
+          changelog: "test"
           version_type: alpha # or beta, alpha
           featured: false
           status: 'draft' # or archived, draft, unlisted, scheduled, unknown
