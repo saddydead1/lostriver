@@ -16,7 +16,7 @@ jobs:
     - name: Modrinth Release
       uses: dsx137/modrinth-release-action@main
       env:
-        MODRINTH_TOKEN: ${{ MODRINTH_TOKEN }}
+        MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
       with:
         name: saddydead1
         project_id: LgNfX8cW
