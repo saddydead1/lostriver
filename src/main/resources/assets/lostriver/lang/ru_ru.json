@@ -3,5 +3,12 @@
 
   "item.lostriver.peeper": "Пипер",
   "item.lostriver.boomerang": "Рыба-Бумеранг",
-  "item.lostriver.knife": "Нож"
+  "item.lostriver.knife": "Нож",
+  "item.lostriver.sand": "Песочек",
+
+  "block.lostriver.sand": "Песочек",
+
+  "entity.lostriver.peeper": "Пипер",
+  "entity.lostriver.boomerang": "Рыба-Бумеранг",
+  "entity.lostriver.stalker": "Сталкер"
 }

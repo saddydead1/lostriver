@@ -21,6 +21,5 @@ class ModWorldGenProvider(
             .add(Registries.DIMENSION_TYPE, B4546::bootstapType)
             .add(Registries.LEVEL_STEM, B4546::bootstrapStem)
             .add(Registries.BIOME, ModBiomes::bootstrap)
-           // .add(Registries.BIOME, Islands::bootstrap)
     }
 }

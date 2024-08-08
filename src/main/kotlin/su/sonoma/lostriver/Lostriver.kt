@@ -23,6 +23,7 @@ import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import org.slf4j.Logger
+import su.sonoma.lostriver.block.ModBlocks
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
@@ -41,6 +42,7 @@ object Lostriver {
     init {
         modEventBus.addListener { event: FMLCommonSetupEvent -> this.commonSetup(event) }
 
+        ModBlocks.BLOCKS.register(modEventBus)
         ModItems.ITEMS.register(modEventBus)
         Sounds.SOUNDS.register(modEventBus)
         ModEntity.ENTITY_TYPES.register(modEventBus)
@@ -89,6 +91,7 @@ object Lostriver {
                output.accept(ModItems.PEEPER.get())
                 output.accept(ModItems.BOOMERANG.get())
                 output.accept(ModItems.KNIFE.get())
+                output.accept(ModItems.SAND.get())
             }.build()
     }
 

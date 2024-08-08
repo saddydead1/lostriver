@@ -7,6 +7,7 @@ import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.entity.BoomerangEntity
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.entity.PeeperEntity
+import su.sonoma.lostriver.entity.StalkerEntity
 
 
 class ModEvents {
@@ -16,6 +17,7 @@ class ModEvents {
         fun entityAttributeEvent(event: EntityAttributeCreationEvent) {
             event.put(ModEntity.PEEPER.get(), PeeperEntity.setAttributes())
             event.put(ModEntity.BOOMERANG.get(), BoomerangEntity.setAttributes())
+            event.put(ModEntity.STALKER.get(), StalkerEntity.setAttributes())
         }
     }
 }

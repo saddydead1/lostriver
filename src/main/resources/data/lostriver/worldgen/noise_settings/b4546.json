@@ -235,7 +235,7 @@
             "type": "minecraft:condition",
             "if_true": {
               "type": "minecraft:vertical_gradient",
-              "random_name": "subcraftica:seabed_layer",
+              "random_name": "lost_river:seabed_layer",
               "true_at_and_below": {
                 "absolute": 280
               },
@@ -246,7 +246,7 @@
             "then_run": {
               "type": "minecraft:block",
               "result_state": {
-                "Name": "minecraft:sandstone"
+                "Name": "lostriver:sand"
               }
             }
           },

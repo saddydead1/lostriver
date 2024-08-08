@@ -3,8 +3,8 @@
   "downfall": 0.0,
   "effects": {
     "fog_color": 59110,
-    "foliage_color": 5373696,
-    "grass_color": 6749952,
+    "foliage_color": 11546150,
+    "grass_color": 11546150,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -12,7 +12,7 @@
       "tick_delay": 6000
     },
     "sky_color": 27571,
-    "water_color": 3847130,
+    "water_color": 3949738,
     "water_fog_color": 59110
   },
   "features": [
@@ -45,7 +45,11 @@
     [],
     [
       "minecraft:patch_grass_badlands",
-      "minecraft:trees_savanna"
+      "minecraft:trees_savanna",
+      "minecraft:seagrass_cold",
+      "minecraft:seagrass_warm",
+      "minecraft:seagrass_deep_warm",
+      "minecraft:seagrass_normal"
     ]
   ],
   "has_precipitation": false,
