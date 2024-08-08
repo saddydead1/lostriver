@@ -13,23 +13,27 @@ jobs:
       packages: write
 
     steps:
-      - name: Modrinth Release
-        uses: dsx137/modrinth-release-action@main
-        env:
-          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+      - uses: Kir-Antipov/mc-publish@v3.3
         with:
-          name: Lost River
-          project_id: LgNfX8cW
-          loaders: forge
-          game_versions: 1.20.1 # 1.12.2:1.20.6 means version range
-          version_number: ${{ github.event.release.tag_name }}
+          # Only include this section if you wish to publish
+          # your assets on Modrinth.
+          modrinth-id: LgNfX8cW
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
           files: |
-            ./build/libs/*-all.jar
-          dependencies: 8BmcQJ2H:required, ordsPcFz:required
-          changelog: ${{ github.event.release.body }}
-          version_type: alpha # or beta, alpha
-          featured: false
-          status: 'draft' # or archived, draft, unlisted, scheduled, unknown
-          requested_status: 'draft' # or archived, draft, unlisted
-          updatable: false # default true, means updating existing version
-          delete_old_files: false # default true
+            build/libs/lostriver-${{ github.event.release.tag_name }}.jar
+
+          loaders: |
+            forge
+
+          name: Lost River
+          version: ${{ github.event.release.tag_name }}
+          version-type: alpha
+          changelog-file: ${{ github.event.release.body }}
+
+          game-versions: |
+            1.20.1
+
+          dependencies: |
+            kotlinforforge(required){modrinth:ordsPcFz}
+            geckolib(required){modrinth:8BmcQJ2H}
