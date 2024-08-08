@@ -16,6 +16,7 @@
 /build/reobfJar
 /build/resources
 /build/tmp
+/build/
 run-data
 run
 .kotlin
