@@ -22,9 +22,9 @@ jobs:
           project_id: LgNfX8cW
           loaders: forge
           game_versions: 1.20.1 # 1.12.2:1.20.6 means version range
-          version_number: ${{ github.event.release.tag_name }}
+          version_number: 1.0.0-alpha
           files: |
-            ./build/libs/lostriver-${{ github.event.release.tag_name }}.jar
+            ./build/libs/lostriver-1.0.0-alpha.jar
           dependencies: 8BmcQJ2H:required, ordsPcFz:required
           changelog: ${{ github.event.release.body }}
           version_type: alpha # or beta, alpha
