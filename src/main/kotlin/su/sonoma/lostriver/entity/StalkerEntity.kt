@@ -8,8 +8,10 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier
 import net.minecraft.world.entity.ai.attributes.Attributes
 import net.minecraft.world.entity.ai.goal.*
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal
+import net.minecraft.world.entity.animal.AbstractSchoolingFish
 import net.minecraft.world.entity.monster.Monster
 import net.minecraft.world.entity.player.Player
+import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.LevelReader
 import software.bernie.geckolib.animatable.GeoEntity
@@ -20,12 +22,20 @@ import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.util.GeckoLibUtil
 
 
-class StalkerEntity(pEntityType: EntityType<out Monster>, pLevel: Level) : Monster(pEntityType, pLevel), GeoEntity {
+class StalkerEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: Level) : AbstractSchoolingFish(pEntityType, pLevel), GeoEntity {
 
     private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
 
     override fun checkSpawnObstruction(world: LevelReader): Boolean {
         return world.isUnobstructed(this)
+    }
+
+    override fun getBucketItemStack(): ItemStack {
+        return ItemStack.EMPTY
+    }
+
+    override fun getFlopSound(): SoundEvent {
+        return SoundEvents.DOLPHIN_AMBIENT
     }
 
     override fun canBreatheUnderwater(): Boolean {

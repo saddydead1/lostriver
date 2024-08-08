@@ -15,13 +15,13 @@ object ModEntity {
         DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MODID)
 
     val PEEPER: RegistryObject<EntityType<PeeperEntity>> =
-        registerMob("peeper", ::PeeperEntity, 0.5F, 0.2F, MobCategory.WATER_CREATURE)
+        registerMob("peeper", ::PeeperEntity, 0.5F, 0.2F, MobCategory.WATER_AMBIENT)
 
     val BOOMERANG: RegistryObject<EntityType<BoomerangEntity>> =
-        registerMob("boomerang", ::BoomerangEntity, 0.5F, 0.4F, MobCategory.WATER_CREATURE)
+        registerMob("boomerang", ::BoomerangEntity, 0.5F, 0.4F, MobCategory.WATER_AMBIENT)
 
     val STALKER: RegistryObject<EntityType<StalkerEntity>> =
-        registerMob("stalker", ::StalkerEntity,4F, 2F, MobCategory.WATER_CREATURE)
+        registerMob("stalker", ::StalkerEntity,4F, 2F, MobCategory.WATER_AMBIENT)
 
     fun <T : Mob> registerMob(
         name: String,

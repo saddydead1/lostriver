@@ -57,21 +57,21 @@
     "misc": [],
     "monster": [],
     "underground_water_creature": [],
-    "water_ambient": [],
-    "water_creature": [
+    "water_ambient": [
       {
         "type": "lostriver:peeper",
-        "maxCount": 30,
-        "minCount": 10,
+        "maxCount": 15,
+        "minCount": 1,
         "weight": 50
       },
       {
         "type": "lostriver:boomerang",
-        "maxCount": 20,
-        "minCount": 10,
+        "maxCount": 15,
+        "minCount": 1,
         "weight": 50
       }
-    ]
+    ],
+    "water_creature": []
   },
   "temperature": 0.7
 }

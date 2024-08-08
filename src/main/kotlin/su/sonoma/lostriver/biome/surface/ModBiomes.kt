@@ -52,8 +52,8 @@ object ModBiomes {
 
     fun testBiome(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
-        spawnBuilder.addSpawn(MobCategory.WATER_CREATURE, SpawnerData(ModEntity.PEEPER.get(), 50, 10, 30))
-        spawnBuilder.addSpawn(MobCategory.WATER_CREATURE, SpawnerData(ModEntity.BOOMERANG.get(), 50, 10, 20))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 50, 1, 15))
 
 
         val biomeBuilder =
@@ -89,8 +89,8 @@ object ModBiomes {
 
     fun blood_kelp(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
-        spawnBuilder.addSpawn(MobCategory.WATER_CREATURE, SpawnerData(ModEntity.PEEPER.get(), 50, 10, 30))
-        spawnBuilder.addSpawn(MobCategory.WATER_CREATURE, SpawnerData(ModEntity.BOOMERANG.get(), 50, 10, 20))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 50, 1, 15))
 
 
         val biomeBuilder =
@@ -131,10 +131,10 @@ object ModBiomes {
 
     fun kelp(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
-        spawnBuilder.addSpawn(MobCategory.WATER_CREATURE, SpawnerData(ModEntity.PEEPER.get(), 50, 10, 30))
-        spawnBuilder.addSpawn(MobCategory.WATER_CREATURE, SpawnerData(ModEntity.BOOMERANG.get(), 50, 10, 20))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 25, 1, 15))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 25, 1, 15))
 
-        spawnBuilder.addSpawn(MobCategory.WATER_CREATURE, SpawnerData(ModEntity.STALKER.get(), 100, 1, 6))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.STALKER.get(), 50, 1, 5))
 
 
         val biomeBuilder =

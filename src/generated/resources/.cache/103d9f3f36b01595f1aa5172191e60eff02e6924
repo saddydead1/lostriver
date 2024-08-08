@@ -1,6 +1,6 @@
-// 1.20.1	2024-08-08T07:42:43.836574	Registries
+// 1.20.1	2024-08-08T08:02:15.131644	Registries
 292844a204ac731cfa9fcf245db526602228ab38 data/lostriver/dimension/b4546.json
 fec2875e15e2e652e10af61a94a06150eb25d85f data/lostriver/dimension_type/b4546.json
-1da4e2851cfb9250579b997f701f6851d1580a77 data/lostriver/worldgen/biome/blood_kelp.json
-8db8cbc25dd20759aab0068af3b68b0cc39a1677 data/lostriver/worldgen/biome/kelp_forest.json
-b0c28cee6be322a12e308af26187a23ec1599826 data/lostriver/worldgen/biome/safe_shallows.json
+60ecd1e81022017105409ce6d22624b392fe21f8 data/lostriver/worldgen/biome/blood_kelp.json
+49245c5eaa341c0d205153888b7553ef401c807a data/lostriver/worldgen/biome/kelp_forest.json
+f237de6f4af4cce2f6e3f7de6ded71ec1df78cb6 data/lostriver/worldgen/biome/safe_shallows.json
