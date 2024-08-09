@@ -88,6 +88,14 @@ object Lostriver {
                 ModBlocks.BLOOD_GRASS.get(),
                 RenderType.cutout()
             )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.BLOOD_MOSS.get(),
+                RenderType.cutout()
+            )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.DOUBLEKELP.get(),
+                RenderType.cutout()
+            )
         }
     }
 
@@ -103,7 +111,9 @@ object Lostriver {
                 output.accept(ModItems.TOOTH.get())
                 output.accept(ModItems.SILICONE.get())
                 output.accept(ModItems.SAND.get())
+                output.accept(ModItems.DOUBLEKELP.get())
                 output.accept(ModItems.BLOOD_GRASS.get())
+                output.accept(ModItems.BLOOD_MOSS.get())
                 output.accept(ModItems.REAPER_HELMET.get())
             }.build()
     }

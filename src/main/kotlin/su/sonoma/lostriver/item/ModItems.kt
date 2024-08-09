@@ -64,6 +64,17 @@ object ModItems {
             Item.Properties().stacksTo(64)
         )
     }
+    val BLOOD_MOSS: RegistryObject<Item> = ITEMS.register("bloodmoss") {
+        BlockItem( ModBlocks.BLOOD_MOSS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val DOUBLEKELP: RegistryObject<Item> = ITEMS.register("double_kelp") {
+        BlockItem( ModBlocks.DOUBLEKELP.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
 
     val REAPER_FRAGMENT: RegistryObject<Item> = ITEMS.register("reaper_fragment") {
         Item(

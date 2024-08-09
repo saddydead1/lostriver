@@ -3,15 +3,13 @@ package su.sonoma.lostriver.biome.feature
 import com.mojang.serialization.Codec
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.Blocks
-import net.minecraft.world.level.block.TallSeagrassBlock
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf
 import net.minecraft.world.level.levelgen.Heightmap
 import net.minecraft.world.level.levelgen.feature.Feature
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext
 import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration
 import su.sonoma.lostriver.block.ModBlocks
 
-class ModSeaGrassFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
+class BloodGrassFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
     Feature<ProbabilityFeatureConfiguration>(p_66768_) {
     override fun place(p_160318_: FeaturePlaceContext<ProbabilityFeatureConfiguration?>): Boolean {
         var flag = false

@@ -13,6 +13,8 @@ import su.sonoma.lostriver.Lostriver.MODID
 
 object ModPlacedFeature {
     val BLOOD_GRASS: ResourceKey<PlacedFeature> = registerKey("blood_grass_place")
+    val BLOOD_MOSS: ResourceKey<PlacedFeature> = registerKey("blood_moss_place")
+    val DOUBLEKELP: ResourceKey<PlacedFeature> = registerKey("double_kelp_place")
 
     private fun seagrassPlacement(p_195234_: Int): List<PlacementModifier> {
         return java.util.List.of(
@@ -26,7 +28,11 @@ object ModPlacedFeature {
     fun bootstrap(p: BootstapContext<PlacedFeature>) {
         val holdergetter = p.lookup(Registries.CONFIGURED_FEATURE)
         val reference = holdergetter.getOrThrow(ModFeatureConfigured.BLOOD_GRASS)
+        val reference1 = holdergetter.getOrThrow(ModFeatureConfigured.BLOOD_MOSS)
+        val reference2 = holdergetter.getOrThrow(ModFeatureConfigured.DOUBLEKELP)
         register(p, BLOOD_GRASS, reference, seagrassPlacement(80))
+        register(p, BLOOD_MOSS, reference1, seagrassPlacement(80))
+        register(p, DOUBLEKELP, reference2, seagrassPlacement(20))
 
     }
 

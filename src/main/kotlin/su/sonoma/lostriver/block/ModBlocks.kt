@@ -27,4 +27,14 @@ object ModBlocks {
         SeagrassBlock(
         BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
+
+    val BLOOD_MOSS: RegistryObject<Block> = BLOCKS.register("bloodmoss") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val DOUBLEKELP: RegistryObject<Block> = BLOCKS.register("double_kelp") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
 }
