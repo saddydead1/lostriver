@@ -2,7 +2,7 @@
   "carvers": {},
   "downfall": 0.0,
   "effects": {
-    "fog_color": 59110,
+    "fog_color": 3233796,
     "foliage_color": 6192150,
     "grass_color": 6192150,
     "mood_sound": {
@@ -12,8 +12,8 @@
       "tick_delay": 6000
     },
     "sky_color": 27571,
-    "water_color": 6192150,
-    "water_fog_color": 6192150
+    "water_color": 3233796,
+    "water_fog_color": 3233796
   },
   "features": [
     [],
