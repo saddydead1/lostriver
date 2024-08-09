@@ -18,7 +18,7 @@ import net.minecraft.world.level.dimension.LevelStem
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings
 import su.sonoma.lostriver.Lostriver.MODID
-import su.sonoma.lostriver.biome.surface.ModBiomes
+import su.sonoma.lostriver.biome.ModBiomes
 import java.util.*
 
 
@@ -106,7 +106,18 @@ object B4546 {
                             0.0F,
                             0.1F),
                         biomeRegistry.getOrThrow(ModBiomes.BLOOD_KELP)
-                    )
+                    ),
+                            Pair.of(
+                            Climate.parameters(
+                                0.9F,
+                                0.6F,
+                                0.5F,
+                                0.5F,
+                                0.0F,
+                                0.0F,
+                                0.1F),
+                    biomeRegistry.getOrThrow(ModBiomes.DUNES)
+                )
 
 
             )

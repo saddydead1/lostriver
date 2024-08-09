@@ -5,10 +5,17 @@
   "item.lostriver.boomerang": "Boomerang",
   "item.lostriver.knife": "Knife",
   "item.lostriver.sand": "Sand",
+  "item.lostriver.tooth": "Stalker's Tooth",
+  "item.lostriver.silicone": "Silicone Rubber",
+  "item.lostriver.reaper_helmet": "Trophy Reaper Helmet",
+  "item.lostriver.reaper_fragment": "Reaper Fragment",
+  "item.lostriver.blood_grass": "Blood Grass",
 
   "block.lostriver.sand": "Sand",
+  "block.lostriver.blood_grass": "Blood Grass",
 
   "entity.lostriver.peeper": "Peeper",
   "entity.lostriver.boomerang": "Boomerang",
-  "entity.lostriver.stalker": "Stalker"
+  "entity.lostriver.stalker": "Stalker",
+  "entity.lostriver.reaper": "Reaper"
 }

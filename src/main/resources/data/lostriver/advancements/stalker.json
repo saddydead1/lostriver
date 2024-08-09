@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:tooth"
+    },
+    "title": "Kill Stalker",
+    "description": "Get the stalker's tooth",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "lostriver:lostriver",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lostriver:tooth"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

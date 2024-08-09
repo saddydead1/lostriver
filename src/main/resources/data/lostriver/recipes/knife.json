@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "#": {
+        "item": "lostriver:silicone"
+      }
+    },
+    "pattern": [
+      "I",
+      "#"
+    ],
+    "result": {
+      "item": "lostriver:knife"
+    }
+  }

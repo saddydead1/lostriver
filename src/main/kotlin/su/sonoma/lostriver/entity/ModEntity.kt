@@ -21,7 +21,10 @@ object ModEntity {
         registerMob("boomerang", ::BoomerangEntity, 0.5F, 0.4F, MobCategory.WATER_AMBIENT)
 
     val STALKER: RegistryObject<EntityType<StalkerEntity>> =
-        registerMob("stalker", ::StalkerEntity,4F, 2F, MobCategory.WATER_AMBIENT)
+        registerMob("stalker", ::StalkerEntity,2F, 2F, MobCategory.WATER_AMBIENT)
+
+    val REAPER: RegistryObject<EntityType<ReaperEntity>> =
+        registerMob("reaper", ::ReaperEntity,11F, 5F, MobCategory.WATER_AMBIENT)
 
     fun <T : Mob> registerMob(
         name: String,

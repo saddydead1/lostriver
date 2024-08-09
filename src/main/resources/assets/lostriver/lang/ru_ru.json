@@ -5,10 +5,17 @@
   "item.lostriver.boomerang": "Рыба-Бумеранг",
   "item.lostriver.knife": "Нож",
   "item.lostriver.sand": "Песочек",
+  "item.lostriver.tooth": "Зуб Сталкера",
+  "item.lostriver.silicone": "Силиконовая Резина",
+  "item.lostriver.reaper_helmet": "Трофейный шлем Жнеца",
+  "item.lostriver.reaper_fragment": "Фрагмент Жнеца",
+  "item.lostriver.blood_grass": "Кровавая Водоросль",
 
   "block.lostriver.sand": "Песочек",
+  "block.lostriver.blood_grass": "Кровавая Водоросль",
 
   "entity.lostriver.peeper": "Пипер",
   "entity.lostriver.boomerang": "Рыба-Бумеранг",
-  "entity.lostriver.stalker": "Сталкер"
+  "entity.lostriver.stalker": "Сталкер",
+  "entity.lostriver.reaper": "Левиафан-Жнец"
 }

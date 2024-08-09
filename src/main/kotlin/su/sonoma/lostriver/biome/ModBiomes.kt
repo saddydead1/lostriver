@@ -1,6 +1,5 @@
-package su.sonoma.lostriver.biome.surface
+package su.sonoma.lostriver.biome
 
-import com.sun.jna.platform.unix.X11.Colormap
 import net.minecraft.core.registries.Registries
 import net.minecraft.data.worldgen.BiomeDefaultFeatures
 import net.minecraft.data.worldgen.BootstapContext
@@ -13,9 +12,9 @@ import net.minecraft.world.level.biome.*
 import net.minecraft.world.level.biome.Biome.BiomeBuilder
 import net.minecraft.world.level.biome.MobSpawnSettings.SpawnerData
 import net.minecraft.world.level.levelgen.GenerationStep
-import net.minecraftforge.client.event.RenderTooltipEvent
-import net.minecraftforge.client.model.DynamicFluidContainerModel.Colors
 import su.sonoma.lostriver.Lostriver.MODID
+import su.sonoma.lostriver.biome.feature.placements.ModFeatureConfigured
+import su.sonoma.lostriver.biome.feature.placements.ModPlacedFeature
 import su.sonoma.lostriver.entity.ModEntity
 
 
@@ -35,10 +34,16 @@ object ModBiomes {
         ResourceLocation(MODID, "blood_kelp")
     )
 
+    val DUNES: ResourceKey<Biome> = ResourceKey.create(
+        Registries.BIOME,
+        ResourceLocation(MODID, "dunes")
+    )
+
     fun bootstrap(context: BootstapContext<Biome>) {
         context.register(SAFE_SHALLOWS, testBiome(context))
         context.register(KELP_FOREST, kelp(context))
         context.register(BLOOD_KELP, blood_kelp(context))
+        context.register(DUNES, dunes(context))
     }
 
     fun globalOverworldGeneration(builder: BiomeGenerationSettings.Builder?) {
@@ -87,6 +92,44 @@ object ModBiomes {
             .build()
     }
 
+    fun dunes(context: BootstapContext<Biome>): Biome {
+        val spawnBuilder = MobSpawnSettings.Builder()
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 50, 1, 10))
+
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.REAPER.get(), 50, 1, 1))
+
+
+        val biomeBuilder =
+            BiomeGenerationSettings.Builder(
+                context.lookup(Registries.PLACED_FEATURE),
+                context.lookup(Registries.CONFIGURED_CARVER)
+            )
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder)
+        BiomeDefaultFeatures.addExtraGold(biomeBuilder)
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
+
+        return BiomeBuilder()
+            .hasPrecipitation(false)
+            .downfall(0f)
+            .temperature(0.7f)
+            .generationSettings(biomeBuilder.build())
+            .mobSpawnSettings(spawnBuilder.build())
+            .specialEffects(
+                BiomeSpecialEffects.Builder()
+                    .waterColor(16351261)
+                    .waterFogColor(163512611)
+                    .skyColor(27571)
+                    .grassColorOverride(16351261)
+                    .foliageColorOverride(5373696)
+                    .fogColor(16351261)
+                    .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                    .build()
+            )
+            .build()
+    }
+
     fun blood_kelp(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
@@ -104,10 +147,8 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
 
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_COLD)
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_WARM)
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_DEEP_WARM)
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_NORMAL)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_GRASS)
+
 
         return BiomeBuilder()
             .hasPrecipitation(false)
