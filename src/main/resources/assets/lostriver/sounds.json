@@ -4,5 +4,23 @@
     "sounds": [
       "lostriver:peeper"
     ]
+  },
+  "boomerang": {
+    "subtitle": "sounds.subcraftica.boomerang",
+    "sounds": [
+      "lostriver:boomerang"
+    ]
+  },
+  "stalker": {
+    "subtitle": "sounds.subcraftica.stalker",
+    "sounds": [
+      "lostriver:stalker"
+    ]
+  },
+  "reaper": {
+    "subtitle": "sounds.subcraftica.reaper",
+    "sounds": [
+      "lostriver:reaper"
+    ]
   }
 }

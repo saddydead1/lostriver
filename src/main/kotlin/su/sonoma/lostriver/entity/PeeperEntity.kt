@@ -17,6 +17,7 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager
 import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.util.GeckoLibUtil
+import su.sonoma.lostriver.event.Sounds
 
 
 class PeeperEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: Level) : AbstractSchoolingFish(pEntityType, pLevel), GeoEntity {
@@ -32,7 +33,7 @@ class PeeperEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: L
 
 
     override fun getAmbientSound(): SoundEvent {
-        return SoundEvents.DOLPHIN_AMBIENT
+        return Sounds.PEEPER.get()
     }
 
     override fun getBucketItemStack(): ItemStack {
