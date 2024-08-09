@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.client.renderer.BoomerangRenderer
 import su.sonoma.lostriver.client.renderer.PeeperRenderer
+import su.sonoma.lostriver.client.renderer.ReaperRenderer
 import su.sonoma.lostriver.client.renderer.StalkerRenderer
 import su.sonoma.lostriver.entity.ModEntity
 
@@ -24,6 +25,9 @@ object ClientListener {
 
         event.registerEntityRenderer(ModEntity.STALKER.get()
         ) { context: EntityRendererProvider.Context? -> StalkerRenderer(context!!) }
+
+        event.registerEntityRenderer(ModEntity.REAPER.get()
+        ) { context: EntityRendererProvider.Context? -> ReaperRenderer(context!!) }
 
     }
 

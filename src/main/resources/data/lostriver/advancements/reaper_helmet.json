@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:reaper_helmet"
+    },
+    "title": "Intimidating Helmet..",
+    "description": "Craft a trophy Leviathan Reaper Helmet",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "lostriver:reaper_fragment",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lostriver:reaper_helmet"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

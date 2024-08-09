@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:peeper"
+    },
+    "title": "Lost River",
+    "description": "Go to planet 4546B for the first time!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "lostriver:textures/block/sand.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "dimension": "lostriver:b4546"
+          }
+        }
+      }
+    }
+  }
+}

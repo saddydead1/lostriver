@@ -2,9 +2,9 @@
   "carvers": {},
   "downfall": 0.0,
   "effects": {
-    "fog_color": 59110,
-    "foliage_color": 11546150,
-    "grass_color": 11546150,
+    "fog_color": 16351261,
+    "foliage_color": 5373696,
+    "grass_color": 16351261,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -12,8 +12,8 @@
       "tick_delay": 6000
     },
     "sky_color": 27571,
-    "water_color": 3949738,
-    "water_fog_color": 59110
+    "water_color": 16351261,
+    "water_fog_color": 163512611
   },
   "features": [
     [],
@@ -45,8 +45,7 @@
     [],
     [
       "minecraft:patch_grass_badlands",
-      "minecraft:trees_savanna",
-      "lostriver:blood_grass_place"
+      "minecraft:trees_savanna"
     ]
   ],
   "has_precipitation": false,
@@ -60,14 +59,14 @@
     "underground_water_creature": [],
     "water_ambient": [
       {
-        "type": "lostriver:peeper",
-        "maxCount": 15,
+        "type": "lostriver:boomerang",
+        "maxCount": 10,
         "minCount": 1,
         "weight": 50
       },
       {
-        "type": "lostriver:boomerang",
-        "maxCount": 15,
+        "type": "lostriver:reaper",
+        "maxCount": 1,
         "minCount": 1,
         "weight": 50
       }

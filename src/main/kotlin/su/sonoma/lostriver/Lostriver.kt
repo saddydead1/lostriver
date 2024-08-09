@@ -2,6 +2,8 @@ package su.sonoma.lostriver
 
 import com.mojang.logging.LogUtils
 import net.minecraft.client.Minecraft
+import net.minecraft.client.renderer.ItemBlockRenderTypes
+import net.minecraft.client.renderer.RenderType
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
@@ -23,11 +25,13 @@ import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import org.slf4j.Logger
+import su.sonoma.lostriver.biome.feature.ModFeature
 import su.sonoma.lostriver.block.ModBlocks
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
 import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
+
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Lostriver.MODID)
@@ -42,6 +46,7 @@ object Lostriver {
     init {
         modEventBus.addListener { event: FMLCommonSetupEvent -> this.commonSetup(event) }
 
+        ModFeature.FEATURES!!.register(modEventBus)
         ModBlocks.BLOCKS.register(modEventBus)
         ModItems.ITEMS.register(modEventBus)
         Sounds.SOUNDS.register(modEventBus)
@@ -79,6 +84,10 @@ object Lostriver {
         fun onClientSetup(event: FMLClientSetupEvent?) {
             LOGGER.info("HELLO FROM CLIENT SETUP")
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().user.name)
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.BLOOD_GRASS.get(),
+                RenderType.cutout()
+            )
         }
     }
 
@@ -91,7 +100,11 @@ object Lostriver {
                output.accept(ModItems.PEEPER.get())
                 output.accept(ModItems.BOOMERANG.get())
                 output.accept(ModItems.KNIFE.get())
+                output.accept(ModItems.TOOTH.get())
+                output.accept(ModItems.SILICONE.get())
                 output.accept(ModItems.SAND.get())
+                output.accept(ModItems.BLOOD_GRASS.get())
+                output.accept(ModItems.REAPER_HELMET.get())
             }.build()
     }
 

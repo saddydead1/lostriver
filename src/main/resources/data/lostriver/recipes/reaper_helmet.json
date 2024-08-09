@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "I": {
+      "item": "lostriver:reaper_fragment"
+    }
+  },
+  "pattern": [
+    "III",
+    "I I"
+  ],
+  "result": {
+    "item": "lostriver:reaper_helmet"
+  }
+}
