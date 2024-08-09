@@ -1,17 +1,16 @@
-package su.sonoma.lostriver.biome.feature
+package su.sonoma.lostriver.biome.feature.custom
 
 import com.mojang.serialization.Codec
 import net.minecraft.core.BlockPos
+import net.minecraft.core.Direction
 import net.minecraft.world.level.block.Blocks
-import net.minecraft.world.level.block.TallSeagrassBlock
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf
 import net.minecraft.world.level.levelgen.Heightmap
 import net.minecraft.world.level.levelgen.feature.Feature
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext
 import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration
 import su.sonoma.lostriver.block.ModBlocks
 
-class ModSeaGrassFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
+class BloodSandFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
     Feature<ProbabilityFeatureConfiguration>(p_66768_) {
     override fun place(p_160318_: FeaturePlaceContext<ProbabilityFeatureConfiguration?>): Boolean {
         var flag = false
@@ -25,15 +24,20 @@ class ModSeaGrassFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
         val blockpos1 = BlockPos(blockpos.x + i, k, blockpos.z + j)
         if (worldgenlevel.getBlockState(blockpos1).`is`(Blocks.WATER)) {
             val flag1 = randomsource.nextDouble() < probabilityfeatureconfiguration!!.probability.toDouble()
-            val blockstate = ModBlocks.BLOOD_GRASS.get().defaultBlockState()
+            val blockstate = ModBlocks.BLOOD_SAND.get().defaultBlockState()
             if (blockstate.canSurvive(worldgenlevel, blockpos1)) {
                 if (flag1) {
                     val blockpos2 = blockpos1.above()
                     if (worldgenlevel.getBlockState(blockpos2).`is`(Blocks.WATER)) {
-                        worldgenlevel.setBlock(blockpos1, blockstate, 2)
+
+                        val positions: List<BlockPos> = mutableListOf(blockpos.north(), blockpos.south(), blockpos.west(), blockpos.east())
+
+                        for (pos in positions){
+                            worldgenlevel.setBlock(pos.below(), blockstate, 2)
+                        }
                     }
                 } else {
-                    worldgenlevel.setBlock(blockpos1, blockstate, 2)
+                    worldgenlevel.setBlock(blockpos.below(), blockstate, 2)
                 }
 
                 flag = true

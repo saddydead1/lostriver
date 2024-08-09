@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "lostriver:block/sand",
+    "top": "lostriver:block/bloodsand_top",
+    "side": "lostriver:block/bloodsand_side"
+  }
+}

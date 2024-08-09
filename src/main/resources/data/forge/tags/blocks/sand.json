@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "lostriver:sand"
+    "lostriver:sand",
+    "lostriver:kelpsand",
+    "lostriver:bloodsand"
   ]
 }

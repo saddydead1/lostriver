@@ -20,6 +20,7 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager
 import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.util.GeckoLibUtil
+import su.sonoma.lostriver.event.Sounds
 
 
 class StalkerEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: Level) : AbstractSchoolingFish(pEntityType, pLevel), GeoEntity {
@@ -58,7 +59,7 @@ class StalkerEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: 
     }
 
     override fun getAmbientSound(): SoundEvent {
-        return SoundEvents.DOLPHIN_AMBIENT
+        return Sounds.STALKER.get()
     }
 
     override fun getDeathSound(): SoundEvent {

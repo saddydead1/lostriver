@@ -72,6 +72,10 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.DOUBLEKELP)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
+
         return BiomeBuilder()
             .hasPrecipitation(false)
             .downfall(0f)
@@ -110,6 +114,8 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
+
         return BiomeBuilder()
             .hasPrecipitation(false)
             .downfall(0f)
@@ -118,8 +124,8 @@ object ModBiomes {
             .mobSpawnSettings(spawnBuilder.build())
             .specialEffects(
                 BiomeSpecialEffects.Builder()
-                    .waterColor(16351261)
-                    .waterFogColor(163512611)
+                    .waterColor(9143615)
+                    .waterFogColor(9143615)
                     .skyColor(27571)
                     .grassColorOverride(16351261)
                     .foliageColorOverride(5373696)
@@ -148,8 +154,10 @@ object ModBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_GRASS)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_MOSS)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOODSAND)
 
-
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
         return BiomeBuilder()
             .hasPrecipitation(false)
             .downfall(0f)
@@ -158,8 +166,8 @@ object ModBiomes {
             .mobSpawnSettings(spawnBuilder.build())
             .specialEffects(
                 BiomeSpecialEffects.Builder()
-                    .waterColor(3949738)
-                    .waterFogColor(59110)
+                    .waterColor(1053345)
+                    .waterFogColor(1053345)
                     .skyColor(27571)
                     .grassColorOverride(11546150)
                     .foliageColorOverride(11546150)
@@ -197,6 +205,10 @@ object ModBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_DEEP_WARM)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_NORMAL)
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.KELPSAND)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
+
         return BiomeBuilder()
             .hasPrecipitation(false)
             .downfall(0f)
@@ -205,12 +217,12 @@ object ModBiomes {
             .mobSpawnSettings(spawnBuilder.build())
             .specialEffects(
                 BiomeSpecialEffects.Builder()
-                    .waterColor(6192150)
-                    .waterFogColor(6192150)
+                    .waterColor(3233796)
+                    .waterFogColor(3233796)
                     .skyColor(27571)
                     .grassColorOverride(6192150)
                     .foliageColorOverride(6192150)
-                    .fogColor(59110)
+                    .fogColor(3233796)
                     .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
                     .build()
             )

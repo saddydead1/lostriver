@@ -12,8 +12,8 @@
       "tick_delay": 6000
     },
     "sky_color": 27571,
-    "water_color": 3949738,
-    "water_fog_color": 59110
+    "water_color": 1053345,
+    "water_fog_color": 1053345
   },
   "features": [
     [],
@@ -46,7 +46,10 @@
     [
       "minecraft:patch_grass_badlands",
       "minecraft:trees_savanna",
-      "lostriver:blood_grass_place"
+      "lostriver:blood_grass_place",
+      "lostriver:blood_moss_place",
+      "lostriver:blood_sand_place",
+      "lostriver:limestone"
     ]
   ],
   "has_precipitation": false,

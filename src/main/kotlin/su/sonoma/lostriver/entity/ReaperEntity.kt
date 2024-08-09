@@ -20,6 +20,7 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager
 import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.util.GeckoLibUtil
+import su.sonoma.lostriver.event.Sounds
 
 
 class ReaperEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: Level) : AbstractSchoolingFish(pEntityType, pLevel), GeoEntity {
@@ -58,15 +59,19 @@ class ReaperEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: L
     }
 
     override fun getAmbientSound(): SoundEvent {
-        return SoundEvents.DOLPHIN_AMBIENT
+        return Sounds.REAPER.get()
     }
 
     override fun getDeathSound(): SoundEvent {
-        return SoundEvents.DOLPHIN_DEATH
+        return Sounds.REAPER.get()
     }
 
     override fun getSoundVolume(): Float {
-        return 0.2f
+        return 0.5f
+    }
+
+    override fun getAmbientSoundInterval(): Int {
+        return 90
     }
 
     companion object {

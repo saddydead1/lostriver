@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "lostriver:titan",
+          "weight": 50
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lostriver:copper",
+          "weight": 50
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "lostriver:blocks/limestone"
+}

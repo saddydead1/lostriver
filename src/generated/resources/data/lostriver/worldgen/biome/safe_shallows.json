@@ -45,7 +45,9 @@
     [],
     [
       "minecraft:patch_grass_badlands",
-      "minecraft:trees_savanna"
+      "minecraft:trees_savanna",
+      "lostriver:double_kelp_place",
+      "lostriver:limestone"
     ]
   ],
   "has_precipitation": false,
