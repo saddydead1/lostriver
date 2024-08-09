@@ -1,18 +1,15 @@
 package su.sonoma.lostriver.block
 
-import net.minecraft.world.item.BlockItem
-import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.SeagrassBlock
 import net.minecraft.world.level.block.state.BlockBehaviour
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument
 import net.minecraft.world.level.material.MapColor
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import su.sonoma.lostriver.Lostriver.MODID
-import su.sonoma.lostriver.item.ModItems
-import java.util.function.Supplier
 
 
 object ModBlocks {
@@ -21,6 +18,16 @@ object ModBlocks {
     val SAND: RegistryObject<Block> = BLOCKS.register("sand") {
         ModSandBlock(
         BlockBehaviour.Properties.copy(Blocks.DIRT))
+    }
+
+    val BLOOD_SAND: RegistryObject<Block> = BLOCKS.register("bloodsand") {
+        ModSandBlock(
+            BlockBehaviour.Properties.copy(Blocks.DIRT))
+    }
+
+    val KELP_SAND: RegistryObject<Block> = BLOCKS.register("kelpsand") {
+        ModSandBlock(
+            BlockBehaviour.Properties.copy(Blocks.DIRT))
     }
 
     val BLOOD_GRASS: RegistryObject<Block> = BLOCKS.register("blood_grass") {
@@ -36,5 +43,12 @@ object ModBlocks {
     val DOUBLEKELP: RegistryObject<Block> = BLOCKS.register("double_kelp") {
         SeagrassBlock(
             BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val LIMESTONE: RegistryObject<Block> = BLOCKS.register("limestone") {
+        Block(
+            BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
+        )
     }
 }

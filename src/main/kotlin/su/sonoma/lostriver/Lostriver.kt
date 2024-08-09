@@ -110,11 +110,18 @@ object Lostriver {
                 output.accept(ModItems.KNIFE.get())
                 output.accept(ModItems.TOOTH.get())
                 output.accept(ModItems.SILICONE.get())
+                output.accept(ModItems.TITAN.get())
+                output.accept(ModItems.COPPER.get())
                 output.accept(ModItems.SAND.get())
+                output.accept(ModItems.LIMESTONE.get())
+                output.accept(ModItems.KELP_SAND.get())
                 output.accept(ModItems.DOUBLEKELP.get())
                 output.accept(ModItems.BLOOD_GRASS.get())
+                output.accept(ModItems.BLOOD_SAND.get())
                 output.accept(ModItems.BLOOD_MOSS.get())
+                output.accept(ModItems.REAPER_FRAGMENT.get())
                 output.accept(ModItems.REAPER_HELMET.get())
+                output.accept(ModItems.OXYGENTANK.get())
             }.build()
     }
 

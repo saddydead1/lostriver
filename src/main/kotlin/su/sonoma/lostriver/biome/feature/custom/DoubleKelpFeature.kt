@@ -1,4 +1,4 @@
-package su.sonoma.lostriver.biome.feature
+package su.sonoma.lostriver.biome.feature.custom
 
 import com.mojang.serialization.Codec
 import net.minecraft.core.BlockPos
@@ -9,7 +9,7 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext
 import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration
 import su.sonoma.lostriver.block.ModBlocks
 
-class BloodMossFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
+class DoubleKelpFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
     Feature<ProbabilityFeatureConfiguration>(p_66768_) {
     override fun place(p_160318_: FeaturePlaceContext<ProbabilityFeatureConfiguration?>): Boolean {
         var flag = false
@@ -23,7 +23,7 @@ class BloodMossFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
         val blockpos1 = BlockPos(blockpos.x + i, k, blockpos.z + j)
         if (worldgenlevel.getBlockState(blockpos1).`is`(Blocks.WATER)) {
             val flag1 = randomsource.nextDouble() < probabilityfeatureconfiguration!!.probability.toDouble()
-            val blockstate = ModBlocks.BLOOD_MOSS.get().defaultBlockState()
+            val blockstate = ModBlocks.DOUBLEKELP.get().defaultBlockState()
             if (blockstate.canSurvive(worldgenlevel, blockpos1)) {
                 if (flag1) {
                     val blockpos2 = blockpos1.above()

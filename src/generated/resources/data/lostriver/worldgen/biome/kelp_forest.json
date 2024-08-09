@@ -52,7 +52,9 @@
       "minecraft:seagrass_cold",
       "minecraft:seagrass_warm",
       "minecraft:seagrass_deep_warm",
-      "minecraft:seagrass_normal"
+      "minecraft:seagrass_normal",
+      "lostriver:kelp_sand_place",
+      "lostriver:limestone"
     ]
   ],
   "has_precipitation": false,

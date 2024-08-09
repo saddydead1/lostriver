@@ -44,6 +44,18 @@ object ModItems {
 
     }
 
+    val TITAN: RegistryObject<Item> = ITEMS.register("titan") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val COPPER: RegistryObject<Item> = ITEMS.register("copper") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
     val KNIFE: RegistryObject<Item> = ITEMS.register("knife") {
         SwordItem(
             Tiers.IRON,
@@ -55,6 +67,24 @@ object ModItems {
 
     val SAND: RegistryObject<Item> = ITEMS.register("sand") {
         BlockItem( ModBlocks.SAND.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val LIMESTONE: RegistryObject<Item> = ITEMS.register("limestone") {
+        BlockItem( ModBlocks.LIMESTONE.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val BLOOD_SAND: RegistryObject<Item> = ITEMS.register("bloodsand") {
+        BlockItem( ModBlocks.BLOOD_SAND.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val KELP_SAND: RegistryObject<Item> = ITEMS.register("kelpsand") {
+        BlockItem( ModBlocks.KELP_SAND.get(),
             Item.Properties().stacksTo(64)
         )
     }
@@ -83,4 +113,7 @@ object ModItems {
 
     val REAPER_HELMET = ITEMS.register("reaper_helmet")
     { ReaperArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, Item.Properties()) }
+
+    val OXYGENTANK = ITEMS.register("oxygentank")
+    { OxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
 }

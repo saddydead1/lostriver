@@ -74,6 +74,8 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.DOUBLEKELP)
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
+
         return BiomeBuilder()
             .hasPrecipitation(false)
             .downfall(0f)
@@ -111,6 +113,8 @@ object ModBiomes {
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
 
         return BiomeBuilder()
             .hasPrecipitation(false)
@@ -151,8 +155,9 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_GRASS)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_MOSS)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOODSAND)
 
-
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
         return BiomeBuilder()
             .hasPrecipitation(false)
             .downfall(0f)
@@ -199,6 +204,10 @@ object ModBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_WARM)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_DEEP_WARM)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_NORMAL)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.KELPSAND)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
 
         return BiomeBuilder()
             .hasPrecipitation(false)

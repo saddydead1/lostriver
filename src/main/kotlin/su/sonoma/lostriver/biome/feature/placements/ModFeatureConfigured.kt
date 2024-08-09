@@ -8,16 +8,20 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature
 import net.minecraft.world.level.levelgen.feature.Feature
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration
 import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.biome.feature.ModFeature
-import su.sonoma.lostriver.biome.feature.BloodGrassFeature
-import su.sonoma.lostriver.biome.feature.BloodMossFeature
+import su.sonoma.lostriver.block.ModBlocks
 
 
 object ModFeatureConfigured {
     val BLOOD_GRASS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_grass")
+    val BLOODSAND: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_sand")
+    val KELPSAND: ResourceKey<ConfiguredFeature<*, *>> = registerKey("kelp_sand")
     val BLOOD_MOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_moss")
     val DOUBLEKELP: ResourceKey<ConfiguredFeature<*, *>> = registerKey("double_kelp")
+    val LIMESTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("limestone")
 
     fun bootstrap(p: BootstapContext<ConfiguredFeature<*, *>>) {
         register(
@@ -37,6 +41,24 @@ object ModFeatureConfigured {
             DOUBLEKELP,
             ModFeature.DOUBLEKELP!!.get(),
             ProbabilityFeatureConfiguration(0.2f)
+        )
+        register(
+            p,
+            BLOODSAND,
+            ModFeature.BLOODSAND!!.get(),
+            ProbabilityFeatureConfiguration(0.5f)
+        )
+        register(
+            p,
+            KELPSAND,
+            ModFeature.KELPSAND!!.get(),
+            ProbabilityFeatureConfiguration(0.5f)
+        )
+        register(
+            p,
+            LIMESTONE,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.LIMESTONE.get()))
         )
     }
 

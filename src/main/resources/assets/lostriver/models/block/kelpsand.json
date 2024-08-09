@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "lostriver:block/kelpsand_bottom",
+    "top": "lostriver:block/kelpsand_top",
+    "side": "lostriver:block/kelpsand_side"
+  }
+}
