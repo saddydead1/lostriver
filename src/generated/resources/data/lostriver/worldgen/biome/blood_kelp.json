@@ -49,7 +49,9 @@
       "lostriver:blood_grass_place",
       "lostriver:blood_moss_place",
       "lostriver:blood_sand_place",
-      "lostriver:limestone"
+      "lostriver:limestone",
+      "lostriver:sandstone",
+      "lostriver:quartz"
     ]
   ],
   "has_precipitation": false,

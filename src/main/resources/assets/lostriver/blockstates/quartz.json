@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "lostriver:block/quartz"
+    },
+    "facing=down": {
+      "model": "lostriver:block/quartz",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "lostriver:block/quartz",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lostriver:block/quartz",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "lostriver:block/quartz",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lostriver:block/quartz",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

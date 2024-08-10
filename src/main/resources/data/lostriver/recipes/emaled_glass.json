@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "I": {
+      "tag": "forge:glass"
+    },
+    "R": {
+      "item": "lostriver:tooth"
+    }
+  },
+  "pattern": [
+    "IR"
+  ],
+  "result": {
+    "item": "lostriver:emaled_glass"
+  }
+}

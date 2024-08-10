@@ -7,11 +7,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus
 import su.sonoma.lostriver.Lostriver.MODID
-import su.sonoma.lostriver.client.renderer.BoomerangRenderer
-import su.sonoma.lostriver.client.renderer.PeeperRenderer
-import su.sonoma.lostriver.client.renderer.ReaperRenderer
-import su.sonoma.lostriver.client.renderer.StalkerRenderer
+import su.sonoma.lostriver.client.renderer.*
 import su.sonoma.lostriver.entity.ModEntity
+
 
 @EventBusSubscriber(modid = MODID, bus = Bus.MOD, value = [Dist.CLIENT])
 object ClientListener {
@@ -29,6 +27,11 @@ object ClientListener {
         event.registerEntityRenderer(ModEntity.REAPER.get()
         ) { context: EntityRendererProvider.Context? -> ReaperRenderer(context!!) }
 
+        event.registerEntityRenderer(ModEntity.SEAMOTH.get()
+        ) { context: EntityRendererProvider.Context? -> SeamothRenderer(context!!) }
+
+        event.registerEntityRenderer(ModEntity.SEAMOTH.get()
+        ) { context: EntityRendererProvider.Context? -> SeamothRenderer(context!!) }
     }
 
 }

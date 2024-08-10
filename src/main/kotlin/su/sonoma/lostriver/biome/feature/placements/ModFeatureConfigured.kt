@@ -21,7 +21,10 @@ object ModFeatureConfigured {
     val KELPSAND: ResourceKey<ConfiguredFeature<*, *>> = registerKey("kelp_sand")
     val BLOOD_MOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_moss")
     val DOUBLEKELP: ResourceKey<ConfiguredFeature<*, *>> = registerKey("double_kelp")
+
     val LIMESTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("limestone")
+    val SANDSTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("sandstone")
+    val QUARTZ: ResourceKey<ConfiguredFeature<*, *>> = registerKey("quartz")
 
     fun bootstrap(p: BootstapContext<ConfiguredFeature<*, *>>) {
         register(
@@ -59,6 +62,18 @@ object ModFeatureConfigured {
             LIMESTONE,
             Feature.SIMPLE_BLOCK,
             SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.LIMESTONE.get()))
+        )
+        register(
+            p,
+            SANDSTONE,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SANDSTONE.get()))
+        )
+        register(
+            p,
+            QUARTZ,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.QUARTZ.get()))
         )
     }
 

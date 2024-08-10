@@ -1,5 +1,6 @@
 package su.sonoma.lostriver.entity
 
+import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.EntityType.EntityFactory
 import net.minecraft.world.entity.Mob
@@ -26,12 +27,21 @@ object ModEntity {
     val REAPER: RegistryObject<EntityType<ReaperEntity>> =
         registerMob("reaper", ::ReaperEntity,11F, 5F, MobCategory.WATER_AMBIENT)
 
+    val SEAMOTH: RegistryObject<EntityType<SeamothEntity>> =
+        registerBoat("seamoth", EntityType.Builder.of(::SeamothEntity , MobCategory.MISC
+        ).sized(1.6f, 1.6f).clientTrackingRange(1)
+        )
+
+    private fun <T : Entity?> registerBoat(name: String, builder: EntityType.Builder<T>): RegistryObject<EntityType<T>> {
+        return ENTITY_TYPES.register(name) { builder.build("lostriver:$name") }
+    }
+
     fun <T : Mob> registerMob(
         name: String,
         entity: EntityFactory<T>,
         width: Float,
         height: Float,
-        category: MobCategory
+        category: MobCategory,
     ): RegistryObject<EntityType<T>> {
         val entityType = ENTITY_TYPES.register(
             name

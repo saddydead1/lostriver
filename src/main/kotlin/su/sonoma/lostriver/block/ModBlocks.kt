@@ -10,6 +10,8 @@ import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import su.sonoma.lostriver.Lostriver.MODID
+import su.sonoma.lostriver.block.custom.ModOreBlock
+import su.sonoma.lostriver.block.custom.ModSandBlock
 
 
 object ModBlocks {
@@ -46,9 +48,24 @@ object ModBlocks {
     }
 
     val LIMESTONE: RegistryObject<Block> = BLOCKS.register("limestone") {
-        Block(
+        ModOreBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
                 .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
         )
     }
+
+    val QUARTZ: RegistryObject<Block> = BLOCKS.register("quartz") {
+        ModOreBlock(
+            BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
+        )
+    }
+
+    val SANDSTONE: RegistryObject<Block> = BLOCKS.register("sandstone") {
+        ModOreBlock(
+            BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
+        )
+    }
+
 }
