@@ -56,6 +56,35 @@ object ModItems {
 
     }
 
+    val SILVER: RegistryObject<Item> = ITEMS.register("silver") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+    val GOLD: RegistryObject<Item> = ITEMS.register("gold") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val LEAD: RegistryObject<Item> = ITEMS.register("lead") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val QUARTZ: RegistryObject<Item> = ITEMS.register("quartz") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val EMALEDGLASS: RegistryObject<Item> = ITEMS.register("emaled_glass") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
     val KNIFE: RegistryObject<Item> = ITEMS.register("knife") {
         SwordItem(
             Tiers.IRON,
@@ -73,6 +102,12 @@ object ModItems {
 
     val LIMESTONE: RegistryObject<Item> = ITEMS.register("limestone") {
         BlockItem( ModBlocks.LIMESTONE.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val SANDSTONE: RegistryObject<Item> = ITEMS.register("sandstone") {
+        BlockItem( ModBlocks.SANDSTONE.get(),
             Item.Properties().stacksTo(64)
         )
     }
@@ -116,4 +151,7 @@ object ModItems {
 
     val OXYGENTANK = ITEMS.register("oxygentank")
     { OxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
+
+    val HIGHOXYGENTANK = ITEMS.register("highoxygentank")
+    { HighOxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
 }

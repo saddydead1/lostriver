@@ -54,7 +54,9 @@
       "minecraft:seagrass_deep_warm",
       "minecraft:seagrass_normal",
       "lostriver:kelp_sand_place",
-      "lostriver:limestone"
+      "lostriver:limestone",
+      "lostriver:sandstone",
+      "lostriver:quartz"
     ]
   ],
   "has_precipitation": false,

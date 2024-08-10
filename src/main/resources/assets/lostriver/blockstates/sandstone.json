@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "lostriver:block/sandstone"
+    },
+    "facing=down": {
+      "model": "lostriver:block/sandstone",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "lostriver:block/sandstone",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lostriver:block/sandstone",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "lostriver:block/sandstone",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lostriver:block/sandstone",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

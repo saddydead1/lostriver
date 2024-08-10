@@ -27,9 +27,12 @@ import net.minecraftforge.registries.RegistryObject
 import org.slf4j.Logger
 import su.sonoma.lostriver.biome.feature.ModFeature
 import su.sonoma.lostriver.block.ModBlocks
+import su.sonoma.lostriver.block.entity.ModBlockEntities
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
+import su.sonoma.lostriver.recipe.ModRecipes
+import su.sonoma.lostriver.screen.ModMenuTypes
 import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
 
 
@@ -46,6 +49,10 @@ object Lostriver {
     init {
         modEventBus.addListener { event: FMLCommonSetupEvent -> this.commonSetup(event) }
 
+
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus)
+        ModMenuTypes.MENUS.register(modEventBus)
+        ModRecipes.register(modEventBus)
         ModFeature.FEATURES!!.register(modEventBus)
         ModBlocks.BLOCKS.register(modEventBus)
         ModItems.ITEMS.register(modEventBus)
@@ -112,8 +119,14 @@ object Lostriver {
                 output.accept(ModItems.SILICONE.get())
                 output.accept(ModItems.TITAN.get())
                 output.accept(ModItems.COPPER.get())
+                output.accept(ModItems.LEAD.get())
+                output.accept(ModItems.GOLD.get())
+                output.accept(ModItems.SILVER.get())
+                output.accept(ModItems.QUARTZ.get())
+                output.accept(ModItems.EMALEDGLASS.get())
                 output.accept(ModItems.SAND.get())
                 output.accept(ModItems.LIMESTONE.get())
+                output.accept(ModItems.SANDSTONE.get())
                 output.accept(ModItems.KELP_SAND.get())
                 output.accept(ModItems.DOUBLEKELP.get())
                 output.accept(ModItems.BLOOD_GRASS.get())
@@ -122,6 +135,7 @@ object Lostriver {
                 output.accept(ModItems.REAPER_FRAGMENT.get())
                 output.accept(ModItems.REAPER_HELMET.get())
                 output.accept(ModItems.OXYGENTANK.get())
+                output.accept(ModItems.HIGHOXYGENTANK.get())
             }.build()
     }
 

@@ -26,7 +26,8 @@ object OxygenHud {
         val nbt = player.getInventory().armor.get(2).getTagElement("Oxygen")
         val oxygen = nbt?.getDouble("Oxygen")
 
-        if (player.getInventory().armor.get(2).item == ModItems.OXYGENTANK.get()) {
+        if (player.getInventory().armor.get(2).item == ModItems.OXYGENTANK.get() ||
+            player.getInventory().armor.get(2).item == ModItems.HIGHOXYGENTANK.get()) {
             graphics.drawString(font, "Oxygen: ${oxygen?.toInt()}", 10, 10, 16383998)
         }
     }

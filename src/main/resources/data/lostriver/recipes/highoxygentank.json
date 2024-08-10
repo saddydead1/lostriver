@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+    "key": {
+      "I": {
+        "item": "lostriver:titan"
+      },
+      "G": {
+        "item": "minecraft:glass"
+      },
+      "S": {
+        "item": "lostriver:silver"
+      },
+      "O": {
+        "item": "lostriver:oxygentank"
+      }
+    },
+    "pattern": [
+      "ISI",
+      "GOG",
+      "I I"
+    ],
+    "result": {
+      "item": "lostriver:highoxygentank"
+    }
+  }

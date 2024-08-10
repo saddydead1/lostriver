@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "su.sonoma.lostriver.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "lostriver.refmap.json",
+  "mixins": [
+    "BoatEntityAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
