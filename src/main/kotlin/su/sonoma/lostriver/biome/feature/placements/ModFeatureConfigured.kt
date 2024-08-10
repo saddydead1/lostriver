@@ -21,6 +21,12 @@ object ModFeatureConfigured {
     val KELPSAND: ResourceKey<ConfiguredFeature<*, *>> = registerKey("kelp_sand")
     val BLOOD_MOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_moss")
     val DOUBLEKELP: ResourceKey<ConfiguredFeature<*, *>> = registerKey("double_kelp")
+    val ACIDMUSHROOM: ResourceKey<ConfiguredFeature<*, *>> = registerKey("acidmushroom")
+    val PURPLEMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("purplemoss")
+    val GREENCOVERMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("greencovermoss")
+    val ROYALMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("royalmoss")
+    val SAFESHALLOWMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("safeshallowmoss")
+    val VEINED: ResourceKey<ConfiguredFeature<*, *>> = registerKey("veined")
 
     val LIMESTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("limestone")
     val SANDSTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("sandstone")
@@ -44,6 +50,12 @@ object ModFeatureConfigured {
             DOUBLEKELP,
             ModFeature.DOUBLEKELP!!.get(),
             ProbabilityFeatureConfiguration(0.2f)
+        )
+        register(
+            p,
+            ACIDMUSHROOM,
+            ModFeature.ACIDMUSHROOM!!.get(),
+            ProbabilityFeatureConfiguration(0.1f)
         )
         register(
             p,
@@ -74,6 +86,36 @@ object ModFeatureConfigured {
             QUARTZ,
             Feature.SIMPLE_BLOCK,
             SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.QUARTZ.get()))
+        )
+        register(
+            p,
+            PURPLEMOSS,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PURPLEMOSS.get()))
+        )
+        register(
+            p,
+            ROYALMOSS,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ROYALMOSS.get()))
+        )
+        register(
+            p,
+            VEINED,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VEINED.get()))
+        )
+        register(
+            p,
+            GREENCOVERMOSS,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.GREENCOVERMOSS.get()))
+        )
+        register(
+            p,
+            SAFESHALLOWMOSS,
+            ModFeature.SAFESHALLOWMOSS!!.get(),
+            ProbabilityFeatureConfiguration(0.3f)
         )
     }
 

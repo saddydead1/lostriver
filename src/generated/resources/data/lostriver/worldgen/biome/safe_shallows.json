@@ -47,6 +47,12 @@
       "minecraft:patch_grass_badlands",
       "minecraft:trees_savanna",
       "lostriver:double_kelp_place",
+      "lostriver:acidmushroom_place",
+      "lostriver:purplemoss_place",
+      "lostriver:safeshallowmoss_place",
+      "lostriver:greencovermoss_place",
+      "lostriver:veined_place",
+      "lostriver:royalmoss_place",
       "lostriver:limestone",
       "lostriver:quartz"
     ]

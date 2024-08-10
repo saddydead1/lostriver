@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "I": {
+      "tag": "forge:titan_ingot"
+    },
+    "W": {
+      "item": "lostriver:powercell"
+    },
+    "G": {
+      "tag": "forge:glass"
+    },
+    "L": {
+      "item": "lostriver:lubricant"
+    },
+    "P": {
+      "tag": "forge:lead"
+    }
+  },
+  "pattern": [
+    " I ",
+    "GWG",
+    "PLP"
+  ],
+  "result": {
+    "item": "lostriver:seamoth"
+  }
+}

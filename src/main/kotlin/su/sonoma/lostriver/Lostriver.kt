@@ -97,6 +97,10 @@ object Lostriver {
                 ModBlocks.DOUBLEKELP.get(),
                 RenderType.cutout()
             )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.VEINED.get(),
+                RenderType.cutout()
+            )
         }
     }
 
@@ -111,25 +115,40 @@ object Lostriver {
                 output.accept(ModItems.KNIFE.get())
                 output.accept(ModItems.TOOTH.get())
                 output.accept(ModItems.SILICONE.get())
+                output.accept(ModItems.WIRINGKIT.get())
+                output.accept(ModItems.FIBERMESH.get())
+                output.accept(ModItems.BATTERY.get())
+                output.accept(ModItems.POWERCELL.get())
+                output.accept(ModItems.LUBRICANT.get())
                 output.accept(ModItems.TITAN.get())
                 output.accept(ModItems.COPPER.get())
                 output.accept(ModItems.LEAD.get())
                 output.accept(ModItems.GOLD.get())
                 output.accept(ModItems.SILVER.get())
                 output.accept(ModItems.QUARTZ.get())
+                output.accept(ModItems.TITANINGOT.get())
                 output.accept(ModItems.EMALEDGLASS.get())
                 output.accept(ModItems.SAND.get())
                 output.accept(ModItems.LIMESTONE.get())
                 output.accept(ModItems.SANDSTONE.get())
                 output.accept(ModItems.KELP_SAND.get())
+                output.accept(ModItems.ACIDMUSHROOM.get())
                 output.accept(ModItems.DOUBLEKELP.get())
+                output.accept(ModItems.PURPLEMOSS.get())
+                output.accept(ModItems.GREENCOVERMOSS.get())
+                output.accept(ModItems.VEINED.get())
+                output.accept(ModItems.SAFESHALLOWMOSS.get())
+                output.accept(ModItems.ROYALMOSS.get())
                 output.accept(ModItems.BLOOD_GRASS.get())
                 output.accept(ModItems.BLOOD_SAND.get())
                 output.accept(ModItems.BLOOD_MOSS.get())
                 output.accept(ModItems.REAPER_FRAGMENT.get())
                 output.accept(ModItems.REAPER_HELMET.get())
+                output.accept(ModItems.REBREATHER.get())
+                output.accept(ModItems.FINS.get())
                 output.accept(ModItems.OXYGENTANK.get())
                 output.accept(ModItems.HIGHOXYGENTANK.get())
+                output.accept(ModItems.SEAMOTH.get())
             }.build()
     }
 

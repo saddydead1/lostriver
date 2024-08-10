@@ -4,7 +4,11 @@
     "to_place": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "lostriver:quartz"
+        "Name": "lostriver:quartz",
+        "Properties": {
+          "facing": "up",
+          "waterlogged": "false"
+        }
       }
     }
   }

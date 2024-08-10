@@ -7,7 +7,6 @@ import net.minecraft.world.item.*
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
-import software.bernie.example.item.WolfArmorItem
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.block.ModBlocks
 
@@ -135,6 +134,32 @@ object ModItems {
         )
     }
 
+    val PURPLEMOSS: RegistryObject<Item> = ITEMS.register("purplemoss") {
+        BlockItem( ModBlocks.PURPLEMOSS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+    val GREENCOVERMOSS: RegistryObject<Item> = ITEMS.register("greencovermoss") {
+        BlockItem( ModBlocks.GREENCOVERMOSS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+    val ROYALMOSS: RegistryObject<Item> = ITEMS.register("royalmoss") {
+        BlockItem( ModBlocks.ROYALMOSS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+    val SAFESHALLOWMOSS: RegistryObject<Item> = ITEMS.register("safeshallowmoss") {
+        BlockItem( ModBlocks.SAFESHALLOWMOSS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+    val VEINED: RegistryObject<Item> = ITEMS.register("veined") {
+        BlockItem( ModBlocks.VEINED.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
     val DOUBLEKELP: RegistryObject<Item> = ITEMS.register("double_kelp") {
         BlockItem( ModBlocks.DOUBLEKELP.get(),
             Item.Properties().stacksTo(64)
@@ -146,6 +171,46 @@ object ModItems {
             Item.Properties().stacksTo(64))
     }
 
+    val WIRINGKIT: RegistryObject<Item> = ITEMS.register("wiringkit") {
+        Item(
+            Item.Properties().stacksTo(64))
+    }
+
+    val FIBERMESH: RegistryObject<Item> = ITEMS.register("fibermesh") {
+        Item(
+            Item.Properties().stacksTo(64))
+    }
+
+    val TITANINGOT: RegistryObject<Item> = ITEMS.register("titan_ingot") {
+        Item(
+            Item.Properties().stacksTo(64))
+    }
+
+    val BATTERY: RegistryObject<Item> = ITEMS.register("battery") {
+        Item(
+            Item.Properties().stacksTo(64))
+    }
+
+    val ACIDMUSHROOM: RegistryObject<Item> = ITEMS.register("acidmushroom") {
+        BlockItem( ModBlocks.ACIDMUSHROOM.get(),
+            Item.Properties().stacksTo(64))
+    }
+
+    val POWERCELL: RegistryObject<Item> = ITEMS.register("powercell") {
+        Item(
+            Item.Properties().stacksTo(64))
+    }
+
+    val LUBRICANT: RegistryObject<Item> = ITEMS.register("lubricant") {
+        Item(
+            Item.Properties().stacksTo(64))
+    }
+
+    val SEAMOTH: RegistryObject<Item> = ITEMS.register("seamoth") {
+        SeamothItem(
+            Item.Properties().stacksTo(1))
+    }
+
     val REAPER_HELMET = ITEMS.register("reaper_helmet")
     { ReaperArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, Item.Properties()) }
 
@@ -154,4 +219,10 @@ object ModItems {
 
     val HIGHOXYGENTANK = ITEMS.register("highoxygentank")
     { HighOxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
+
+    val REBREATHER = ITEMS.register("rebreather")
+    { RebreatherArmorItem(ArmorMaterials.IRON, ArmorItem.Type.HELMET, Item.Properties()) }
+
+    val FINS = ITEMS.register("fins")
+    { FinsArmorItem(ArmorMaterials.IRON, ArmorItem.Type.BOOTS, Item.Properties()) }
 }

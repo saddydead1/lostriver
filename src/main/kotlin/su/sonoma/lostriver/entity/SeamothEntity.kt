@@ -23,6 +23,7 @@ import software.bernie.geckolib.core.animation.AnimationState
 import software.bernie.geckolib.core.animation.RawAnimation
 import software.bernie.geckolib.core.`object`.PlayState
 import software.bernie.geckolib.util.GeckoLibUtil
+import su.sonoma.lostriver.item.ModItems
 import su.sonoma.lostriver.mixin.BoatEntityAccessor
 
 
@@ -36,7 +37,7 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
     }
 
     override fun getDropItem(): Item {
-        TODO()
+        return ModItems.SEAMOTH.get()
     }
 
     override fun playStepSound(pos: BlockPos, state: BlockState) {

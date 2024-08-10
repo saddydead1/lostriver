@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "I": {
+      "item": "minecraft:kelp"
+    }
+  },
+  "pattern": [
+    "III"
+  ],
+  "result": {
+    "item": "lostriver:fibermesh"
+  }
+}

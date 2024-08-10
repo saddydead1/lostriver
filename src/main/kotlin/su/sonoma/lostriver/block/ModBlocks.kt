@@ -37,6 +37,36 @@ object ModBlocks {
         BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
+    val PURPLEMOSS: RegistryObject<Block> = BLOCKS.register("purplemoss") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val ROYALMOSS: RegistryObject<Block> = BLOCKS.register("royalmoss") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val GREENCOVERMOSS: RegistryObject<Block> = BLOCKS.register("greencovermoss") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val SAFESHALLOWMOSS: RegistryObject<Block> = BLOCKS.register("safeshallowmoss") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val VEINED: RegistryObject<Block> = BLOCKS.register("veined") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val ACIDMUSHROOM: RegistryObject<Block> = BLOCKS.register("acidmushroom") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
     val BLOOD_MOSS: RegistryObject<Block> = BLOCKS.register("bloodmoss") {
         SeagrassBlock(
             BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
@@ -53,6 +83,7 @@ object ModBlocks {
                 .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
         )
     }
+
 
     val QUARTZ: RegistryObject<Block> = BLOCKS.register("quartz") {
         ModOreBlock(
