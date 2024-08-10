@@ -41,8 +41,12 @@ object HudEvent {
         val font: Font = mine.font
         val depth = 350 - Math.round(player.y)
 
-        if (player.level().dimensionTypeId() == B4546.B4546_TYPE && player.isInWater) {
-            graphics.drawString(font, "Depth: ${depth}", 10, 20, 16383998)
+        if (player.level().dimensionTypeId() == B4546.B4546_TYPE) {
+            if (depth <= 0) {
+                graphics.drawString(font, "Depth: 0", 10, 20, 16383998)
+            } else {
+                graphics.drawString(font, "Depth: ${depth}", 10, 20, 16383998)
+            }
         }
     }
 }
