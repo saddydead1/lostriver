@@ -27,12 +27,9 @@ import net.minecraftforge.registries.RegistryObject
 import org.slf4j.Logger
 import su.sonoma.lostriver.biome.feature.ModFeature
 import su.sonoma.lostriver.block.ModBlocks
-import su.sonoma.lostriver.block.entity.ModBlockEntities
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
-import su.sonoma.lostriver.recipe.ModRecipes
-import su.sonoma.lostriver.screen.ModMenuTypes
 import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
 
 
@@ -50,9 +47,6 @@ object Lostriver {
         modEventBus.addListener { event: FMLCommonSetupEvent -> this.commonSetup(event) }
 
 
-        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus)
-        ModMenuTypes.MENUS.register(modEventBus)
-        ModRecipes.register(modEventBus)
         ModFeature.FEATURES!!.register(modEventBus)
         ModBlocks.BLOCKS.register(modEventBus)
         ModItems.ITEMS.register(modEventBus)
