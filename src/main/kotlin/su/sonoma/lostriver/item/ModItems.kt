@@ -134,11 +134,42 @@ object ModItems {
         )
     }
 
+    val PORTAL: RegistryObject<Item> = ITEMS.register("portal") {
+        BlockItem( ModBlocks.PORTAL.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
     val PURPLEMOSS: RegistryObject<Item> = ITEMS.register("purplemoss") {
         BlockItem( ModBlocks.PURPLEMOSS.get(),
             Item.Properties().stacksTo(64)
         )
     }
+
+    val PURPLEBLOCK: RegistryObject<Item> = ITEMS.register("purpleblock") {
+        BlockItem( ModBlocks.PURPLEBLOCK.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val ROYALBLOCK: RegistryObject<Item> = ITEMS.register("royalblock") {
+        BlockItem( ModBlocks.ROYALBLOCK.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val BASKET: RegistryObject<Item> = ITEMS.register("basket") {
+        BlockItem( ModBlocks.BASKET.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val PAPYRUS: RegistryObject<Item> = ITEMS.register("papyrus") {
+        BlockItem( ModBlocks.PAPYRUS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
     val GREENCOVERMOSS: RegistryObject<Item> = ITEMS.register("greencovermoss") {
         BlockItem( ModBlocks.GREENCOVERMOSS.get(),
             Item.Properties().stacksTo(64)
@@ -149,6 +180,13 @@ object ModItems {
             Item.Properties().stacksTo(64)
         )
     }
+
+    val CORAL: RegistryObject<Item> = ITEMS.register("coral") {
+        BlockItem( ModBlocks.CORAL.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
     val SAFESHALLOWMOSS: RegistryObject<Item> = ITEMS.register("safeshallowmoss") {
         BlockItem( ModBlocks.SAFESHALLOWMOSS.get(),
             Item.Properties().stacksTo(64)

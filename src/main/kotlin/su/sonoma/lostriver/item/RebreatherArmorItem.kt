@@ -1,26 +1,12 @@
 package su.sonoma.lostriver.item
 
-import com.mojang.blaze3d.vertex.Tesselator
-import net.minecraft.client.Minecraft
-import net.minecraft.client.gui.Font
-import net.minecraft.client.gui.GuiGraphics
-import net.minecraft.client.gui.font.FontManager
 import net.minecraft.client.model.HumanoidModel
-import net.minecraft.client.renderer.MultiBufferSource
-import net.minecraft.world.effect.MobEffect
-import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.entity.LivingEntity
-import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ArmorItem
 import net.minecraft.world.item.ArmorMaterial
 import net.minecraft.world.item.ItemStack
-import net.minecraft.world.level.Level
-import net.minecraftforge.api.distmarker.Dist
-import net.minecraftforge.client.event.RenderGuiOverlayEvent
 import net.minecraftforge.client.extensions.common.IClientItemExtensions
-import net.minecraftforge.eventbus.api.SubscribeEvent
-import net.minecraftforge.fml.common.Mod
 import software.bernie.geckolib.animatable.GeoItem
 import software.bernie.geckolib.constant.DefaultAnimations
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
@@ -28,8 +14,6 @@ import software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegis
 import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.renderer.GeoArmorRenderer
 import software.bernie.geckolib.util.GeckoLibUtil
-import su.sonoma.lostriver.Lostriver
-import su.sonoma.lostriver.client.renderer.OxygenTankRenderer
 import su.sonoma.lostriver.client.renderer.RebreatherRenderer
 import java.util.function.Consumer
 
@@ -58,12 +42,6 @@ class RebreatherArmorItem(armorMaterial: ArmorMaterial?, type: Type?, properties
                 return renderer!!
             }
         })
-    }
-
-    override fun onArmorTick(stack: ItemStack, level: Level, player: Player) {
-        if(player.isInWater()) {
-            player.addEffect(MobEffectInstance(MobEffect.byId(29), 20, 1))
-        }
     }
 
     override fun registerControllers(controllers: ControllerRegistrar) {
