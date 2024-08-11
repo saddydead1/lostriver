@@ -4,7 +4,11 @@
     "to_place": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "lostriver:limestone"
+        "Name": "lostriver:limestone",
+        "Properties": {
+          "facing": "up",
+          "waterlogged": "false"
+        }
       }
     }
   }

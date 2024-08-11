@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "A": {
+      "item": "lostriver:battery"
+    },
+    "C": {
+      "tag": "forge:silicone"
+    }
+  },
+  "pattern": [
+    "CAC"
+  ],
+  "result": {
+    "item": "lostriver:powercell"
+  }
+}

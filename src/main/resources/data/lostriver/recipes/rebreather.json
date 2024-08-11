@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "I": {
+      "item": "lostriver:fibermesh"
+    },
+    "W": {
+      "item": "lostriver:wiringkit"
+    }
+  },
+  "pattern": [
+    "IW"
+  ],
+  "result": {
+    "item": "lostriver:rebreather"
+  }
+}
