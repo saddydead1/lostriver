@@ -16,7 +16,7 @@ object DepthEvent {
         val mine= Minecraft.getInstance()
         val player = mine.player ?: return
 
-        val depth = 350 - Math.round(player.y)
+        val depth = 129 - Math.round(player.y)
 
         if (player.level().dimensionTypeId() == B4546.B4546_TYPE) {
             if (player.getInventory().armor.get(3).item != ModItems.REBREATHER.get()) {

@@ -55,9 +55,9 @@ object B4546 {
             1.0,
             true,
             true,
-            -64,
-            512,
-            512,
+            0,
+            256,
+            256,
             BlockTags.INFINIBURN_OVERWORLD,
             BuiltinDimensionTypes.OVERWORLD_EFFECTS,
             1.0f,
@@ -77,46 +77,46 @@ object B4546 {
                 ParameterList(listOf(
                     Pair.of(
                         Climate.parameters(
-                            0.3F,
-                            0.6F,
-                            0.2F,
-                            0.5F,
-                            0.0F,
                             0.1F,
-                            0.1F),
+                            0.15F,
+                            0.15F,
+                            0.5F,
+                            0.1F,
+                            0.0F,
+                            0F),
                         biomeRegistry.getOrThrow(ModBiomes.KELP_FOREST)
                         ),
                         Pair.of(
                         Climate.parameters(
-                            0.3F,
-                            0.6F,
                             0.1F,
+                            0.1F,
+                            0.25F,
                             0.5F,
                             0.0F,
                             0.0F,
-                            0.1F),
+                            0F),
                     biomeRegistry.getOrThrow(ModBiomes.SAFE_SHALLOWS)
                 ),
                     Pair.of(
                         Climate.parameters(
-                            0.3F,
-                            0.6F,
-                            0.2F,
+                            0.1F,
+                            0.5F,
+                            0.25F,
+                            0.1F,
                             0.5F,
                             0.0F,
-                            0.0F,
-                            0.1F),
+                            0F),
                         biomeRegistry.getOrThrow(ModBiomes.BLOOD_KELP)
                     ),
                             Pair.of(
                             Climate.parameters(
-                                0.9F,
+                                0.5F,
+                                0.1F,
+                                0.1F,
                                 0.6F,
-                                0.5F,
-                                0.5F,
                                 0.0F,
                                 0.0F,
-                                0.1F),
+                                0F),
                     biomeRegistry.getOrThrow(ModBiomes.DUNES)
                 )
 
