@@ -3,6 +3,7 @@ package su.sonoma.lostriver.block
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.SeagrassBlock
+import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument
 import net.minecraft.world.level.material.MapColor
@@ -11,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.block.custom.ModOreBlock
+import su.sonoma.lostriver.block.custom.ModPortalBlock
 import su.sonoma.lostriver.block.custom.ModSandBlock
 
 
@@ -32,6 +34,16 @@ object ModBlocks {
             BlockBehaviour.Properties.copy(Blocks.DIRT))
     }
 
+    val PURPLEBLOCK: RegistryObject<Block> = BLOCKS.register("purpleblock") {
+        ModSandBlock(
+            BlockBehaviour.Properties.copy(Blocks.DIRT))
+    }
+
+    val ROYALBLOCK: RegistryObject<Block> = BLOCKS.register("royalblock") {
+        ModSandBlock(
+            BlockBehaviour.Properties.copy(Blocks.DIRT))
+    }
+
     val BLOOD_GRASS: RegistryObject<Block> = BLOCKS.register("blood_grass") {
         SeagrassBlock(
         BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
@@ -42,7 +54,22 @@ object ModBlocks {
             BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
+    val PORTAL: RegistryObject<Block> = BLOCKS.register("portal") {
+        ModPortalBlock(
+            BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion().noCollission())
+    }
+
     val ROYALMOSS: RegistryObject<Block> = BLOCKS.register("royalmoss") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val BASKET: RegistryObject<Block> = BLOCKS.register("basket") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val PAPYRUS: RegistryObject<Block> = BLOCKS.register("papyrus") {
         SeagrassBlock(
             BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
@@ -84,6 +111,11 @@ object ModBlocks {
         )
     }
 
+    val CORAL: RegistryObject<Block> = BLOCKS.register("coral") {
+        ModSandBlock(
+            BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops().sound(SoundType.CORAL_BLOCK)
+        )
+    }
 
     val QUARTZ: RegistryObject<Block> = BLOCKS.register("quartz") {
         ModOreBlock(

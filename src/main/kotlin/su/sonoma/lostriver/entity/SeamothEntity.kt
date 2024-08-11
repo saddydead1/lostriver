@@ -4,11 +4,8 @@ import net.minecraft.core.BlockPos
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult
-import net.minecraft.world.effect.MobEffectInstance
-import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
-import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.MoverType
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.entity.vehicle.Boat
@@ -70,12 +67,6 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
 
     override fun positionRider(pPassenger: Entity, pCallback: MoveFunction?) {
         super.positionRider(pPassenger, pCallback)
-
-        if (this.hasPassenger(pPassenger)) {
-            if (pPassenger is LivingEntity) {
-                pPassenger.addEffect(MobEffectInstance(MobEffects.NIGHT_VISION, 2, 1, true, false, false))
-            }
-        }
     }
 
     override fun setInput(

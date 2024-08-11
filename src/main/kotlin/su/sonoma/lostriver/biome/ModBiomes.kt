@@ -45,14 +45,14 @@ object ModBiomes {
         context.register(DUNES, dunes(context))
     }
 
-    fun globalOverworldGeneration(builder: BiomeGenerationSettings.Builder?) {
-        BiomeDefaultFeatures.addDefaultCarversAndLakes(builder)
-        BiomeDefaultFeatures.addDefaultCrystalFormations(builder)
-        BiomeDefaultFeatures.addDefaultMonsterRoom(builder)
-        BiomeDefaultFeatures.addDefaultUndergroundVariety(builder)
-        BiomeDefaultFeatures.addDefaultSprings(builder)
-        BiomeDefaultFeatures.addSurfaceFreezing(builder)
-    }
+//    fun globalOverworldGeneration(builder: BiomeGenerationSettings.Builder?) {
+//        BiomeDefaultFeatures.addDefaultCarversAndLakes(builder)
+//        BiomeDefaultFeatures.addDefaultCrystalFormations(builder)
+//        BiomeDefaultFeatures.addDefaultMonsterRoom(builder)
+//        BiomeDefaultFeatures.addDefaultUndergroundVariety(builder)
+//        BiomeDefaultFeatures.addDefaultSprings(builder)
+//        BiomeDefaultFeatures.addSurfaceFreezing(builder)
+//    }
 
     fun testBiome(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
@@ -71,6 +71,8 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.SAFESHALLOW)
+
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.DOUBLEKELP)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.ACIDMUSHROOM)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.PURPLEMOSS)
@@ -79,8 +81,11 @@ object ModBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.VEINED)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.ROYALMOSS)
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.CORALTUBE)
+
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.QUARTZ)
+
 
         return BiomeBuilder()
             .hasPrecipitation(false)
@@ -159,6 +164,8 @@ object ModBiomes {
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.SAFESHALLOW)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_GRASS)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_MOSS)
