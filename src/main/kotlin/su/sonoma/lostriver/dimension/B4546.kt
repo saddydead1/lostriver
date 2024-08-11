@@ -77,51 +77,51 @@ object B4546 {
                 ParameterList(listOf(
                     Pair.of(
                         Climate.parameters(
-                            0.1F,
-                            0.15F,
-                            0.15F,
+                            0.3F,
+                            0.6F,
+                            0.2F,
                             0.5F,
-                            0.1F,
                             0.0F,
-                            0F),
+                            0.1F,
+                            0.1F),
                         biomeRegistry.getOrThrow(ModBiomes.KELP_FOREST)
-                        ),
-                        Pair.of(
-                        Climate.parameters(
-                            0.1F,
-                            0.1F,
-                            0.25F,
-                            0.5F,
-                            0.0F,
-                            0.0F,
-                            0F),
-                    biomeRegistry.getOrThrow(ModBiomes.SAFE_SHALLOWS)
-                ),
+                    ),
                     Pair.of(
                         Climate.parameters(
-                            0.1F,
-                            0.5F,
-                            0.25F,
+                            0.3F,
+                            0.6F,
                             0.1F,
                             0.5F,
                             0.0F,
-                            0F),
+                            0.0F,
+                            0.1F),
+                        biomeRegistry.getOrThrow(ModBiomes.SAFE_SHALLOWS)
+                    ),
+                    Pair.of(
+                        Climate.parameters(
+                            0.3F,
+                            0.6F,
+                            0.2F,
+                            0.5F,
+                            0.0F,
+                            0.0F,
+                            0.1F),
                         biomeRegistry.getOrThrow(ModBiomes.BLOOD_KELP)
                     ),
-                            Pair.of(
-                            Climate.parameters(
-                                0.5F,
-                                0.1F,
-                                0.1F,
-                                0.6F,
-                                0.0F,
-                                0.0F,
-                                0F),
-                    biomeRegistry.getOrThrow(ModBiomes.DUNES)
+                    Pair.of(
+                        Climate.parameters(
+                            0.9F,
+                            0.6F,
+                            0.5F,
+                            0.5F,
+                            0.0F,
+                            0.0F,
+                            0.1F),
+                        biomeRegistry.getOrThrow(ModBiomes.DUNES)
+                    )
+
+
                 )
-
-
-            )
                 )
             ),
             Holder.Reference.createStandAlone(object: HolderOwner<NoiseGeneratorSettings> {

@@ -20,7 +20,7 @@ object DepthEvent {
 
         if (player.level().dimensionTypeId() == B4546.B4546_TYPE) {
             if (player.getInventory().armor.get(3).item != ModItems.REBREATHER.get()) {
-                if (depth >= 100 && player.isInWater && !player.isCreative) {
+                if (depth >= 50 && player.isInWater && !player.isCreative) {
                     if (player.tickCount % 20 == 0) {  // довольно костыльно, но работает
                         player.attack(event.player)
                     }
