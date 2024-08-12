@@ -54,7 +54,7 @@ object ModBlocks {
     }
 
     val PORTAL: RegistryObject<Block> = BLOCKS.register("portal") {
-        ModPortalBlock(
+        Block(
             BlockBehaviour.Properties.copy(Blocks.STONE))
     }
 
