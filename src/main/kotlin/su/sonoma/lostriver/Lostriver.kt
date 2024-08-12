@@ -126,6 +126,7 @@ object Lostriver {
             .icon { ModItems.PEEPER.get().defaultInstance }
             .title(Component.translatable(MODID + ".subtab"))
             .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
+                output.accept(ModItems.PORTAL.get())
                output.accept(ModItems.PEEPER.get())
                 output.accept(ModItems.BOOMERANG.get())
                 output.accept(ModItems.KNIFE.get())
