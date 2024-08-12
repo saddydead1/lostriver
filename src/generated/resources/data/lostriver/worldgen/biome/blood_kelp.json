@@ -46,6 +46,7 @@
     [
       "minecraft:patch_grass_badlands",
       "minecraft:trees_savanna",
+      "lostriver:ssafeshallow_place",
       "lostriver:blood_grass_place",
       "lostriver:blood_moss_place",
       "lostriver:blood_sand_place",

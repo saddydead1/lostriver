@@ -39,7 +39,7 @@ object HudEvent {
         val graphics: GuiGraphics = event.guiGraphics
 
         val font: Font = mine.font
-        val depth = 350 - Math.round(player.y)
+        val depth = 129 - Math.round(player.y)
 
         if (player.level().dimensionTypeId() == B4546.B4546_TYPE) {
             if (depth <= 0) {

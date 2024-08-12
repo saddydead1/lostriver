@@ -55,9 +55,9 @@ object B4546 {
             1.0,
             true,
             true,
-            -64,
-            512,
-            512,
+            0,
+            256,
+            256,
             BlockTags.INFINIBURN_OVERWORLD,
             BuiltinDimensionTypes.OVERWORLD_EFFECTS,
             1.0f,
@@ -85,8 +85,8 @@ object B4546 {
                             0.1F,
                             0.1F),
                         biomeRegistry.getOrThrow(ModBiomes.KELP_FOREST)
-                        ),
-                        Pair.of(
+                    ),
+                    Pair.of(
                         Climate.parameters(
                             0.3F,
                             0.6F,
@@ -95,8 +95,8 @@ object B4546 {
                             0.0F,
                             0.0F,
                             0.1F),
-                    biomeRegistry.getOrThrow(ModBiomes.SAFE_SHALLOWS)
-                ),
+                        biomeRegistry.getOrThrow(ModBiomes.SAFE_SHALLOWS)
+                    ),
                     Pair.of(
                         Climate.parameters(
                             0.3F,
@@ -108,20 +108,20 @@ object B4546 {
                             0.1F),
                         biomeRegistry.getOrThrow(ModBiomes.BLOOD_KELP)
                     ),
-                            Pair.of(
-                            Climate.parameters(
-                                0.9F,
-                                0.6F,
-                                0.5F,
-                                0.5F,
-                                0.0F,
-                                0.0F,
-                                0.1F),
-                    biomeRegistry.getOrThrow(ModBiomes.DUNES)
+                    Pair.of(
+                        Climate.parameters(
+                            0.9F,
+                            0.6F,
+                            0.5F,
+                            0.5F,
+                            0.0F,
+                            0.0F,
+                            0.1F),
+                        biomeRegistry.getOrThrow(ModBiomes.DUNES)
+                    )
+
+
                 )
-
-
-            )
                 )
             ),
             Holder.Reference.createStandAlone(object: HolderOwner<NoiseGeneratorSettings> {

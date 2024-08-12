@@ -12,7 +12,6 @@ import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.block.custom.ModOreBlock
-import su.sonoma.lostriver.block.custom.ModPortalBlock
 import su.sonoma.lostriver.block.custom.ModSandBlock
 
 
@@ -56,7 +55,7 @@ object ModBlocks {
 
     val PORTAL: RegistryObject<Block> = BLOCKS.register("portal") {
         ModPortalBlock(
-            BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion().noCollission())
+            BlockBehaviour.Properties.copy(Blocks.STONE))
     }
 
     val ROYALMOSS: RegistryObject<Block> = BLOCKS.register("royalmoss") {
