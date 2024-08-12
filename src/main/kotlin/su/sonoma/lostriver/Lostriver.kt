@@ -1,11 +1,13 @@
 package su.sonoma.lostriver
 
 import com.mojang.logging.LogUtils
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.ItemBlockRenderTypes
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
+import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters
 import net.minecraft.world.item.CreativeModeTabs
@@ -69,6 +71,12 @@ object Lostriver {
         if (Config.logDirtBlock) LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT))
 
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber)
+
+        CustomPortalBuilder.beginPortal()
+            .frameBlock(ModBlocks.PORTAL.get())
+            .destDimID(ResourceLocation("lostriver:b4546"))
+            .tintColor(0, 66, 184)
+            .registerPortal()
 
         Config.items.forEach { item: Item -> LOGGER.info("ITEM >> {}", item.toString()) }
     }

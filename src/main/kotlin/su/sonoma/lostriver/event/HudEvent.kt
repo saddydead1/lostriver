@@ -27,7 +27,7 @@ object HudEvent {
 
         if (player.getInventory().armor.get(2).item == ModItems.OXYGENTANK.get() ||
             player.getInventory().armor.get(2).item == ModItems.HIGHOXYGENTANK.get()) {
-            graphics.drawString(font, "Oxygen: ${oxygen?.toInt()}", 10, 10, 16383998)
+            graphics.drawString(font, "Oxygen: ${oxygen?.toInt()}", 10, 20, 16383998)
         }
     }
 
@@ -43,9 +43,9 @@ object HudEvent {
 
         if (player.level().dimensionTypeId() == B4546.B4546_TYPE) {
             if (depth <= 0) {
-                graphics.drawString(font, "Depth: 0", 10, 20, 16383998)
+                graphics.drawString(font, "Depth: 0", 10, 10, 16383998)
             } else {
-                graphics.drawString(font, "Depth: ${depth}", 10, 20, 16383998)
+                graphics.drawString(font, "Depth: ${depth}", 10, 10, 16383998)
             }
         }
     }
