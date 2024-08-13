@@ -170,6 +170,8 @@ object Lostriver {
                 output.accept(ModItems.FINS.get())
                 output.accept(ModItems.OXYGENTANK.get())
                 output.accept(ModItems.HIGHOXYGENTANK.get())
+                output.accept(ModItems.SEAMOTHFRAGMENT.get())
+                output.accept(ModItems.SEAMOTHBLUEPRINT.get())
                 output.accept(ModItems.SEAMOTH.get())
             }.build()
     }

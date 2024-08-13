@@ -8,6 +8,9 @@
     "W": {
       "item": "lostriver:powercell"
     },
+    "B": {
+      "item": "lostriver:seamoth_blueprint"
+    },
     "G": {
       "tag": "forge:glass"
     },
@@ -19,8 +22,8 @@
     }
   },
   "pattern": [
-    " I ",
-    "GWG",
+    "IWI",
+    "GBG",
     "PLP"
   ],
   "result": {

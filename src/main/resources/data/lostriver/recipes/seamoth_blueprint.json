@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "A": {
+      "item": "lostriver:seamoth_fragment"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "item": "lostriver:seamoth_blueprint"
+  }
+}

@@ -37,6 +37,18 @@ object ModItems {
 
     }
 
+    val SEAMOTHFRAGMENT: RegistryObject<Item> = ITEMS.register("seamoth_fragment") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val SEAMOTHBLUEPRINT: RegistryObject<Item> = ITEMS.register("seamoth_blueprint") {
+        BlueprintItem(
+            Item.Properties().stacksTo(64))
+
+    }
+
     val SILICONE: RegistryObject<Item> = ITEMS.register("silicone") {
         Item(
             Item.Properties().stacksTo(64))
