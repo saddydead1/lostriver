@@ -119,8 +119,6 @@ object B4546 {
                             0.1F),
                         biomeRegistry.getOrThrow(ModBiomes.DUNES)
                     )
-
-
                 )
                 )
             ),

@@ -2,7 +2,6 @@ package su.sonoma.lostriver.biome.feature.custom
 
 import com.mojang.serialization.Codec
 import net.minecraft.core.BlockPos
-import net.minecraft.core.Direction
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.levelgen.Heightmap
 import net.minecraft.world.level.levelgen.feature.Feature
@@ -24,7 +23,7 @@ class KelpSandFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
         val blockpos1 = BlockPos(blockpos.x + i, k, blockpos.z + j)
         if (worldgenlevel.getBlockState(blockpos1).`is`(Blocks.WATER)) {
             val flag1 = randomsource.nextDouble() < probabilityfeatureconfiguration!!.probability.toDouble()
-            val blockstate = ModBlocks.KELP_SAND.get().defaultBlockState()
+            val blockstate = ModBlocks.SAND.get().defaultBlockState()
             if (blockstate.canSurvive(worldgenlevel, blockpos1)) {
                 if (flag1) {
                     val blockpos2 = blockpos1.above()

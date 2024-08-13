@@ -28,4 +28,16 @@ object DepthEvent {
             }
         }
     }
+
+    @SubscribeEvent
+    fun tpToLavaZone(event: PlayerTickEvent) {
+        val mine= Minecraft.getInstance()
+        val player = mine.player ?: return
+
+        if (player.level().dimensionTypeId() == B4546.B4546_TYPE) {
+            if (player.getY() <= 0) {
+                player.setPos(player.x, 200.0, player.z) // пока что просто тпхает наверх
+            }
+        }
+    }
 }

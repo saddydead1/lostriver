@@ -1,5 +1,5 @@
 {
-  "feature": "lostriver:kelp_sand",
+  "feature": "lostriver:bloodstolb",
   "placement": [
     {
       "type": "minecraft:in_square"
@@ -10,7 +10,7 @@
     },
     {
       "type": "minecraft:count",
-      "count": 95
+      "count": 5
     },
     {
       "type": "minecraft:biome"
