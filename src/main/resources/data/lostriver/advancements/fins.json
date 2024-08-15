@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:fins"
+    },
+    "title": "Fast as the wind",
+    "description": "Craft a fins",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "lostriver:knife",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lostriver:fins"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

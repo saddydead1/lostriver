@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:highoxygentank"
+    },
+    "title": "More!",
+    "description": "Upgrade oxygen tank",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "lostriver:oxygentank",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lostriver:highoxygentank"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
