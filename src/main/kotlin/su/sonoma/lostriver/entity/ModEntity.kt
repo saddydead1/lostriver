@@ -18,6 +18,9 @@ object ModEntity {
     val PEEPER: RegistryObject<EntityType<PeeperEntity>> =
         registerMob("peeper", ::PeeperEntity, 0.5F, 0.2F, MobCategory.WATER_AMBIENT)
 
+    val BLADDER: RegistryObject<EntityType<BladderEntity>> =
+        registerMob("bladderfish", ::BladderEntity, 0.5F, 0.6F, MobCategory.WATER_AMBIENT)
+
     val BOOMERANG: RegistryObject<EntityType<BoomerangEntity>> =
         registerMob("boomerang", ::BoomerangEntity, 0.5F, 0.4F, MobCategory.WATER_AMBIENT)
 

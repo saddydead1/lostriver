@@ -3,6 +3,7 @@ package su.sonoma.lostriver.item
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.food.FoodProperties
+import net.minecraft.world.food.Foods
 import net.minecraft.world.item.*
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
@@ -22,6 +23,13 @@ object ModItems {
         )
     }
 
+    val COOKED_PEEPER: RegistryObject<Item> = ITEMS.register("cooked_peeper") {
+        Item(
+            Item.Properties().stacksTo(64)
+                .food(Foods.COOKED_SALMON)
+        )
+    }
+
     val BOOMERANG: RegistryObject<Item> = ITEMS.register("boomerang") {
         Item(
             Item.Properties().stacksTo(64)
@@ -31,8 +39,37 @@ object ModItems {
         )
     }
 
+    val COOKED_BOOMERANG: RegistryObject<Item> = ITEMS.register("cooked_boomerang") {
+        Item(
+            Item.Properties().stacksTo(64)
+                .food(Foods.COOKED_SALMON)
+        )
+    }
+
+    val BLADDER: RegistryObject<Item> = ITEMS.register("bladderfish") {
+        Item(
+            Item.Properties().stacksTo(64)
+                .food(FoodProperties.Builder().nutrition(5).saturationMod(0.2f)
+                    .effect(MobEffectInstance(MobEffects.HUNGER, 400, 1), 1.0f)
+                    .build())
+        )
+    }
+
+    val COOKED_BLADDERFISH: RegistryObject<Item> = ITEMS.register("cooked_bladderfish") {
+        Item(
+            Item.Properties().stacksTo(64)
+                .food(Foods.COOKED_SALMON)
+        )
+    }
+
     val TOOTH: RegistryObject<Item> = ITEMS.register("tooth") {
         Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val WATER: RegistryObject<Item> = ITEMS.register("water") {
+        PotionItem(
             Item.Properties().stacksTo(64))
 
     }

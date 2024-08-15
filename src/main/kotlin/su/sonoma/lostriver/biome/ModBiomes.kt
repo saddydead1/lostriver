@@ -57,8 +57,8 @@ object ModBiomes {
     fun testBiome(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
-        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 50, 1, 15))
-
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 25, 1, 15))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BLADDER.get(), 25, 1, 15))
 
         val biomeBuilder =
             BiomeGenerationSettings.Builder(
@@ -109,8 +109,8 @@ object ModBiomes {
 
     fun dunes(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
-        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 50, 1, 10))
-
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 25, 1, 15))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BLADDER.get(), 25, 1, 15))
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.REAPER.get(), 50, 1, 1))
 
 
@@ -151,7 +151,8 @@ object ModBiomes {
     fun blood_kelp(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
-        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 50, 1, 15))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 25, 1, 15))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BLADDER.get(), 25, 1, 15))
 
 
         val biomeBuilder =

@@ -1,10 +1,10 @@
-// 1.20.1	2024-08-13T08:59:05.252418	Registries
+// 1.20.1	2024-08-15T12:34:30.224624	Registries
 ed8a16eaa1826c4a43749e2fbb2044dc6cb8171b data/lostriver/dimension/b4546.json
 3bcf23cab7f8af06c90e6e7a3deac73046e08750 data/lostriver/dimension_type/b4546.json
-add6f88c3e49a005d7c4c81ac8c2976b43c62998 data/lostriver/worldgen/biome/blood_kelp.json
-0be9b697538b6c6ae8710158cf6159a543a64649 data/lostriver/worldgen/biome/dunes.json
+f4b201f41e27426cede4155c744c576dbc211f9e data/lostriver/worldgen/biome/blood_kelp.json
+0a0908e9edf55919ee13763f825a3da62c6b3542 data/lostriver/worldgen/biome/dunes.json
 04a45cc5bbcc06fde41cd555c6fc809fd27a34a0 data/lostriver/worldgen/biome/kelp_forest.json
-0a1808904eeb5885ab09bd0779b05abb9f6d317a data/lostriver/worldgen/biome/safe_shallows.json
+d66ca74a7a0347896816c419e8be20de2e994ebb data/lostriver/worldgen/biome/safe_shallows.json
 bbb2c6cfb24925037deaabe0a51b3fc996f025ba data/lostriver/worldgen/configured_feature/acidmushroom.json
 81f6dc0c3f731a3bf29500191a4c92655e8f9136 data/lostriver/worldgen/configured_feature/blood_grass.json
 ffe16dd06cc75afce89b188ea3150b7cafb77af3 data/lostriver/worldgen/configured_feature/blood_moss.json

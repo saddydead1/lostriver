@@ -17,10 +17,9 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager
 import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.util.GeckoLibUtil
-import su.sonoma.lostriver.event.Sounds
 
 
-class BoomerangEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: Level) : AbstractSchoolingFish(pEntityType, pLevel), GeoEntity {
+class BladderEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: Level) : AbstractSchoolingFish(pEntityType, pLevel), GeoEntity {
 
     private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
 
@@ -31,13 +30,8 @@ class BoomerangEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel
 
     }
 
-
-    override fun getAmbientSound(): SoundEvent {
-        return SoundEvents.DOLPHIN_AMBIENT
-    }
-
     override fun getBucketItemStack(): ItemStack {
-        return ItemStack.EMPTY
+       return ItemStack.EMPTY
     }
 
     override fun getFlopSound(): SoundEvent {
@@ -52,11 +46,12 @@ class BoomerangEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel
         return 0.2f
     }
 
+
     companion object {
         fun setAttributes(): AttributeSupplier {
             return createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 5.0)
-                .add(Attributes.MOVEMENT_SPEED, 0.8)
+                .add(Attributes.MAX_HEALTH, 2.0)
+                .add(Attributes.MOVEMENT_SPEED, 0.5)
                 .build()
         }
     }

@@ -128,7 +128,12 @@ object Lostriver {
             .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
                 output.accept(ModItems.PORTAL.get())
                output.accept(ModItems.PEEPER.get())
+                output.accept(ModItems.COOKED_PEEPER.get())
                 output.accept(ModItems.BOOMERANG.get())
+                output.accept(ModItems.COOKED_BOOMERANG.get())
+                output.accept(ModItems.BLADDER.get())
+                output.accept(ModItems.COOKED_BLADDERFISH.get())
+                output.accept(ModItems.WATER.get())
                 output.accept(ModItems.KNIFE.get())
                 output.accept(ModItems.TOOTH.get())
                 output.accept(ModItems.SILICONE.get())
