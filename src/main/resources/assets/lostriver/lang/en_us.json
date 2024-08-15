@@ -20,6 +20,7 @@
   "item.lostriver.wiringkit": "Wiring Kit",
   "item.lostriver.fibermesh": "Fiber Mesh",
   "item.lostriver.gold": "Gold",
+  "item.lostriver.bladderfish": "Bladderfish",
   "item.lostriver.titan_ingot": "Titan Ingot",
   "item.lostriver.battery": "Battery",
   "item.lostriver.acidmushroom": "Acid Mushroom",
@@ -40,8 +41,15 @@
   "item.lostriver.royalmoss": "Royal Moss",
   "item.lostriver.safeshallowmoss": "Safeshallow's Moss",
   "item.lostriver.veined": "Veined Nettle",
+  "item.lostriver.seamoth_fragment": "Seamoth Fragment",
+  "item.lostriver.seamoth_blueprint": "Seamoth Blueprint",
+  "item.lostriver.water.effect.empty": "Water Bottle",
+  "item.lostriver.cooked_peeper": "Cooked Peeper",
+  "item.lostriver.cooked_boomerang": "Cooked Boomerang",
+  "item.lostriver.cooked_bladderfish": "Cooked Bladderfish",
 
   "block.lostriver.greencovermoss": "Greencover Moss",
+  "block.lostriver.portal": "4546B Portal",
   "block.lostriver.purplemoss": "Purple Moss",
   "block.lostriver.purpleblock": "Purple Sand",
   "block.lostriver.royalblock": "Royal Sand",
@@ -66,5 +74,6 @@
   "entity.lostriver.seamoth": "Seamoth",
   "entity.lostriver.boomerang": "Boomerang",
   "entity.lostriver.stalker": "Stalker",
-  "entity.lostriver.reaper": "Reaper"
+  "entity.lostriver.reaper": "Reaper",
+  "entity.lostriver.bladderfish": "Bladderfish"
 }

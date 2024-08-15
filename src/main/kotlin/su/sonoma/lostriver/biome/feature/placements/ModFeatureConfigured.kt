@@ -30,6 +30,7 @@ object ModFeatureConfigured {
 
     val SAFESHALLOW: ResourceKey<ConfiguredFeature<*, *>> = registerKey("ssafe_shallow")
     val CORALTUBE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("coraltube")
+    val BLOODSTOLB: ResourceKey<ConfiguredFeature<*, *>> = registerKey("bloodstolb")
 
     val LIMESTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("limestone")
     val SANDSTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("sandstone")
@@ -70,7 +71,7 @@ object ModFeatureConfigured {
             p,
             KELPSAND,
             ModFeature.KELPSAND!!.get(),
-            ProbabilityFeatureConfiguration(0.5f)
+            ProbabilityFeatureConfiguration(0.9f)
         )
         register(
             p,
@@ -83,6 +84,12 @@ object ModFeatureConfigured {
             CORALTUBE,
             ModFeature.CORALTUBE!!.get(),
             ProbabilityFeatureConfiguration(0.5f)
+        )
+        register(
+            p,
+            BLOODSTOLB,
+            ModFeature.BLOODSTOLB!!.get(),
+            ProbabilityFeatureConfiguration(0.1f)
         )
         register(
             p,

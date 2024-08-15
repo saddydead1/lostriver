@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:portal"
+    },
+    "title": "Aurora",
+    "description": "Find the aurora",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "lostriver:lostriver",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "lostriver:aurora"
+          }
+        }
+      }
+    }
+  }
+}

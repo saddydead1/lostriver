@@ -61,10 +61,16 @@
     "underground_water_creature": [],
     "water_ambient": [
       {
-        "type": "lostriver:boomerang",
-        "maxCount": 10,
+        "type": "lostriver:peeper",
+        "maxCount": 15,
         "minCount": 1,
-        "weight": 50
+        "weight": 25
+      },
+      {
+        "type": "lostriver:bladderfish",
+        "maxCount": 15,
+        "minCount": 1,
+        "weight": 25
       },
       {
         "type": "lostriver:reaper",

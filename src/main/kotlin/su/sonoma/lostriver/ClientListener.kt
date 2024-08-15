@@ -30,8 +30,9 @@ object ClientListener {
         event.registerEntityRenderer(ModEntity.SEAMOTH.get()
         ) { context: EntityRendererProvider.Context? -> SeamothRenderer(context!!) }
 
-        event.registerEntityRenderer(ModEntity.SEAMOTH.get()
-        ) { context: EntityRendererProvider.Context? -> SeamothRenderer(context!!) }
+        event.registerEntityRenderer(ModEntity.BLADDER.get()
+        ) { context: EntityRendererProvider.Context? -> BladderRenderer(context!!) }
+
     }
 
 }

@@ -40,6 +40,13 @@
   "item.lostriver.royalmoss": "Королевский Мох",
   "item.lostriver.safeshallowmoss": "Мох Безопасный Отмелей",
   "item.lostriver.veined": "Жилковатая Крапива",
+  "item.lostriver.bladderfish": "Пузырь",
+  "item.lostriver.seamoth_fragment": "Фрагмент Мотылька",
+  "item.lostriver.seamoth_blueprint": "Чертёж Мотылька",
+  "item.lostriver.water.effect.empty": "Бутылка Воды",
+  "item.lostriver.cooked_peeper": "Приготовленный Пипер",
+  "item.lostriver.cooked_boomerang": "Приготовленная Рыба-Бумеранг",
+  "item.lostriver.cooked_bladderfish": "Приготовленный Пузырь",
 
   "block.lostriver.greencovermoss": "Зеленопокровный Мох",
   "block.lostriver.purplemoss": "Королевский Мох",
@@ -54,6 +61,7 @@
   "block.lostriver.acidmushroom": "Кислотный Гриб",
   "block.lostriver.quartz": "Кварц",
   "block.lostriver.coral": "Коралл",
+  "block.lostriver.portal": "Портал на 4546B",
   "block.lostriver.kelpsand": "Песочек Леса Водорослей",
   "block.lostriver.limestone": "Выступ Известняка",
   "block.lostriver.sandstone": "Выступ Песчаника",
@@ -66,5 +74,6 @@
   "entity.lostriver.seamoth": "Мотылёк",
   "entity.lostriver.boomerang": "Рыба-Бумеранг",
   "entity.lostriver.stalker": "Сталкер",
-  "entity.lostriver.reaper": "Левиафан-Жнец"
+  "entity.lostriver.reaper": "Левиафан-Жнец",
+  "entity.lostriver.bladderfish": "Пузырь"
 }

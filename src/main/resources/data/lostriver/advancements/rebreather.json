@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:rebreather"
+    },
+    "title": "I'm a Diver",
+    "description": "Craft a rebreather",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "lostriver:fins",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lostriver:rebreather"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

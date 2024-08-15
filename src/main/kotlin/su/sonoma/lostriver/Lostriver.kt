@@ -126,8 +126,14 @@ object Lostriver {
             .icon { ModItems.PEEPER.get().defaultInstance }
             .title(Component.translatable(MODID + ".subtab"))
             .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
+                output.accept(ModItems.PORTAL.get())
                output.accept(ModItems.PEEPER.get())
+                output.accept(ModItems.COOKED_PEEPER.get())
                 output.accept(ModItems.BOOMERANG.get())
+                output.accept(ModItems.COOKED_BOOMERANG.get())
+                output.accept(ModItems.BLADDER.get())
+                output.accept(ModItems.COOKED_BLADDERFISH.get())
+                output.accept(ModItems.WATER.get())
                 output.accept(ModItems.KNIFE.get())
                 output.accept(ModItems.TOOTH.get())
                 output.accept(ModItems.SILICONE.get())
@@ -169,6 +175,8 @@ object Lostriver {
                 output.accept(ModItems.FINS.get())
                 output.accept(ModItems.OXYGENTANK.get())
                 output.accept(ModItems.HIGHOXYGENTANK.get())
+                output.accept(ModItems.SEAMOTHFRAGMENT.get())
+                output.accept(ModItems.SEAMOTHBLUEPRINT.get())
                 output.accept(ModItems.SEAMOTH.get())
             }.build()
     }

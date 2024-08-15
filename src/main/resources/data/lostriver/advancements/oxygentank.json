@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:oxygentank"
+    },
+    "title": "Like a fish in water",
+    "description": "Craft a oxygen tank",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "lostriver:knife",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lostriver:oxygentank"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

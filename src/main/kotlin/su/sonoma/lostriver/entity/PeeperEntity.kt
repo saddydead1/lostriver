@@ -37,7 +37,7 @@ class PeeperEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: L
     }
 
     override fun getBucketItemStack(): ItemStack {
-        TODO("Not yet implemented")
+        return ItemStack.EMPTY
     }
 
     override fun getFlopSound(): SoundEvent {

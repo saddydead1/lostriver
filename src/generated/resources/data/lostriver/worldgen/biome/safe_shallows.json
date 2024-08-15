@@ -79,7 +79,13 @@
         "type": "lostriver:boomerang",
         "maxCount": 15,
         "minCount": 1,
-        "weight": 50
+        "weight": 25
+      },
+      {
+        "type": "lostriver:bladderfish",
+        "maxCount": 15,
+        "minCount": 1,
+        "weight": 25
       }
     ],
     "water_creature": []
