@@ -29,6 +29,8 @@ object ModPlacedFeature {
     val CORALTUBE: ResourceKey<PlacedFeature> = registerKey("coraltube_place")
     val BLOODSTOLB: ResourceKey<PlacedFeature> = registerKey("bloodstolb_place")
 
+    val MUSHROOM: ResourceKey<PlacedFeature> = registerKey("mushroom_place")
+
     val LIMESTONE: ResourceKey<PlacedFeature> = registerKey("limestone")
     val SANDSTONE: ResourceKey<PlacedFeature> = registerKey("sandstone")
     val QUARTZ: ResourceKey<PlacedFeature> = registerKey("quartz")
@@ -65,6 +67,8 @@ object ModPlacedFeature {
         val reference6 = holdergetter.getOrThrow(ModFeatureConfigured.SANDSTONE)
         val reference7 = holdergetter.getOrThrow(ModFeatureConfigured.QUARTZ)
 
+        val reference17 = holdergetter.getOrThrow(ModFeatureConfigured.MUSHROOM)
+
         register(p, BLOOD_GRASS, reference, placement(80))
         register(p, BLOOD_MOSS, reference1, placement(80))
         register(p, BLOODSAND, reference3, placement(90))
@@ -75,6 +79,8 @@ object ModPlacedFeature {
         register(p, SAFESHALLOW, reference14, placement(90))
         register(p, CORALTUBE, reference15, placement(20))
         register(p, BLOODSTOLB, reference16, placement(5))
+
+        register(p, MUSHROOM, reference17, placement(1))
 
         register(p, GREENCOVERMOSS, reference9, placement(90))
         register(p, PURPLEMOSS, reference10, placement(90))

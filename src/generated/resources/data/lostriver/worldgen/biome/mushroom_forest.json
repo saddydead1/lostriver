@@ -20,7 +20,9 @@
     [],
     [],
     [],
-    [],
+    [
+      "lostriver:mushroom_place"
+    ],
     [],
     [
       "minecraft:ore_coal_upper",
@@ -47,17 +49,8 @@
       "minecraft:patch_grass_badlands",
       "minecraft:trees_savanna",
       "lostriver:ssafeshallow_place",
-      "lostriver:double_kelp_place",
-      "lostriver:acidmushroom_place",
-      "lostriver:purplemoss_place",
-      "lostriver:safeshallowmoss_place",
-      "lostriver:greencovermoss_place",
-      "lostriver:veined_place",
-      "lostriver:royalmoss_place",
-      "lostriver:coraltube_place",
       "lostriver:limestone",
-      "lostriver:quartz",
-      "lostriver:mushroom_place"
+      "lostriver:quartz"
     ]
   ],
   "has_precipitation": false,

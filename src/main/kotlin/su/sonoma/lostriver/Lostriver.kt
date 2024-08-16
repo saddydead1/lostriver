@@ -153,6 +153,8 @@ object Lostriver {
                 output.accept(ModItems.LIMESTONE.get())
                 output.accept(ModItems.SANDSTONE.get())
                 output.accept(ModItems.CORAL.get())
+                output.accept(ModItems.MUSHROOM.get())
+                output.accept(ModItems.MUSHROOMSTEW.get())
                 output.accept(ModItems.SAND.get())
                 output.accept(ModItems.PURPLEBLOCK.get())
                 output.accept(ModItems.ROYALBLOCK.get())

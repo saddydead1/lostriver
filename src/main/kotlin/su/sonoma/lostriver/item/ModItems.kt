@@ -148,6 +148,18 @@ object ModItems {
         )
     }
 
+    val MUSHROOM: RegistryObject<Item> = ITEMS.register("mushroom") {
+        BlockItem( ModBlocks.MUSHROOM.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val MUSHROOMSTEW: RegistryObject<Item> = ITEMS.register("mushroomstew") {
+        BlockItem( ModBlocks.MUSHROOMSTEW.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
     val LIMESTONE: RegistryObject<Item> = ITEMS.register("limestone") {
         BlockItem( ModBlocks.LIMESTONE.get(),
             Item.Properties().stacksTo(64)

@@ -25,6 +25,8 @@ object ModFeature {
     val CORALTUBE: RegistryObject<CoralTubeFeature>? = register("coraltube", CoralTubeFeature(ProbabilityFeatureConfiguration.CODEC))
     val BLOODSTOLB: RegistryObject<BloodBiomeFeature>? = register("bloodstolb", BloodBiomeFeature(ProbabilityFeatureConfiguration.CODEC))
 
+    val MUSHROOM: RegistryObject<MushroomFeature>? = register("mushroom", MushroomFeature(ProbabilityFeatureConfiguration.CODEC))
+
     fun <C : FeatureConfiguration?, F : Feature<C>?> register(name: String, p: F): RegistryObject<F>? {
         return FEATURES?.register(name) {p}
     }
