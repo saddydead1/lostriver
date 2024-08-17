@@ -30,6 +30,9 @@ object ModEntity {
     val REAPER: RegistryObject<EntityType<ReaperEntity>> =
         registerMob("reaper", ::ReaperEntity,11F, 5F, MobCategory.WATER_AMBIENT)
 
+    val JELLYRAY: RegistryObject<EntityType<JellyrayEntity>> =
+        registerMob("jellyray", ::JellyrayEntity,2F, 0.5F, MobCategory.WATER_AMBIENT)
+
     val SEAMOTH: RegistryObject<EntityType<SeamothEntity>> =
         registerBoat("seamoth", EntityType.Builder.of(::SeamothEntity , MobCategory.MISC
         ).sized(1.6f, 1.6f).clientTrackingRange(1)

@@ -66,22 +66,28 @@
     "underground_water_creature": [],
     "water_ambient": [
       {
+        "type": "lostriver:jellyray",
+        "maxCount": 5,
+        "minCount": 3,
+        "weight": 40
+      },
+      {
         "type": "lostriver:peeper",
         "maxCount": 15,
         "minCount": 1,
-        "weight": 50
+        "weight": 20
       },
       {
         "type": "lostriver:boomerang",
         "maxCount": 15,
         "minCount": 1,
-        "weight": 25
+        "weight": 20
       },
       {
         "type": "lostriver:bladderfish",
         "maxCount": 15,
         "minCount": 1,
-        "weight": 25
+        "weight": 20
       }
     ],
     "water_creature": []

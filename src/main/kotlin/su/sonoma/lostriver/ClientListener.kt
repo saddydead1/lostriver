@@ -33,6 +33,9 @@ object ClientListener {
         event.registerEntityRenderer(ModEntity.BLADDER.get()
         ) { context: EntityRendererProvider.Context? -> BladderRenderer(context!!) }
 
+        event.registerEntityRenderer(ModEntity.JELLYRAY.get()
+        ) { context: EntityRendererProvider.Context? -> JellyrayRenderer(context!!) }
+
     }
 
 }
