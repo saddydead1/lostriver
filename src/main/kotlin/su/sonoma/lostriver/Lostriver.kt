@@ -23,6 +23,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber
 import net.minecraftforge.fml.config.ModConfig
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
+import net.minecraftforge.network.NetworkRegistry
+import net.minecraftforge.network.simple.SimpleChannel
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
@@ -32,6 +34,7 @@ import su.sonoma.lostriver.block.ModBlocks
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
+import su.sonoma.lostriver.protocol.BoatMessage
 import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
 
 
@@ -39,6 +42,14 @@ import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
 @Mod(Lostriver.MODID)
 object Lostriver {
     const val MODID: String = "lostriver"
+    const val PROTOCOL_VERSION = "1"
+
+    val INSTANCE: SimpleChannel = NetworkRegistry.newSimpleChannel(
+        ResourceLocation(MODID, "main"),
+        { PROTOCOL_VERSION },
+         PROTOCOL_VERSION::equals ,
+         PROTOCOL_VERSION::equals
+    )
 
     val LOGGER: Logger = LogUtils.getLogger()
 
@@ -47,7 +58,6 @@ object Lostriver {
 
     init {
         modEventBus.addListener { event: FMLCommonSetupEvent -> this.commonSetup(event) }
-
 
         ModFeature.FEATURES!!.register(modEventBus)
         ModBlocks.BLOCKS.register(modEventBus)
@@ -61,6 +71,8 @@ object Lostriver {
 
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC)
+
+        INSTANCE.registerMessage(BoatMessage.id, BoatMessage::class.java, BoatMessage::toFriendlyByteBuf, BoatMessage::toBoatMessage, BoatMessage::handle)
     }
 
     private fun commonSetup(event: FMLCommonSetupEvent) {

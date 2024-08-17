@@ -29,6 +29,7 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
 
     init {
         this.setMaxUpStep(5.0f)
+
     }
 
     override fun getDropItem(): Item {
@@ -53,7 +54,7 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
 
     override fun interact(player: Player, hand: InteractionHand?): InteractionResult {
         if (player.startRiding(this)) {
-            playSound(Sounds.SEAMOTH_WELCOME.get(), 0.6f, 1f)
+            this.playSound(Sounds.SEAMOTH_WELCOME.get(), 0.6f, 1f)
             return InteractionResult.CONSUME
         } else return InteractionResult.PASS
     }

@@ -80,5 +80,8 @@
   "entity.lostriver.stalker": "Stalker",
   "entity.lostriver.reaper": "Reaper",
   "entity.lostriver.bladderfish": "Bladderfish",
-  "entity.lostriver.jellyray": "Jellyray"
+  "entity.lostriver.jellyray": "Jellyray",
+
+  "key.category.lostriver.lost_river_transport": "Lost River Transport",
+  "key.lostriver.dock": "Dock/Undock Seamoth"
 }

@@ -80,5 +80,8 @@
   "entity.lostriver.stalker": "Сталкер",
   "entity.lostriver.reaper": "Левиафан-Жнец",
   "entity.lostriver.bladderfish": "Пузырь",
-  "entity.lostriver.jellyray": "Медузоскат"
+  "entity.lostriver.jellyray": "Медузоскат",
+
+  "key.category.lostriver.lost_river_transport": "Lost River Transport",
+  "key.lostriver.dock": "Стыковать/Отстыковать Мотылёк"
 }

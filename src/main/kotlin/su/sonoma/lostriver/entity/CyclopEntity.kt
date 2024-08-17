@@ -58,7 +58,7 @@ class CyclopEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entity
 
     override fun interact(player: Player, hand: InteractionHand?): InteractionResult {
         if (player.startRiding(this)) {
-            playSound(Sounds.CYCLOP_WELCOME.get(), 0.2f, 1f)
+            this.playSound(Sounds.CYCLOP_WELCOME.get(), 0.2f, 1f)
             return InteractionResult.CONSUME
         } else return InteractionResult.PASS
     }
