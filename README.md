@@ -4,6 +4,7 @@
 <a href="https://github.com/saddydead1/lostriver/blob/stable/LICENSE"><img src="https://img.shields.io/github/license/saddydead1/lostriver?style=for-the-badge&color=purple" alt="License"></a>
 <img src="https://img.shields.io/modrinth/dt/LgNfX8cW?style=for-the-badge&label=MODRINTH&color=green">
 <img src="https://img.shields.io/modrinth/v/LgNfX8cW?style=for-the-badge">
+<a href="https://discord.gg/TzYSA3nVNy"><img src="https://img.shields.io/discord/1274313006859161650?style=for-the-badge&logo=discord&label=discord&color=purple" alt="discord">
 </h1>
 
 **Lost River** is an exciting Minecraft mod that takes players to the mysterious and dangerous planet 4546B from the game Subnautica. Immerse yourself in an unforgettable underwater adventure, exploring the endless depths of the ocean, full of dangers and unexplored secrets.
