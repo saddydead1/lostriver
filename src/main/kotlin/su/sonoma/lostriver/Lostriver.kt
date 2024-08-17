@@ -114,7 +114,15 @@ object Lostriver {
                 RenderType.cutout()
             )
             ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.BLUEPALM.get(),
+                RenderType.cutout()
+            )
+            ItemBlockRenderTypes.setRenderLayer(
                 ModBlocks.BASKET.get(),
+                RenderType.cutout()
+            )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.YELLOWGRASS.get(),
                 RenderType.cutout()
             )
         }
@@ -162,6 +170,8 @@ object Lostriver {
                 output.accept(ModItems.BLOOD_SAND.get())
                 output.accept(ModItems.ACIDMUSHROOM.get())
                 output.accept(ModItems.DOUBLEKELP.get())
+                output.accept(ModItems.BLUEPALM.get())
+                output.accept(ModItems.YELLOWGRASS.get())
                 output.accept(ModItems.BASKET.get())
                 output.accept(ModItems.PAPYRUS.get())
                 output.accept(ModItems.VEINED.get())

@@ -27,6 +27,8 @@ object ModFeatureConfigured {
     val ROYALMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("royalmoss")
     val SAFESHALLOWMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("safeshallowmoss")
     val VEINED: ResourceKey<ConfiguredFeature<*, *>> = registerKey("veined")
+    val BLUEPALM: ResourceKey<ConfiguredFeature<*, *>> = registerKey("bluepalm")
+    val YELLOWGRASS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("yellowgrass")
 
     val SAFESHALLOW: ResourceKey<ConfiguredFeature<*, *>> = registerKey("ssafe_shallow")
     val CORALTUBE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("coraltube")
@@ -43,6 +45,12 @@ object ModFeatureConfigured {
             p,
             BLOOD_GRASS,
             ModFeature.BLOOD_GRASS!!.get(),
+            ProbabilityFeatureConfiguration(0.3f)
+        )
+        register(
+            p,
+            YELLOWGRASS,
+            ModFeature.YELLOWGRASS!!.get(),
             ProbabilityFeatureConfiguration(0.3f)
         )
         register(
@@ -134,6 +142,12 @@ object ModFeatureConfigured {
             VEINED,
             Feature.SIMPLE_BLOCK,
             SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VEINED.get()))
+        )
+        register(
+            p,
+            BLUEPALM,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BLUEPALM.get()))
         )
         register(
             p,

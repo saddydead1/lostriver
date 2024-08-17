@@ -154,6 +154,18 @@ object ModItems {
         )
     }
 
+    val BLUEPALM: RegistryObject<Item> = ITEMS.register("bluepalm") {
+        BlockItem( ModBlocks.BLUEPALM.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val YELLOWGRASS: RegistryObject<Item> = ITEMS.register("yellowgrass") {
+        BlockItem( ModBlocks.YELLOWGRASS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
     val MUSHROOMSTEW: RegistryObject<Item> = ITEMS.register("mushroomstew") {
         BlockItem( ModBlocks.MUSHROOMSTEW.get(),
             Item.Properties().stacksTo(64)

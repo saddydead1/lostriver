@@ -80,10 +80,14 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.SAFESHALLOW)
 
-        biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, ModPlacedFeature.MUSHROOM)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.VEINED)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLUEPALM)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.YELLOWGRASS)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.QUARTZ)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.MUSHROOM)
 
 
         return BiomeBuilder()
@@ -94,12 +98,12 @@ object ModBiomes {
             .mobSpawnSettings(spawnBuilder.build())
             .specialEffects(
                 BiomeSpecialEffects.Builder()
-                    .waterColor(3847130)
-                    .waterFogColor(59110)
+                    .waterColor(3368703)
+                    .waterFogColor(3369471)
                     .skyColor(27571)
-                    .grassColorOverride(6749952)
-                    .foliageColorOverride(5373696)
-                    .fogColor(59110)
+                    .grassColorOverride(3368703)
+                    .foliageColorOverride(3368703)
+                    .fogColor(3369471)
                     .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
                     .build()
             )
@@ -137,8 +141,6 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.QUARTZ)
-
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.MUSHROOM)
 
         return BiomeBuilder()
             .hasPrecipitation(false)

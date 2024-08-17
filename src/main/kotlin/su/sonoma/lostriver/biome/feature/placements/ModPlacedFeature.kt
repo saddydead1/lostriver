@@ -24,6 +24,8 @@ object ModPlacedFeature {
     val ROYALMOSS: ResourceKey<PlacedFeature> = registerKey("royalmoss_place")
     val GREENCOVERMOSS: ResourceKey<PlacedFeature> = registerKey("greencovermoss_place")
     val VEINED: ResourceKey<PlacedFeature> = registerKey("veined_place")
+    val BLUEPALM: ResourceKey<PlacedFeature> = registerKey("bluepalm_place")
+    val YELLOWGRASS: ResourceKey<PlacedFeature> = registerKey("yellowgrass_place")
 
     val SAFESHALLOW: ResourceKey<PlacedFeature> = registerKey("ssafeshallow_place")
     val CORALTUBE: ResourceKey<PlacedFeature> = registerKey("coraltube_place")
@@ -58,6 +60,8 @@ object ModPlacedFeature {
         val reference11 = holdergetter.getOrThrow(ModFeatureConfigured.SAFESHALLOWMOSS)
         val reference12 = holdergetter.getOrThrow(ModFeatureConfigured.ROYALMOSS)
         val reference13 = holdergetter.getOrThrow(ModFeatureConfigured.VEINED)
+        val reference18 = holdergetter.getOrThrow(ModFeatureConfigured.BLUEPALM)
+        val reference19 = holdergetter.getOrThrow(ModFeatureConfigured.YELLOWGRASS)
 
         val reference14 = holdergetter.getOrThrow(ModFeatureConfigured.SAFESHALLOW)
         val reference15 = holdergetter.getOrThrow(ModFeatureConfigured.CORALTUBE)
@@ -75,6 +79,8 @@ object ModPlacedFeature {
         register(p, KELPSAND, reference5, placement(95))
         register(p, DOUBLEKELP, reference2, placement(20))
         register(p, ACIDMUSHROOM, reference8, placement(30))
+        register(p, BLUEPALM, reference18, placement(90))
+        register(p, YELLOWGRASS, reference19, placement(90))
 
         register(p, SAFESHALLOW, reference14, placement(90))
         register(p, CORALTUBE, reference15, placement(20))
