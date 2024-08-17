@@ -1,5 +1,6 @@
 package su.sonoma.lostriver.entity
 
+import net.minecraft.sounds.SoundEvent
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.entity.Entity
@@ -22,7 +23,7 @@ import su.sonoma.lostriver.item.ModItems
 import su.sonoma.lostriver.mixin.BoatEntityAccessor
 
 
-class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entityType, world), GeoEntity {
+class CyclopEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entityType, world), GeoEntity {
     var pressingForward: Boolean = false
 
     private val factory: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
@@ -32,7 +33,11 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
     }
 
     override fun getDropItem(): Item {
-        return ModItems.SEAMOTH.get()
+        return ModItems.CYCLOP.get()
+    }
+
+    override fun getPaddleSound(): SoundEvent? {
+        return Sounds.CYCLOP.get()
     }
 
     override fun tick() {
@@ -43,7 +48,7 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
         this.move(MoverType.SELF, this.deltaMovement)
         if (this.firstPassenger != null && this.pressingForward) {
             val passenger: Entity = this.firstPassenger!!
-            this.xRot = passenger.getXRot() * 1f
+            this.xRot = passenger.getXRot() * 0.5f
         }
     }
 
@@ -53,13 +58,13 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
 
     override fun interact(player: Player, hand: InteractionHand?): InteractionResult {
         if (player.startRiding(this)) {
-            playSound(Sounds.SEAMOTH_WELCOME.get(), 0.6f, 1f)
+            playSound(Sounds.CYCLOP_WELCOME.get(), 0.2f, 1f)
             return InteractionResult.CONSUME
         } else return InteractionResult.PASS
     }
 
     override fun canAddPassenger(passenger: Entity?): Boolean {
-        return passengers.size < 2
+        return passengers.size < 3
     }
 
     override fun positionRider(pPassenger: Entity, pCallback: MoveFunction?) {
@@ -96,7 +101,7 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
     override fun registerControllers(controllerRegistrar: ControllerRegistrar) {
         controllerRegistrar.add(AnimationController(
             this, "main", 0
-        ) { event: AnimationState<SeamothEntity?> ->
+        ) { event: AnimationState<CyclopEntity?> ->
             event.controller.setAnimation(RawAnimation.begin().thenLoop("misc.idle"))
             PlayState.CONTINUE
         })

@@ -47,6 +47,7 @@
   "item.lostriver.cooked_peeper": "Приготовленный Пипер",
   "item.lostriver.cooked_boomerang": "Приготовленная Рыба-Бумеранг",
   "item.lostriver.cooked_bladderfish": "Приготовленный Пузырь",
+  "item.lostriver.cyclop": "Циклоп",
 
   "block.lostriver.greencovermoss": "Зеленопокровный Мох",
   "block.lostriver.purplemoss": "Королевский Мох",
@@ -74,6 +75,7 @@
 
   "entity.lostriver.peeper": "Пипер",
   "entity.lostriver.seamoth": "Мотылёк",
+  "entity.lostriver.cyclop": "Циклоп",
   "entity.lostriver.boomerang": "Рыба-Бумеранг",
   "entity.lostriver.stalker": "Сталкер",
   "entity.lostriver.reaper": "Левиафан-Жнец",

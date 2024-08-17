@@ -47,6 +47,7 @@
   "item.lostriver.cooked_peeper": "Cooked Peeper",
   "item.lostriver.cooked_boomerang": "Cooked Boomerang",
   "item.lostriver.cooked_bladderfish": "Cooked Bladderfish",
+  "item.lostriver.cyclop": "Cyclop",
 
   "block.lostriver.greencovermoss": "Greencover Moss",
   "block.lostriver.portal": "4546B Portal",
@@ -74,6 +75,7 @@
 
   "entity.lostriver.peeper": "Peeper",
   "entity.lostriver.seamoth": "Seamoth",
+  "entity.lostriver.cyclop": "Cyclop",
   "entity.lostriver.boomerang": "Boomerang",
   "entity.lostriver.stalker": "Stalker",
   "entity.lostriver.reaper": "Reaper",

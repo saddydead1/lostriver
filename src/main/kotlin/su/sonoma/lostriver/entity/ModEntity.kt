@@ -38,6 +38,11 @@ object ModEntity {
         ).sized(1.6f, 1.6f).clientTrackingRange(1)
         )
 
+    val CYCLOP: RegistryObject<EntityType<CyclopEntity>> =
+        registerBoat("cyclop", EntityType.Builder.of(::CyclopEntity , MobCategory.MISC
+        ).sized(1.6f, 1.6f).clientTrackingRange(1)
+        )
+
     private fun <T : Entity?> registerBoat(name: String, builder: EntityType.Builder<T>): RegistryObject<EntityType<T>> {
         return ENTITY_TYPES.register(name) { builder.build("lostriver:$name") }
     }

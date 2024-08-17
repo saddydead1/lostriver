@@ -190,6 +190,7 @@ object Lostriver {
                 output.accept(ModItems.SEAMOTHFRAGMENT.get())
                 output.accept(ModItems.SEAMOTHBLUEPRINT.get())
                 output.accept(ModItems.SEAMOTH.get())
+                output.accept(ModItems.CYCLOP.get())
             }.build()
     }
 

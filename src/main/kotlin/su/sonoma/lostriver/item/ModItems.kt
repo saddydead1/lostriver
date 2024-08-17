@@ -260,6 +260,7 @@ object ModItems {
         )
     }
 
+
     val SAFESHALLOWMOSS: RegistryObject<Item> = ITEMS.register("safeshallowmoss") {
         BlockItem( ModBlocks.SAFESHALLOWMOSS.get(),
             Item.Properties().stacksTo(64)
@@ -319,6 +320,11 @@ object ModItems {
 
     val SEAMOTH: RegistryObject<Item> = ITEMS.register("seamoth") {
         SeamothItem(
+            Item.Properties().stacksTo(1))
+    }
+
+    val CYCLOP: RegistryObject<Item> = ITEMS.register("cyclop") {
+        CyclopItem(
             Item.Properties().stacksTo(1))
     }
 
