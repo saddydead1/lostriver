@@ -19,4 +19,7 @@ object Sounds {
     val BOOMERANG: RegistryObject<SoundEvent> = registerSoundEvent("boomerang")
     val STALKER: RegistryObject<SoundEvent> = registerSoundEvent("stalker")
     val REAPER: RegistryObject<SoundEvent> = registerSoundEvent("reaper")
+    val CYCLOP: RegistryObject<SoundEvent> = registerSoundEvent("cyclop")
+    val CYCLOP_WELCOME: RegistryObject<SoundEvent> = registerSoundEvent("cyclop_welcome")
+    val SEAMOTH_WELCOME: RegistryObject<SoundEvent> = registerSoundEvent("seamoth_welcome")
 }

@@ -24,10 +24,14 @@ object ModPlacedFeature {
     val ROYALMOSS: ResourceKey<PlacedFeature> = registerKey("royalmoss_place")
     val GREENCOVERMOSS: ResourceKey<PlacedFeature> = registerKey("greencovermoss_place")
     val VEINED: ResourceKey<PlacedFeature> = registerKey("veined_place")
+    val BLUEPALM: ResourceKey<PlacedFeature> = registerKey("bluepalm_place")
+    val YELLOWGRASS: ResourceKey<PlacedFeature> = registerKey("yellowgrass_place")
 
     val SAFESHALLOW: ResourceKey<PlacedFeature> = registerKey("ssafeshallow_place")
     val CORALTUBE: ResourceKey<PlacedFeature> = registerKey("coraltube_place")
     val BLOODSTOLB: ResourceKey<PlacedFeature> = registerKey("bloodstolb_place")
+
+    val MUSHROOM: ResourceKey<PlacedFeature> = registerKey("mushroom_place")
 
     val LIMESTONE: ResourceKey<PlacedFeature> = registerKey("limestone")
     val SANDSTONE: ResourceKey<PlacedFeature> = registerKey("sandstone")
@@ -56,6 +60,8 @@ object ModPlacedFeature {
         val reference11 = holdergetter.getOrThrow(ModFeatureConfigured.SAFESHALLOWMOSS)
         val reference12 = holdergetter.getOrThrow(ModFeatureConfigured.ROYALMOSS)
         val reference13 = holdergetter.getOrThrow(ModFeatureConfigured.VEINED)
+        val reference18 = holdergetter.getOrThrow(ModFeatureConfigured.BLUEPALM)
+        val reference19 = holdergetter.getOrThrow(ModFeatureConfigured.YELLOWGRASS)
 
         val reference14 = holdergetter.getOrThrow(ModFeatureConfigured.SAFESHALLOW)
         val reference15 = holdergetter.getOrThrow(ModFeatureConfigured.CORALTUBE)
@@ -65,16 +71,22 @@ object ModPlacedFeature {
         val reference6 = holdergetter.getOrThrow(ModFeatureConfigured.SANDSTONE)
         val reference7 = holdergetter.getOrThrow(ModFeatureConfigured.QUARTZ)
 
+        val reference17 = holdergetter.getOrThrow(ModFeatureConfigured.MUSHROOM)
+
         register(p, BLOOD_GRASS, reference, placement(80))
         register(p, BLOOD_MOSS, reference1, placement(80))
         register(p, BLOODSAND, reference3, placement(90))
         register(p, KELPSAND, reference5, placement(95))
         register(p, DOUBLEKELP, reference2, placement(20))
         register(p, ACIDMUSHROOM, reference8, placement(30))
+        register(p, BLUEPALM, reference18, placement(90))
+        register(p, YELLOWGRASS, reference19, placement(90))
 
         register(p, SAFESHALLOW, reference14, placement(90))
         register(p, CORALTUBE, reference15, placement(20))
         register(p, BLOODSTOLB, reference16, placement(5))
+
+        register(p, MUSHROOM, reference17, placement(1))
 
         register(p, GREENCOVERMOSS, reference9, placement(90))
         register(p, PURPLEMOSS, reference10, placement(90))

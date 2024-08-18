@@ -1,7 +1,5 @@
 package su.sonoma.lostriver.entity
 
-import net.minecraft.core.BlockPos
-import net.minecraft.sounds.SoundEvents
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.entity.Entity
@@ -11,7 +9,6 @@ import net.minecraft.world.entity.player.Player
 import net.minecraft.world.entity.vehicle.Boat
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.Level
-import net.minecraft.world.level.block.state.BlockState
 import software.bernie.geckolib.animatable.GeoEntity
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar
@@ -20,6 +17,7 @@ import software.bernie.geckolib.core.animation.AnimationState
 import software.bernie.geckolib.core.animation.RawAnimation
 import software.bernie.geckolib.core.`object`.PlayState
 import software.bernie.geckolib.util.GeckoLibUtil
+import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
 import su.sonoma.lostriver.mixin.BoatEntityAccessor
 
@@ -31,14 +29,11 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
 
     init {
         this.setMaxUpStep(5.0f)
+
     }
 
     override fun getDropItem(): Item {
         return ModItems.SEAMOTH.get()
-    }
-
-    override fun playStepSound(pos: BlockPos, state: BlockState) {
-        this.playSound(SoundEvents.PIG_STEP, 0.15f, 1.0f)
     }
 
     override fun tick() {
@@ -58,7 +53,10 @@ class SeamothEntity(entityType: EntityType<out Boat>, world: Level) : Boat(entit
     }
 
     override fun interact(player: Player, hand: InteractionHand?): InteractionResult {
-        return if (player.startRiding(this)) InteractionResult.CONSUME else InteractionResult.PASS
+        if (player.startRiding(this)) {
+            this.playSound(Sounds.SEAMOTH_WELCOME.get(), 0.6f, 1f)
+            return InteractionResult.CONSUME
+        } else return InteractionResult.PASS
     }
 
     override fun canAddPassenger(passenger: Entity?): Boolean {

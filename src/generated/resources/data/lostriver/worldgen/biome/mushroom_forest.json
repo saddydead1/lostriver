@@ -1,0 +1,96 @@
+{
+  "carvers": {},
+  "downfall": 0.0,
+  "effects": {
+    "fog_color": 3369471,
+    "foliage_color": 3368703,
+    "grass_color": 3368703,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 27571,
+    "water_color": 3368703,
+    "water_fog_color": 3369471
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_iron_small",
+      "minecraft:ore_gold",
+      "minecraft:ore_gold_lower",
+      "minecraft:ore_redstone",
+      "minecraft:ore_redstone_lower",
+      "minecraft:ore_diamond",
+      "minecraft:ore_diamond_large",
+      "minecraft:ore_diamond_buried",
+      "minecraft:ore_lapis",
+      "minecraft:ore_lapis_buried",
+      "minecraft:ore_copper",
+      "minecraft:underwater_magma",
+      "minecraft:ore_gold_extra"
+    ],
+    [],
+    [],
+    [
+      "minecraft:patch_grass_badlands",
+      "minecraft:trees_savanna",
+      "lostriver:ssafeshallow_place",
+      "lostriver:veined_place",
+      "lostriver:bluepalm_place",
+      "lostriver:yellowgrass_place",
+      "lostriver:limestone",
+      "lostriver:quartz",
+      "lostriver:mushroom_place"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [
+      {
+        "type": "lostriver:jellyray",
+        "maxCount": 5,
+        "minCount": 3,
+        "weight": 40
+      },
+      {
+        "type": "lostriver:peeper",
+        "maxCount": 15,
+        "minCount": 1,
+        "weight": 20
+      },
+      {
+        "type": "lostriver:boomerang",
+        "maxCount": 15,
+        "minCount": 1,
+        "weight": 20
+      },
+      {
+        "type": "lostriver:bladderfish",
+        "maxCount": 15,
+        "minCount": 1,
+        "weight": 20
+      }
+    ],
+    "water_creature": []
+  },
+  "temperature": 0.7
+}

@@ -1,6 +1,9 @@
 {
   "lostriver.tab": "Lost River",
 
+  "lostriver.cannotundock": "Мотылёк не пристыкован",
+  "lostriver.cannotdock": "Мотылёк уже пристыкован",
+
   "item.lostriver.peeper": "Пипер",
   "item.lostriver.boomerang": "Рыба-Бумеранг",
   "item.lostriver.knife": "Нож",
@@ -47,6 +50,7 @@
   "item.lostriver.cooked_peeper": "Приготовленный Пипер",
   "item.lostriver.cooked_boomerang": "Приготовленная Рыба-Бумеранг",
   "item.lostriver.cooked_bladderfish": "Приготовленный Пузырь",
+  "item.lostriver.cyclop": "Циклоп",
 
   "block.lostriver.greencovermoss": "Зеленопокровный Мох",
   "block.lostriver.purplemoss": "Королевский Мох",
@@ -60,6 +64,8 @@
   "block.lostriver.papyrus": "Сверток Папируса",
   "block.lostriver.acidmushroom": "Кислотный Гриб",
   "block.lostriver.quartz": "Кварц",
+  "block.lostriver.bluepalm": "Синяя Пальма",
+  "block.lostriver.yellowgrass": "Желтая Трава",
   "block.lostriver.coral": "Коралл",
   "block.lostriver.portal": "Портал на 4546B",
   "block.lostriver.kelpsand": "Песочек Леса Водорослей",
@@ -69,11 +75,18 @@
   "block.lostriver.blood_grass": "Кровавая Водоросль",
   "block.lostriver.bloodmoss": "Кровавый Мох",
   "block.lostriver.double_kelp": "Вьющаяся Водоросль",
+  "block.lostriver.mushroom": "Гриб",
+  "block.lostriver.mushroomstew": "Стебель гриба",
 
   "entity.lostriver.peeper": "Пипер",
   "entity.lostriver.seamoth": "Мотылёк",
+  "entity.lostriver.cyclop": "Циклоп",
   "entity.lostriver.boomerang": "Рыба-Бумеранг",
   "entity.lostriver.stalker": "Сталкер",
   "entity.lostriver.reaper": "Левиафан-Жнец",
-  "entity.lostriver.bladderfish": "Пузырь"
+  "entity.lostriver.bladderfish": "Пузырь",
+  "entity.lostriver.jellyray": "Медузоскат",
+
+  "key.category.lostriver.lost_river_transport": "Lost River Transport",
+  "key.lostriver.dock": "Стыковать/Отстыковать Мотылёк"
 }

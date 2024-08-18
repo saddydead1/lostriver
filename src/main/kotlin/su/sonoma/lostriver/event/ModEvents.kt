@@ -17,6 +17,7 @@ class ModEvents {
             event.put(ModEntity.STALKER.get(), StalkerEntity.setAttributes())
             event.put(ModEntity.REAPER.get(), ReaperEntity.setAttributes())
             event.put(ModEntity.BLADDER.get(), BladderEntity.setAttributes())
+            event.put(ModEntity.JELLYRAY.get(), JellyrayEntity.setAttributes())
         }
     }
 }

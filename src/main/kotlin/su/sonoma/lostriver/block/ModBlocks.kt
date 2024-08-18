@@ -1,9 +1,6 @@
 package su.sonoma.lostriver.block
 
-import net.minecraft.world.level.block.Block
-import net.minecraft.world.level.block.Blocks
-import net.minecraft.world.level.block.SeagrassBlock
-import net.minecraft.world.level.block.SoundType
+import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument
 import net.minecraft.world.level.material.MapColor
@@ -48,6 +45,16 @@ object ModBlocks {
         BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
+    val BLUEPALM: RegistryObject<Block> = BLOCKS.register("bluepalm") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val YELLOWGRASS: RegistryObject<Block> = BLOCKS.register("yellowgrass") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
     val PURPLEMOSS: RegistryObject<Block> = BLOCKS.register("purplemoss") {
         SeagrassBlock(
             BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
@@ -56,6 +63,16 @@ object ModBlocks {
     val PORTAL: RegistryObject<Block> = BLOCKS.register("portal") {
         Block(
             BlockBehaviour.Properties.copy(Blocks.STONE))
+    }
+
+    val MUSHROOM: RegistryObject<Block> = BLOCKS.register("mushroom") {
+        SlabBlock(
+            BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noOcclusion())
+    }
+
+    val MUSHROOMSTEW: RegistryObject<Block> = BLOCKS.register("mushroomstew") {
+        Block(
+            BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM))
     }
 
     val ROYALMOSS: RegistryObject<Block> = BLOCKS.register("royalmoss") {

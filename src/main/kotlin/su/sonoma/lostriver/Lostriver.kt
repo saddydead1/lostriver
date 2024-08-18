@@ -23,6 +23,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber
 import net.minecraftforge.fml.config.ModConfig
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
+import net.minecraftforge.network.NetworkRegistry
+import net.minecraftforge.network.simple.SimpleChannel
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
@@ -32,6 +34,8 @@ import su.sonoma.lostriver.block.ModBlocks
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
+import su.sonoma.lostriver.protocol.DockMessage
+import su.sonoma.lostriver.protocol.UnDockMessage
 import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
 
 
@@ -39,6 +43,14 @@ import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
 @Mod(Lostriver.MODID)
 object Lostriver {
     const val MODID: String = "lostriver"
+    const val PROTOCOL_VERSION = "1"
+
+    val INSTANCE: SimpleChannel = NetworkRegistry.newSimpleChannel(
+        ResourceLocation(MODID, "main"),
+        { PROTOCOL_VERSION },
+         PROTOCOL_VERSION::equals ,
+         PROTOCOL_VERSION::equals
+    )
 
     val LOGGER: Logger = LogUtils.getLogger()
 
@@ -47,7 +59,6 @@ object Lostriver {
 
     init {
         modEventBus.addListener { event: FMLCommonSetupEvent -> this.commonSetup(event) }
-
 
         ModFeature.FEATURES!!.register(modEventBus)
         ModBlocks.BLOCKS.register(modEventBus)
@@ -61,6 +72,9 @@ object Lostriver {
 
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC)
+
+        INSTANCE.registerMessage(DockMessage.id, DockMessage::class.java, DockMessage::toFriendlyByteBuf, DockMessage::toBoatMessage, DockMessage::handle)
+        INSTANCE.registerMessage(UnDockMessage.id, UnDockMessage::class.java, UnDockMessage::toFriendlyByteBuf, UnDockMessage::toBoatMessage, UnDockMessage::handle)
     }
 
     private fun commonSetup(event: FMLCommonSetupEvent) {
@@ -114,7 +128,15 @@ object Lostriver {
                 RenderType.cutout()
             )
             ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.BLUEPALM.get(),
+                RenderType.cutout()
+            )
+            ItemBlockRenderTypes.setRenderLayer(
                 ModBlocks.BASKET.get(),
+                RenderType.cutout()
+            )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.YELLOWGRASS.get(),
                 RenderType.cutout()
             )
         }
@@ -153,6 +175,8 @@ object Lostriver {
                 output.accept(ModItems.LIMESTONE.get())
                 output.accept(ModItems.SANDSTONE.get())
                 output.accept(ModItems.CORAL.get())
+                output.accept(ModItems.MUSHROOM.get())
+                output.accept(ModItems.MUSHROOMSTEW.get())
                 output.accept(ModItems.SAND.get())
                 output.accept(ModItems.PURPLEBLOCK.get())
                 output.accept(ModItems.ROYALBLOCK.get())
@@ -160,6 +184,8 @@ object Lostriver {
                 output.accept(ModItems.BLOOD_SAND.get())
                 output.accept(ModItems.ACIDMUSHROOM.get())
                 output.accept(ModItems.DOUBLEKELP.get())
+                output.accept(ModItems.BLUEPALM.get())
+                output.accept(ModItems.YELLOWGRASS.get())
                 output.accept(ModItems.BASKET.get())
                 output.accept(ModItems.PAPYRUS.get())
                 output.accept(ModItems.VEINED.get())
@@ -178,6 +204,7 @@ object Lostriver {
                 output.accept(ModItems.SEAMOTHFRAGMENT.get())
                 output.accept(ModItems.SEAMOTHBLUEPRINT.get())
                 output.accept(ModItems.SEAMOTH.get())
+                output.accept(ModItems.CYCLOP.get())
             }.build()
     }
 

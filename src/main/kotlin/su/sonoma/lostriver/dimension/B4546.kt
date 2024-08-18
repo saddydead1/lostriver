@@ -99,6 +99,17 @@ object B4546 {
                     ),
                     Pair.of(
                         Climate.parameters(
+                            0.8F,
+                            0.6F,
+                            0.5F,
+                            0.1F,
+                            0.0F,
+                            0.2F,
+                            0.1F),
+                        biomeRegistry.getOrThrow(ModBiomes.MUSHROOMFOREST)
+                    ),
+                    Pair.of(
+                        Climate.parameters(
                             0.3F,
                             0.6F,
                             0.2F,
@@ -110,10 +121,10 @@ object B4546 {
                     ),
                     Pair.of(
                         Climate.parameters(
-                            0.9F,
+                            0.3F,
                             0.6F,
-                            0.5F,
-                            0.5F,
+                            0.3F,
+                            0.6F,
                             0.0F,
                             0.0F,
                             0.1F),

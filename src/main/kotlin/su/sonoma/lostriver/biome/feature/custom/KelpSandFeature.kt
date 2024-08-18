@@ -29,7 +29,7 @@ class KelpSandFeature(p_66768_: Codec<ProbabilityFeatureConfiguration>) :
                     val blockpos2 = blockpos1.above()
                     if (worldgenlevel.getBlockState(blockpos2).`is`(Blocks.WATER)) {
 
-                        val positions: List<BlockPos> = mutableListOf(blockpos.north(), blockpos.south(), blockpos.west(), blockpos.east())
+                        val positions: List<BlockPos> = listOf(blockpos.north(), blockpos.south(), blockpos.west(), blockpos.east())
 
                         for (pos in positions){
                             worldgenlevel.setBlock(pos.below(), blockstate, 2)

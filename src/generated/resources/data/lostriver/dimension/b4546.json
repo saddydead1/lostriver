@@ -30,6 +30,18 @@
           }
         },
         {
+          "biome": "lostriver:mushroom_forest",
+          "parameters": {
+            "continentalness": 0.5,
+            "depth": 0.0,
+            "erosion": 0.1,
+            "humidity": 0.6,
+            "offset": 0.1,
+            "temperature": 0.8,
+            "weirdness": 0.2
+          }
+        },
+        {
           "biome": "lostriver:blood_kelp",
           "parameters": {
             "continentalness": 0.2,
@@ -44,12 +56,12 @@
         {
           "biome": "lostriver:dunes",
           "parameters": {
-            "continentalness": 0.5,
+            "continentalness": 0.3,
             "depth": 0.0,
-            "erosion": 0.5,
+            "erosion": 0.6,
             "humidity": 0.6,
             "offset": 0.1,
-            "temperature": 0.9,
+            "temperature": 0.3,
             "weirdness": 0.0
           }
         }

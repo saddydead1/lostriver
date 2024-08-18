@@ -1,6 +1,9 @@
 {
   "lostriver.subtab": "Lost River",
 
+  "lostriver.cannotundock": "Seamoth is not docked",
+  "lostriver.cannotdock": "Seamoth is already docked",
+
   "item.lostriver.peeper": "Peeper",
   "item.lostriver.boomerang": "Boomerang",
   "item.lostriver.knife": "Knife",
@@ -47,6 +50,7 @@
   "item.lostriver.cooked_peeper": "Cooked Peeper",
   "item.lostriver.cooked_boomerang": "Cooked Boomerang",
   "item.lostriver.cooked_bladderfish": "Cooked Bladderfish",
+  "item.lostriver.cyclop": "Cyclop",
 
   "block.lostriver.greencovermoss": "Greencover Moss",
   "block.lostriver.portal": "4546B Portal",
@@ -56,6 +60,8 @@
   "block.lostriver.basket": "Basket",
   "block.lostriver.papyrus": "Papyrus",
   "block.lostriver.coral": "Coral",
+  "block.lostriver.bluepalm": "Blue Palm",
+  "block.lostriver.yellowgrass": "Yellow Grass",
   "block.lostriver.royalmoss": "Royal Moss",
   "block.lostriver.safeshallowmoss": "Safeshallow's Moss",
   "block.lostriver.veined": "Veined Nettle",
@@ -69,11 +75,18 @@
   "block.lostriver.bloodmoss": "Blood Moss",
   "block.lostriver.double_kelp": "Writhing Weed",
   "block.lostriver.bloodsand": "Blood Sand",
+  "block.lostriver.mushroom": "Mushroom",
+  "block.lostriver.mushroomstew": "Mushroom Stew",
 
   "entity.lostriver.peeper": "Peeper",
   "entity.lostriver.seamoth": "Seamoth",
+  "entity.lostriver.cyclop": "Cyclop",
   "entity.lostriver.boomerang": "Boomerang",
   "entity.lostriver.stalker": "Stalker",
   "entity.lostriver.reaper": "Reaper",
-  "entity.lostriver.bladderfish": "Bladderfish"
+  "entity.lostriver.bladderfish": "Bladderfish",
+  "entity.lostriver.jellyray": "Jellyray",
+
+  "key.category.lostriver.lost_river_transport": "Lost River Transport",
+  "key.lostriver.dock": "Dock/Undock Seamoth"
 }
