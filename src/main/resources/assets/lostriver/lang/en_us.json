@@ -1,6 +1,9 @@
 {
   "lostriver.subtab": "Lost River",
 
+  "lostriver.cannotundock": "Seamoth is not docked",
+  "lostriver.cannotdock": "Seamoth is already docked",
+
   "item.lostriver.peeper": "Peeper",
   "item.lostriver.boomerang": "Boomerang",
   "item.lostriver.knife": "Knife",
@@ -72,6 +75,8 @@
   "block.lostriver.bloodmoss": "Blood Moss",
   "block.lostriver.double_kelp": "Writhing Weed",
   "block.lostriver.bloodsand": "Blood Sand",
+  "block.lostriver.mushroom": "Mushroom",
+  "block.lostriver.mushroomstew": "Mushroom Stew",
 
   "entity.lostriver.peeper": "Peeper",
   "entity.lostriver.seamoth": "Seamoth",

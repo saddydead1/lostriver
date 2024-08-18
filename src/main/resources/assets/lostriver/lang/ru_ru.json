@@ -1,6 +1,9 @@
 {
   "lostriver.tab": "Lost River",
 
+  "lostriver.cannotundock": "Мотылёк не пристыкован",
+  "lostriver.cannotdock": "Мотылёк уже пристыкован",
+
   "item.lostriver.peeper": "Пипер",
   "item.lostriver.boomerang": "Рыба-Бумеранг",
   "item.lostriver.knife": "Нож",
@@ -72,6 +75,8 @@
   "block.lostriver.blood_grass": "Кровавая Водоросль",
   "block.lostriver.bloodmoss": "Кровавый Мох",
   "block.lostriver.double_kelp": "Вьющаяся Водоросль",
+  "block.lostriver.mushroom": "Гриб",
+  "block.lostriver.mushroomstew": "Стебель гриба",
 
   "entity.lostriver.peeper": "Пипер",
   "entity.lostriver.seamoth": "Мотылёк",

@@ -9,7 +9,9 @@ import net.minecraftforge.fml.common.Mod
 import su.sonoma.lostriver.Lostriver.INSTANCE
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.entity.CyclopEntity
-import su.sonoma.lostriver.protocol.BoatMessage
+import su.sonoma.lostriver.entity.SeamothEntity
+import su.sonoma.lostriver.protocol.DockMessage
+import su.sonoma.lostriver.protocol.UnDockMessage
 import su.sonoma.lostriver.util.KeyBinding
 
 
@@ -25,19 +27,23 @@ object KeyInput {
         val k = player.z
 
         if (KeyBinding.DOCK.consumeClick()) {
-            if (player.tags.contains("canDock")) {
-                val cyclops = player.level().getEntitiesOfClass(
-                    CyclopEntity::class.java,
-                    AABB(i, j, k, i, (j - 4), k).inflate(
-                        10.0,
-                        5.0,
-                        10.0
+            if (player.vehicle is SeamothEntity) {
+                if (player.tags.contains("canDock")) {
+                    val cyclops = player.level().getEntitiesOfClass(
+                        CyclopEntity::class.java,
+                        AABB(i, j, k, i, (j - 4), k).inflate(
+                            10.0,
+                            5.0,
+                            10.0
+                        )
                     )
-                )
-                val cyclop: Int = cyclops[0].id
+                    val cyclop: Int = cyclops[0].id
 
-                INSTANCE.sendToServer(BoatMessage(cyclop))
-                player.removeTag("canDock")
+                    INSTANCE.sendToServer(DockMessage(cyclop))
+                    player.removeTag("canDock")
+                }
+            } else if (player.controlledVehicle is CyclopEntity) {
+                INSTANCE.sendToServer(UnDockMessage())
             }
         }
     }

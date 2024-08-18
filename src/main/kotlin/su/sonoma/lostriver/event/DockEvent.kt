@@ -11,9 +11,10 @@ import net.minecraftforge.fml.common.Mod
 import su.sonoma.lostriver.Lostriver
 import su.sonoma.lostriver.entity.CyclopEntity
 import su.sonoma.lostriver.entity.SeamothEntity
+import su.sonoma.lostriver.util.KeyBinding
 
 @Mod.EventBusSubscriber(modid = Lostriver.MODID, value = [Dist.CLIENT], bus = Mod.EventBusSubscriber.Bus.FORGE)
-object SeamothEvent {
+object DockEvent {
     @SubscribeEvent
     fun draw(event: RenderGuiOverlayEvent.Post) {
         val mine = Minecraft.getInstance()
@@ -40,7 +41,7 @@ object SeamothEvent {
                     player.addTag("canDock")
                 }
 
-                graphics.drawString(font, "Press R to enter Cyclop", 10, 30, 16383998)
+                graphics.drawString(font, "Press ${KeyBinding.DOCK.key.displayName.string} to enter Cyclop", 10, 30, 16383998)
             } else {
                 player.removeTag("canDock")
             }

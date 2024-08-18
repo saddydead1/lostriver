@@ -34,7 +34,8 @@ import su.sonoma.lostriver.block.ModBlocks
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
-import su.sonoma.lostriver.protocol.BoatMessage
+import su.sonoma.lostriver.protocol.DockMessage
+import su.sonoma.lostriver.protocol.UnDockMessage
 import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
 
 
@@ -72,7 +73,8 @@ object Lostriver {
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC)
 
-        INSTANCE.registerMessage(BoatMessage.id, BoatMessage::class.java, BoatMessage::toFriendlyByteBuf, BoatMessage::toBoatMessage, BoatMessage::handle)
+        INSTANCE.registerMessage(DockMessage.id, DockMessage::class.java, DockMessage::toFriendlyByteBuf, DockMessage::toBoatMessage, DockMessage::handle)
+        INSTANCE.registerMessage(UnDockMessage.id, UnDockMessage::class.java, UnDockMessage::toFriendlyByteBuf, UnDockMessage::toBoatMessage, UnDockMessage::handle)
     }
 
     private fun commonSetup(event: FMLCommonSetupEvent) {
