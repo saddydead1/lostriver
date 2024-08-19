@@ -1,11 +1,11 @@
-// 1.20.1	2024-08-19T16:09:07.473939	Registries
+// 1.20.1	2024-08-19T21:19:31.926474	Registries
 eec9e01f6ada68c0d41a9c5492a63fe7e171777e data/lostriver/dimension/b4546.json
 3bcf23cab7f8af06c90e6e7a3deac73046e08750 data/lostriver/dimension_type/b4546.json
-d626f6fe22dc62104d1888fd1eab6266eba9dc3e data/lostriver/worldgen/biome/blood_kelp.json
+13bab21386176231c749a5a8a5a1b486f2a1135d data/lostriver/worldgen/biome/blood_kelp.json
 0a0908e9edf55919ee13763f825a3da62c6b3542 data/lostriver/worldgen/biome/dunes.json
 f4b201f41e27426cede4155c744c576dbc211f9e data/lostriver/worldgen/biome/glassy_plateaus.json
 6086f293661ca32058e8f37b02aeabe9e5877111 data/lostriver/worldgen/biome/kelp_forest.json
-6ed7f03177c6bdfac6c69ccd05ecc0754f8df185 data/lostriver/worldgen/biome/mushroom_forest.json
+5fd9475054f34e12b0ff1f6784ccb0e194e9c337 data/lostriver/worldgen/biome/mushroom_forest.json
 2dec50290522e6923b132eecb8ce5bb7c95df561 data/lostriver/worldgen/biome/safe_shallows.json
 bbb2c6cfb24925037deaabe0a51b3fc996f025ba data/lostriver/worldgen/configured_feature/acidmushroom.json
 81f6dc0c3f731a3bf29500191a4c92655e8f9136 data/lostriver/worldgen/configured_feature/blood_grass.json
@@ -42,7 +42,7 @@ f8615aed1edbd8ebb4a5ff57a90474c84f380e64 data/lostriver/worldgen/placed_feature/
 64d7890f24fcd614c9080c874040647e4322f960 data/lostriver/worldgen/placed_feature/greencovermoss_place.json
 80637cbe20ba4fd791cece352f2106509e4f8b66 data/lostriver/worldgen/placed_feature/kelp_sand_place.json
 62d5d192ff5307388ba95757723218674e544d1f data/lostriver/worldgen/placed_feature/limestone.json
-1579966f1836a071921410b1bbe593fab1d0b85d data/lostriver/worldgen/placed_feature/lithium.json
+1579966f1836a071921410b1bbe593fab1d0b85d data/lostriver/worldgen/placed_feature/lithium_place.json
 4602601e3c0085833c4315c43cbfaa01dc8c2517 data/lostriver/worldgen/placed_feature/mushroom_place.json
 ad2243f8a4e404026253c4aac79eedf0c1acbeb7 data/lostriver/worldgen/placed_feature/purplemoss_place.json
 e0961f460ae7b391ee0369ddfba51096d1498a44 data/lostriver/worldgen/placed_feature/quartz.json

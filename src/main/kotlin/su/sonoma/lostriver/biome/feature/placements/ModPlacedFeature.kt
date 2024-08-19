@@ -37,7 +37,7 @@ object ModPlacedFeature {
     val LIMESTONE: ResourceKey<PlacedFeature> = registerKey("limestone")
     val SANDSTONE: ResourceKey<PlacedFeature> = registerKey("sandstone")
     val QUARTZ: ResourceKey<PlacedFeature> = registerKey("quartz")
-    val LITHIUM: ResourceKey<PlacedFeature> = registerKey("lithium")
+    val LITHIUM: ResourceKey<PlacedFeature> = registerKey("lithium_place")
 
     val BLOOD_KELP: ResourceKey<PlacedFeature> = registerKey("blood_kelp")
 

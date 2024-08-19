@@ -136,6 +136,12 @@ object ModBlocks {
         )
     }
 
+    val BLOODSTONE: RegistryObject<Block> = BLOCKS.register("bloodstone") {
+        ModSandBlock(
+            BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)
+        )
+    }
+
     val QUARTZ: RegistryObject<Block> = BLOCKS.register("quartz") {
         ModOreBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)

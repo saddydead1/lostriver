@@ -52,9 +52,9 @@ object ModBiomes {
         context.register(SAFE_SHALLOWS, testBiome(context))
         context.register(KELP_FOREST, kelp(context))
         context.register(BLOOD_KELP, blood_kelp(context))
+        context.register(BLOOD, blood(context))
         context.register(DUNES, dunes(context))
         context.register(MUSHROOMFOREST, mushroom(context))
-        context.register(BLOOD, blood(context))
     }
 
 //    fun globalOverworldGeneration(builder: BiomeGenerationSettings.Builder?) {
@@ -137,10 +137,10 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_KELP)
+
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LITHIUM)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.QUARTZ)
-
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_KELP)
 
         return BiomeBuilder()
             .hasPrecipitation(false)
