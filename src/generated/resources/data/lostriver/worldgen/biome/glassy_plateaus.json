@@ -2,9 +2,9 @@
   "carvers": {},
   "downfall": 0.0,
   "effects": {
-    "fog_color": 65882,
-    "foliage_color": 5373696,
-    "grass_color": 6749952,
+    "fog_color": 59110,
+    "foliage_color": 11546150,
+    "grass_color": 11546150,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -12,8 +12,8 @@
       "tick_delay": 6000
     },
     "sky_color": 27571,
-    "water_color": 65882,
-    "water_fog_color": 65882
+    "water_color": 1053345,
+    "water_fog_color": 1053345
   },
   "features": [
     [],
@@ -46,9 +46,14 @@
     [
       "minecraft:patch_grass_badlands",
       "minecraft:trees_savanna",
+      "lostriver:bloodstolb_place",
+      "lostriver:ssafeshallow_place",
+      "lostriver:blood_grass_place",
+      "lostriver:blood_moss_place",
+      "lostriver:blood_sand_place",
       "lostriver:limestone",
-      "lostriver:quartz",
-      "lostriver:blood_kelp"
+      "lostriver:sandstone",
+      "lostriver:quartz"
     ]
   ],
   "has_precipitation": false,
