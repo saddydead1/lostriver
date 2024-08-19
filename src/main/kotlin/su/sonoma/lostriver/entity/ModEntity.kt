@@ -30,6 +30,9 @@ object ModEntity {
     val REAPER: RegistryObject<EntityType<ReaperEntity>> =
         registerMob("reaper", ::ReaperEntity,11F, 5F, MobCategory.WATER_AMBIENT)
 
+    val GHOST_LEVIATHAN: RegistryObject<EntityType<GhostLeviathanEntity>> =
+        registerMob("ghost_leviathan", ::GhostLeviathanEntity,11F, 5F, MobCategory.WATER_AMBIENT)
+
     val JELLYRAY: RegistryObject<EntityType<JellyrayEntity>> =
         registerMob("jellyray", ::JellyrayEntity,2F, 0.5F, MobCategory.WATER_AMBIENT)
 

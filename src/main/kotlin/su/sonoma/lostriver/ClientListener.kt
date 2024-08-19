@@ -39,6 +39,9 @@ object ClientListener {
         event.registerEntityRenderer(ModEntity.JELLYRAY.get()
         ) { context: EntityRendererProvider.Context? -> JellyrayRenderer(context!!) }
 
+        event.registerEntityRenderer(ModEntity.GHOST_LEVIATHAN.get()
+        ) { context: EntityRendererProvider.Context? -> GhostLeviathanRenderer(context!!) }
+
     }
 
 }

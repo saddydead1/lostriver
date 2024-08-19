@@ -255,6 +255,12 @@ object ModItems {
         )
     }
 
+    val BLOODKELP_MOSS: RegistryObject<Item> = ITEMS.register("bloodkelpmoss") {
+        BlockItem( ModBlocks.BLOODKELP_MOSS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
     val PORTAL: RegistryObject<Item> = ITEMS.register("portal") {
         BlockItem( ModBlocks.PORTAL.get(),
             Item.Properties().stacksTo(64)

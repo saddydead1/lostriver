@@ -122,9 +122,8 @@ object ModBiomes {
 
     fun blood(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
-        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
-        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 25, 1, 15))
-        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BLADDER.get(), 25, 1, 15))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.GHOST_LEVIATHAN.get(), 20, 1, 2))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BLADDER.get(), 80, 1, 15))
 
         val biomeBuilder =
             BiomeGenerationSettings.Builder(
@@ -139,7 +138,9 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_KELP)
 
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LITHIUM)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOODKELP_MOSS)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ModPlacedFeature.LITHIUM)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.QUARTZ)
 
         return BiomeBuilder()

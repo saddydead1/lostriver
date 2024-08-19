@@ -1,0 +1,6 @@
+{
+  "parent": "lostriver:block/moss",
+  "textures": {
+    "texture": "lostriver:block/bloodkelpmoss"
+  }
+}

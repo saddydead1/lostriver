@@ -89,9 +89,11 @@
   "block.lostriver.mushroom": "Гриб",
   "block.lostriver.lithium": "Литий",
   "block.lostriver.mushroomstew": "Стебель гриба",
+  "block.lostriver.bloodkelpmoss": "Покров биома кровавых водорослей",
 
   "entity.lostriver.peeper": "Пипер",
   "entity.lostriver.seamoth": "Мотылёк",
+  "entity.lostriver.ghost_leviathan": "Призрачный Левиафан",
   "entity.lostriver.cyclop": "Циклоп",
   "entity.lostriver.boomerang": "Рыба-Бумеранг",
   "entity.lostriver.stalker": "Сталкер",

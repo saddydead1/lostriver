@@ -47,8 +47,11 @@
       "minecraft:patch_grass_badlands",
       "minecraft:trees_savanna",
       "lostriver:blood_kelp",
-      "lostriver:lithium_place",
+      "lostriver:bloodkelp_moss_place",
       "lostriver:quartz"
+    ],
+    [
+      "lostriver:lithium_place"
     ]
   ],
   "has_precipitation": false,
@@ -62,22 +65,16 @@
     "underground_water_creature": [],
     "water_ambient": [
       {
-        "type": "lostriver:peeper",
-        "maxCount": 15,
+        "type": "lostriver:ghost_leviathan",
+        "maxCount": 2,
         "minCount": 1,
-        "weight": 50
-      },
-      {
-        "type": "lostriver:boomerang",
-        "maxCount": 15,
-        "minCount": 1,
-        "weight": 25
+        "weight": 20
       },
       {
         "type": "lostriver:bladderfish",
         "maxCount": 15,
         "minCount": 1,
-        "weight": 25
+        "weight": 80
       }
     ],
     "water_creature": []

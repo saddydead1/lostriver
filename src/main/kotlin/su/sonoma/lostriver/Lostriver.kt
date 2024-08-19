@@ -147,6 +147,10 @@ object Lostriver {
                 ModBlocks.YELLOWGRASS.get(),
                 RenderType.cutout()
             )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.BLOODKELP_MOSS.get(),
+                RenderType.cutout()
+            )
         }
     }
 
@@ -208,6 +212,7 @@ object Lostriver {
                 output.accept(ModItems.ROYALMOSS.get())
                 output.accept(ModItems.PURPLEMOSS.get())
                 output.accept(ModItems.GREENCOVERMOSS.get())
+                output.accept(ModItems.BLOODKELP_MOSS.get())
                 output.accept(ModItems.BLOOD_MOSS.get())
                 output.accept(ModItems.BLOOD_GRASS.get())
                 output.accept(ModItems.REAPER_FRAGMENT.get())
