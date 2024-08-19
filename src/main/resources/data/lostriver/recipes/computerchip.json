@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "A": {
+      "tag": "forge:gold"
+    },
+    "C": {
+      "item": "lostriver:tablecoral"
+    },
+    "W": {
+      "tag": "forge:copper_wire"
+    }
+  },
+  "pattern": [
+    "AW",
+    "CC"
+  ],
+  "result": {
+    "item": "lostriver:computerchip"
+  }
+}

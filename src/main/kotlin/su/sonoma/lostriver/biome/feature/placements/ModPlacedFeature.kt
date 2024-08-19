@@ -28,6 +28,7 @@ object ModPlacedFeature {
     val YELLOWGRASS: ResourceKey<PlacedFeature> = registerKey("yellowgrass_place")
 
     val SAFESHALLOW: ResourceKey<PlacedFeature> = registerKey("ssafeshallow_place")
+    val TABLECORAL: ResourceKey<PlacedFeature> = registerKey("tablecoral_place")
     val CORALTUBE: ResourceKey<PlacedFeature> = registerKey("coraltube_place")
     val BLOODSTOLB: ResourceKey<PlacedFeature> = registerKey("bloodstolb_place")
 
@@ -36,12 +37,24 @@ object ModPlacedFeature {
     val LIMESTONE: ResourceKey<PlacedFeature> = registerKey("limestone")
     val SANDSTONE: ResourceKey<PlacedFeature> = registerKey("sandstone")
     val QUARTZ: ResourceKey<PlacedFeature> = registerKey("quartz")
+    val LITHIUM: ResourceKey<PlacedFeature> = registerKey("lithium")
+
+    val BLOOD_KELP: ResourceKey<PlacedFeature> = registerKey("blood_kelp")
 
     private fun placement(p_195234_: Int): List<PlacementModifier> {
         return java.util.List.of(
             InSquarePlacement.spread(),
             PlacementUtils.HEIGHTMAP_TOP_SOLID,
             CountPlacement.of(p_195234_),
+            BiomeFilter.biome()
+        )
+    }
+
+    private fun placementKelp(): List<PlacementModifier> {
+        return java.util.List.of(
+            NoiseBasedCountPlacement.of(80, 80.0, 0.0),
+            InSquarePlacement.spread(),
+            PlacementUtils.HEIGHTMAP_TOP_SOLID,
             BiomeFilter.biome()
         )
     }
@@ -65,11 +78,15 @@ object ModPlacedFeature {
 
         val reference14 = holdergetter.getOrThrow(ModFeatureConfigured.SAFESHALLOW)
         val reference15 = holdergetter.getOrThrow(ModFeatureConfigured.CORALTUBE)
+        val reference21 = holdergetter.getOrThrow(ModFeatureConfigured.TABLECORAL)
         val reference16 = holdergetter.getOrThrow(ModFeatureConfigured.BLOODSTOLB)
 
         val reference4 = holdergetter.getOrThrow(ModFeatureConfigured.LIMESTONE)
         val reference6 = holdergetter.getOrThrow(ModFeatureConfigured.SANDSTONE)
         val reference7 = holdergetter.getOrThrow(ModFeatureConfigured.QUARTZ)
+        val reference20 = holdergetter.getOrThrow(ModFeatureConfigured.LITHIUM)
+
+        val reference22 = holdergetter.getOrThrow(ModFeatureConfigured.BLOOD_KELP)
 
         val reference17 = holdergetter.getOrThrow(ModFeatureConfigured.MUSHROOM)
 
@@ -82,7 +99,10 @@ object ModPlacedFeature {
         register(p, BLUEPALM, reference18, placement(90))
         register(p, YELLOWGRASS, reference19, placement(90))
 
+        register(p, BLOOD_KELP, reference22, placementKelp())
+
         register(p, SAFESHALLOW, reference14, placement(90))
+        register(p, TABLECORAL, reference21, placement(90))
         register(p, CORALTUBE, reference15, placement(20))
         register(p, BLOODSTOLB, reference16, placement(5))
 
@@ -97,6 +117,7 @@ object ModPlacedFeature {
         register(p, LIMESTONE, reference4, placement(80))
         register(p, SANDSTONE, reference6, placement(80))
         register(p, QUARTZ, reference7, placement(50))
+        register(p, LITHIUM, reference20, placement(50))
     }
 
     private fun registerKey(name: String): ResourceKey<PlacedFeature> {

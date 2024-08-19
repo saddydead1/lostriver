@@ -31,6 +31,7 @@ object ModFeatureConfigured {
     val YELLOWGRASS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("yellowgrass")
 
     val SAFESHALLOW: ResourceKey<ConfiguredFeature<*, *>> = registerKey("ssafe_shallow")
+    val TABLECORAL: ResourceKey<ConfiguredFeature<*, *>> = registerKey("table_coral")
     val CORALTUBE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("coraltube")
     val BLOODSTOLB: ResourceKey<ConfiguredFeature<*, *>> = registerKey("bloodstolb")
 
@@ -39,6 +40,9 @@ object ModFeatureConfigured {
     val LIMESTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("limestone")
     val SANDSTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("sandstone")
     val QUARTZ: ResourceKey<ConfiguredFeature<*, *>> = registerKey("quartz")
+    val LITHIUM: ResourceKey<ConfiguredFeature<*, *>> = registerKey("lithium")
+
+    val BLOOD_KELP: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_kelp")
 
     fun bootstrap(p: BootstapContext<ConfiguredFeature<*, *>>) {
         register(
@@ -46,6 +50,12 @@ object ModFeatureConfigured {
             BLOOD_GRASS,
             ModFeature.BLOOD_GRASS!!.get(),
             ProbabilityFeatureConfiguration(0.3f)
+        )
+        register(
+            p,
+            BLOOD_KELP,
+            ModFeature.BLOOD_KELP!!.get(),
+            null
         )
         register(
             p,
@@ -97,6 +107,12 @@ object ModFeatureConfigured {
         )
         register(
             p,
+            TABLECORAL,
+            ModFeature.TABLECORAL!!.get(),
+            ProbabilityFeatureConfiguration(0.5f)
+        )
+        register(
+            p,
             CORALTUBE,
             ModFeature.CORALTUBE!!.get(),
             ProbabilityFeatureConfiguration(0.5f)
@@ -118,6 +134,12 @@ object ModFeatureConfigured {
             SANDSTONE,
             Feature.SIMPLE_BLOCK,
             SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SANDSTONE.get()))
+        )
+        register(
+            p,
+            LITHIUM,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.LITHIUM.get()))
         )
         register(
             p,

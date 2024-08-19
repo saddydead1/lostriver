@@ -4,10 +4,13 @@ import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument
 import net.minecraft.world.level.material.MapColor
+import net.minecraft.world.level.material.PushReaction
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import net.minecraftforge.registries.RegistryObject
 import su.sonoma.lostriver.Lostriver.MODID
+import su.sonoma.lostriver.block.custom.BloodKelpBlock
+import su.sonoma.lostriver.block.custom.BloodKelpPlantBlock
 import su.sonoma.lostriver.block.custom.ModOreBlock
 import su.sonoma.lostriver.block.custom.ModSandBlock
 
@@ -144,6 +147,36 @@ object ModBlocks {
         ModOreBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
                 .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
+        )
+    }
+
+    val TABLECORAL: RegistryObject<Block> = BLOCKS.register("tablecoral") {
+        SeagrassBlock(
+            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+    }
+
+    val LITHIUM: RegistryObject<Block> = BLOCKS.register("lithium") {
+        ModOreBlock(
+            BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
+        )
+    }
+
+    val BLOOD_KELP_PLANT: RegistryObject<Block> = BLOCKS.register(
+        "blood_kelp_plant") {
+        BloodKelpPlantBlock(
+            BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(
+                SoundType.WET_GRASS
+            ).pushReaction(PushReaction.DESTROY)
+        )
+    }
+
+    val BLOOD_KELP: RegistryObject<Block> = BLOCKS.register(
+        "blood_kelp") {
+        BloodKelpBlock(
+            BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().randomTicks().instabreak().sound(
+                SoundType.WET_GRASS
+            ).pushReaction(PushReaction.DESTROY)
         )
     }
 

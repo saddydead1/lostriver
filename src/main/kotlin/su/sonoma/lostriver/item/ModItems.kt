@@ -127,6 +127,48 @@ object ModItems {
 
     }
 
+    val LITHIUM: RegistryObject<Item> = ITEMS.register("lithium") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val TABLECORAL: RegistryObject<Item> = ITEMS.register("tablecoral") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val COPPERWIRE: RegistryObject<Item> = ITEMS.register("copperwire") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val COMPUTERCHIP: RegistryObject<Item> = ITEMS.register("computerchip") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val PLASTEELINGOT: RegistryObject<Item> = ITEMS.register("plasteelingot") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val ADVANCEDWIRINGKIT: RegistryObject<Item> = ITEMS.register("advancedwiringkit") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val CYCLOPBLUEPRINT: RegistryObject<Item> = ITEMS.register("cyclop_blueprint") {
+        BlueprintItem(
+            Item.Properties().stacksTo(64))
+
+    }
+
     val EMALEDGLASS: RegistryObject<Item> = ITEMS.register("emaled_glass") {
         Item(
             Item.Properties().stacksTo(64))
