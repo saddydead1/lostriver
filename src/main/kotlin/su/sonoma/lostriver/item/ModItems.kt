@@ -362,6 +362,11 @@ object ModItems {
             Item.Properties().stacksTo(64))
     }
 
+    val DEEPACIDMUSHROOM: RegistryObject<Item> = ITEMS.register("deepacidmushroom") {
+        BlockItem( ModBlocks.DEEPACIDMUSHROOM.get(),
+            Item.Properties().stacksTo(64))
+    }
+
     val POWERCELL: RegistryObject<Item> = ITEMS.register("powercell") {
         Item(
             Item.Properties().stacksTo(64))

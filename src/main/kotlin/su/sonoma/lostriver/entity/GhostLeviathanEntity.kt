@@ -58,7 +58,7 @@ class GhostLeviathanEntity(pEntityType: EntityType<out AbstractSchoolingFish>, p
     }
 
     override fun getAmbientSound(): SoundEvent {
-        return Sounds.REAPER.get()
+        return Sounds.GHOSTLEVIATHAN.get()
     }
 
     override fun getDeathSound(): SoundEvent {

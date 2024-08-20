@@ -23,6 +23,7 @@ object ModFeatureConfigured {
     val BLOODKELP_MOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("bloodkelp_moss")
     val DOUBLEKELP: ResourceKey<ConfiguredFeature<*, *>> = registerKey("double_kelp")
     val ACIDMUSHROOM: ResourceKey<ConfiguredFeature<*, *>> = registerKey("acidmushroom")
+    val DEEPACIDMUSHROOM: ResourceKey<ConfiguredFeature<*, *>> = registerKey("deepacidmushroom")
     val PURPLEMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("purplemoss")
     val GREENCOVERMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("greencovermoss")
     val ROYALMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("royalmoss")
@@ -92,6 +93,12 @@ object ModFeatureConfigured {
             p,
             ACIDMUSHROOM,
             ModFeature.ACIDMUSHROOM!!.get(),
+            ProbabilityFeatureConfiguration(0.1f)
+        )
+        register(
+            p,
+            DEEPACIDMUSHROOM,
+            ModFeature.DEEPACIDMUSHROOM!!.get(),
             ProbabilityFeatureConfiguration(0.1f)
         )
         register(

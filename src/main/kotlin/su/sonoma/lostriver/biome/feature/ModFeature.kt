@@ -22,6 +22,7 @@ object ModFeature {
     val DOUBLEKELP: RegistryObject<DoubleKelpFeature>? = register("double_kelp", DoubleKelpFeature(ProbabilityFeatureConfiguration.CODEC))
     val YELLOWGRASS: RegistryObject<YellowGrassFeature>? = register("yellowgrass", YellowGrassFeature(ProbabilityFeatureConfiguration.CODEC))
     val ACIDMUSHROOM: RegistryObject<AcidMushroomFeature>? = register("acidmushroom", AcidMushroomFeature(ProbabilityFeatureConfiguration.CODEC))
+    val DEEPACIDMUSHROOM: RegistryObject<DeepAcidMushroomFeature>? = register("deepacidmushroom", DeepAcidMushroomFeature(ProbabilityFeatureConfiguration.CODEC))
     val SAFESHALLOWMOSS: RegistryObject<SafeShallowMossFeature>? = register("safeshallowmoss", SafeShallowMossFeature(ProbabilityFeatureConfiguration.CODEC))
 
     val SAFESHALLOW: RegistryObject<SafeShallowFeature>? = register("ssafeshallow", SafeShallowFeature(ProbabilityFeatureConfiguration.CODEC))

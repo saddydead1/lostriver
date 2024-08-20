@@ -201,6 +201,7 @@ object Lostriver {
                 output.accept(ModItems.KELP_SAND.get())
                 output.accept(ModItems.BLOOD_SAND.get())
                 output.accept(ModItems.ACIDMUSHROOM.get())
+                output.accept(ModItems.DEEPACIDMUSHROOM.get())
                 output.accept(ModItems.TABLECORAL.get())
                 output.accept(ModItems.DOUBLEKELP.get())
                 output.accept(ModItems.BLUEPALM.get())
