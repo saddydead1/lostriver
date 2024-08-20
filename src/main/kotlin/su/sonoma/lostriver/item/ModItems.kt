@@ -127,6 +127,48 @@ object ModItems {
 
     }
 
+    val LITHIUM: RegistryObject<Item> = ITEMS.register("lithium") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val TABLECORAL: RegistryObject<Item> = ITEMS.register("tablecoral") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val COPPERWIRE: RegistryObject<Item> = ITEMS.register("copperwire") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val COMPUTERCHIP: RegistryObject<Item> = ITEMS.register("computerchip") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val PLASTEELINGOT: RegistryObject<Item> = ITEMS.register("plasteelingot") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val ADVANCEDWIRINGKIT: RegistryObject<Item> = ITEMS.register("advancedwiringkit") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val CYCLOPBLUEPRINT: RegistryObject<Item> = ITEMS.register("cyclop_blueprint") {
+        BlueprintItem(
+            Item.Properties().stacksTo(64))
+
+    }
+
     val EMALEDGLASS: RegistryObject<Item> = ITEMS.register("emaled_glass") {
         Item(
             Item.Properties().stacksTo(64))
@@ -144,6 +186,12 @@ object ModItems {
 
     val SAND: RegistryObject<Item> = ITEMS.register("sand") {
         BlockItem( ModBlocks.SAND.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val BLOODSTONE: RegistryObject<Item> = ITEMS.register("bloodstone") {
+        BlockItem( ModBlocks.BLOODSTONE.get(),
             Item.Properties().stacksTo(64)
         )
     }
@@ -203,6 +251,12 @@ object ModItems {
     }
     val BLOOD_MOSS: RegistryObject<Item> = ITEMS.register("bloodmoss") {
         BlockItem( ModBlocks.BLOOD_MOSS.get(),
+            Item.Properties().stacksTo(64)
+        )
+    }
+
+    val BLOODKELP_MOSS: RegistryObject<Item> = ITEMS.register("bloodkelpmoss") {
+        BlockItem( ModBlocks.BLOODKELP_MOSS.get(),
             Item.Properties().stacksTo(64)
         )
     }
@@ -305,6 +359,11 @@ object ModItems {
 
     val ACIDMUSHROOM: RegistryObject<Item> = ITEMS.register("acidmushroom") {
         BlockItem( ModBlocks.ACIDMUSHROOM.get(),
+            Item.Properties().stacksTo(64))
+    }
+
+    val DEEPACIDMUSHROOM: RegistryObject<Item> = ITEMS.register("deepacidmushroom") {
+        BlockItem( ModBlocks.DEEPACIDMUSHROOM.get(),
             Item.Properties().stacksTo(64))
     }
 

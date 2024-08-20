@@ -18,6 +18,7 @@ class ModEvents {
             event.put(ModEntity.REAPER.get(), ReaperEntity.setAttributes())
             event.put(ModEntity.BLADDER.get(), BladderEntity.setAttributes())
             event.put(ModEntity.JELLYRAY.get(), JellyrayEntity.setAttributes())
+            event.put(ModEntity.GHOST_LEVIATHAN.get(), GhostLeviathanEntity.setAttributes())
         }
     }
 }

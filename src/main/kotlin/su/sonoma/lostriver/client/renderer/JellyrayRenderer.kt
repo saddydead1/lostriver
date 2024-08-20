@@ -1,6 +1,7 @@
 package su.sonoma.lostriver.client.renderer
 
 import net.minecraft.client.renderer.entity.EntityRendererProvider
+import net.minecraft.core.BlockPos
 import net.minecraft.resources.ResourceLocation
 import software.bernie.geckolib.model.DefaultedEntityGeoModel
 import software.bernie.geckolib.renderer.GeoEntityRenderer
@@ -14,5 +15,9 @@ class JellyrayRenderer(renderManager: EntityRendererProvider.Context) :
     ){
     init {
         this.shadowRadius = 0.25f
+    }
+
+    override fun getBlockLightLevel(p_174146_: JellyrayEntity, p_174147_: BlockPos?): Int {
+        return 10
     }
 }

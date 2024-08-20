@@ -47,11 +47,14 @@
       "minecraft:patch_grass_badlands",
       "minecraft:trees_savanna",
       "lostriver:ssafeshallow_place",
+      "lostriver:tablecoral_place",
       "lostriver:veined_place",
       "lostriver:bluepalm_place",
       "lostriver:yellowgrass_place",
       "lostriver:limestone",
+      "lostriver:sandstone",
       "lostriver:quartz",
+      "lostriver:lithium_place",
       "lostriver:mushroom_place"
     ]
   ],

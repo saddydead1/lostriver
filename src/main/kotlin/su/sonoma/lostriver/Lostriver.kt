@@ -128,6 +128,14 @@ object Lostriver {
                 RenderType.cutout()
             )
             ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.BLOOD_KELP.get(),
+                RenderType.cutout()
+            )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.BLOOD_KELP_PLANT.get(),
+                RenderType.cutout()
+            )
+            ItemBlockRenderTypes.setRenderLayer(
                 ModBlocks.BLUEPALM.get(),
                 RenderType.cutout()
             )
@@ -137,6 +145,10 @@ object Lostriver {
             )
             ItemBlockRenderTypes.setRenderLayer(
                 ModBlocks.YELLOWGRASS.get(),
+                RenderType.cutout()
+            )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.BLOODKELP_MOSS.get(),
                 RenderType.cutout()
             )
         }
@@ -160,6 +172,9 @@ object Lostriver {
                 output.accept(ModItems.TOOTH.get())
                 output.accept(ModItems.SILICONE.get())
                 output.accept(ModItems.WIRINGKIT.get())
+                output.accept(ModItems.ADVANCEDWIRINGKIT.get())
+                output.accept(ModItems.COPPERWIRE.get())
+                output.accept(ModItems.COMPUTERCHIP.get())
                 output.accept(ModItems.FIBERMESH.get())
                 output.accept(ModItems.BATTERY.get())
                 output.accept(ModItems.POWERCELL.get())
@@ -170,19 +185,24 @@ object Lostriver {
                 output.accept(ModItems.GOLD.get())
                 output.accept(ModItems.SILVER.get())
                 output.accept(ModItems.QUARTZ.get())
+                output.accept(ModItems.LITHIUM.get())
                 output.accept(ModItems.TITANINGOT.get())
+                output.accept(ModItems.PLASTEELINGOT.get())
                 output.accept(ModItems.EMALEDGLASS.get())
                 output.accept(ModItems.LIMESTONE.get())
                 output.accept(ModItems.SANDSTONE.get())
                 output.accept(ModItems.CORAL.get())
                 output.accept(ModItems.MUSHROOM.get())
                 output.accept(ModItems.MUSHROOMSTEW.get())
+                output.accept(ModItems.BLOODSTONE.get())
                 output.accept(ModItems.SAND.get())
                 output.accept(ModItems.PURPLEBLOCK.get())
                 output.accept(ModItems.ROYALBLOCK.get())
                 output.accept(ModItems.KELP_SAND.get())
                 output.accept(ModItems.BLOOD_SAND.get())
                 output.accept(ModItems.ACIDMUSHROOM.get())
+                output.accept(ModItems.DEEPACIDMUSHROOM.get())
+                output.accept(ModItems.TABLECORAL.get())
                 output.accept(ModItems.DOUBLEKELP.get())
                 output.accept(ModItems.BLUEPALM.get())
                 output.accept(ModItems.YELLOWGRASS.get())
@@ -193,6 +213,7 @@ object Lostriver {
                 output.accept(ModItems.ROYALMOSS.get())
                 output.accept(ModItems.PURPLEMOSS.get())
                 output.accept(ModItems.GREENCOVERMOSS.get())
+                output.accept(ModItems.BLOODKELP_MOSS.get())
                 output.accept(ModItems.BLOOD_MOSS.get())
                 output.accept(ModItems.BLOOD_GRASS.get())
                 output.accept(ModItems.REAPER_FRAGMENT.get())
@@ -204,6 +225,7 @@ object Lostriver {
                 output.accept(ModItems.SEAMOTHFRAGMENT.get())
                 output.accept(ModItems.SEAMOTHBLUEPRINT.get())
                 output.accept(ModItems.SEAMOTH.get())
+                output.accept(ModItems.CYCLOPBLUEPRINT.get())
                 output.accept(ModItems.CYCLOP.get())
             }.build()
     }

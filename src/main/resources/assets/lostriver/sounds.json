@@ -40,5 +40,11 @@
     "sounds": [
       "lostriver:seamoth_welcome"
     ]
+  },
+  "ghostleviathan": {
+    "subtitle": "sounds.subcraftica.ghostleviathan",
+    "sounds": [
+      "lostriver:ghostleviathan"
+    ]
   }
 }

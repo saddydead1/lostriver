@@ -20,8 +20,10 @@ object ModFeatureConfigured {
     val BLOODSAND: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_sand")
     val KELPSAND: ResourceKey<ConfiguredFeature<*, *>> = registerKey("kelp_sand")
     val BLOOD_MOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_moss")
+    val BLOODKELP_MOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("bloodkelp_moss")
     val DOUBLEKELP: ResourceKey<ConfiguredFeature<*, *>> = registerKey("double_kelp")
     val ACIDMUSHROOM: ResourceKey<ConfiguredFeature<*, *>> = registerKey("acidmushroom")
+    val DEEPACIDMUSHROOM: ResourceKey<ConfiguredFeature<*, *>> = registerKey("deepacidmushroom")
     val PURPLEMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("purplemoss")
     val GREENCOVERMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("greencovermoss")
     val ROYALMOSS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("royalmoss")
@@ -31,6 +33,7 @@ object ModFeatureConfigured {
     val YELLOWGRASS: ResourceKey<ConfiguredFeature<*, *>> = registerKey("yellowgrass")
 
     val SAFESHALLOW: ResourceKey<ConfiguredFeature<*, *>> = registerKey("ssafe_shallow")
+    val TABLECORAL: ResourceKey<ConfiguredFeature<*, *>> = registerKey("table_coral")
     val CORALTUBE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("coraltube")
     val BLOODSTOLB: ResourceKey<ConfiguredFeature<*, *>> = registerKey("bloodstolb")
 
@@ -39,6 +42,9 @@ object ModFeatureConfigured {
     val LIMESTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("limestone")
     val SANDSTONE: ResourceKey<ConfiguredFeature<*, *>> = registerKey("sandstone")
     val QUARTZ: ResourceKey<ConfiguredFeature<*, *>> = registerKey("quartz")
+    val LITHIUM: ResourceKey<ConfiguredFeature<*, *>> = registerKey("lithium")
+
+    val BLOOD_KELP: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_kelp")
 
     fun bootstrap(p: BootstapContext<ConfiguredFeature<*, *>>) {
         register(
@@ -46,6 +52,12 @@ object ModFeatureConfigured {
             BLOOD_GRASS,
             ModFeature.BLOOD_GRASS!!.get(),
             ProbabilityFeatureConfiguration(0.3f)
+        )
+        register(
+            p,
+            BLOOD_KELP,
+            ModFeature.BLOOD_KELP!!.get(),
+            null
         )
         register(
             p,
@@ -58,6 +70,12 @@ object ModFeatureConfigured {
             BLOOD_MOSS,
             ModFeature.BLOOD_MOSS!!.get(),
             ProbabilityFeatureConfiguration(0.3f)
+        )
+        register(
+            p,
+            BLOODKELP_MOSS,
+            ModFeature.BLOODKELP_MOSS!!.get(),
+            ProbabilityFeatureConfiguration(0.1f)
         )
         register(
             p,
@@ -79,6 +97,12 @@ object ModFeatureConfigured {
         )
         register(
             p,
+            DEEPACIDMUSHROOM,
+            ModFeature.DEEPACIDMUSHROOM!!.get(),
+            ProbabilityFeatureConfiguration(0.1f)
+        )
+        register(
+            p,
             BLOODSAND,
             ModFeature.BLOODSAND!!.get(),
             ProbabilityFeatureConfiguration(0.5f)
@@ -93,6 +117,12 @@ object ModFeatureConfigured {
             p,
             SAFESHALLOW,
             ModFeature.SAFESHALLOW!!.get(),
+            ProbabilityFeatureConfiguration(0.5f)
+        )
+        register(
+            p,
+            TABLECORAL,
+            ModFeature.TABLECORAL!!.get(),
             ProbabilityFeatureConfiguration(0.5f)
         )
         register(
@@ -118,6 +148,12 @@ object ModFeatureConfigured {
             SANDSTONE,
             Feature.SIMPLE_BLOCK,
             SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SANDSTONE.get()))
+        )
+        register(
+            p,
+            LITHIUM,
+            Feature.SIMPLE_BLOCK,
+            SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.LITHIUM.get()))
         )
         register(
             p,

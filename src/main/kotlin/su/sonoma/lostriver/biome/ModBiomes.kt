@@ -30,7 +30,7 @@ object ModBiomes {
 
     val BLOOD_KELP: ResourceKey<Biome> = ResourceKey.create(
         Registries.BIOME,
-        ResourceLocation(MODID, "blood_kelp")
+        ResourceLocation(MODID, "glassy_plateaus")
     )
 
     val DUNES: ResourceKey<Biome> = ResourceKey.create(
@@ -43,10 +43,16 @@ object ModBiomes {
         ResourceLocation(MODID, "mushroom_forest")
     )
 
+    val BLOOD: ResourceKey<Biome> = ResourceKey.create(
+        Registries.BIOME,
+        ResourceLocation(MODID, "blood_kelp")
+    )
+
     fun bootstrap(context: BootstapContext<Biome>) {
         context.register(SAFE_SHALLOWS, testBiome(context))
         context.register(KELP_FOREST, kelp(context))
         context.register(BLOOD_KELP, blood_kelp(context))
+        context.register(BLOOD, blood(context))
         context.register(DUNES, dunes(context))
         context.register(MUSHROOMFOREST, mushroom(context))
     }
@@ -80,13 +86,16 @@ object ModBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.SAFESHALLOW)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.TABLECORAL)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.VEINED)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLUEPALM)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.YELLOWGRASS)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LIMESTONE)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.SANDSTONE)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.QUARTZ)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.LITHIUM)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.MUSHROOM)
 
@@ -111,6 +120,50 @@ object ModBiomes {
             .build()
     }
 
+    fun blood(context: BootstapContext<Biome>): Biome {
+        val spawnBuilder = MobSpawnSettings.Builder()
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.GHOST_LEVIATHAN.get(), 20, 1, 2))
+        spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BLADDER.get(), 80, 1, 15))
+
+        val biomeBuilder =
+            BiomeGenerationSettings.Builder(
+                context.lookup(Registries.PLACED_FEATURE),
+                context.lookup(Registries.CONFIGURED_CARVER)
+            )
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder)
+        BiomeDefaultFeatures.addExtraGold(biomeBuilder)
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOOD_KELP)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.BLOODKELP_MOSS)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.DEEPACIDMUSHROOM)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ModPlacedFeature.LITHIUM)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.QUARTZ)
+
+        return BiomeBuilder()
+            .hasPrecipitation(false)
+            .downfall(0f)
+            .temperature(0.7f)
+            .generationSettings(biomeBuilder.build())
+            .mobSpawnSettings(spawnBuilder.build())
+            .specialEffects(
+                BiomeSpecialEffects.Builder()
+                    .waterColor(65882)
+                    .waterFogColor(65882)
+                    .skyColor(27571)
+                    .grassColorOverride(6749952)
+                    .foliageColorOverride(5373696)
+                    .fogColor(65882)
+                    .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                    .build()
+            )
+            .build()
+    }
+
     fun testBiome(context: BootstapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
@@ -129,6 +182,7 @@ object ModBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.SAFESHALLOW)
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.TABLECORAL)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.DOUBLEKELP)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.ACIDMUSHROOM)
@@ -275,6 +329,8 @@ object ModBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_SAVANNA)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.KELP_COLD)
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeature.TABLECORAL)
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_COLD)
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_WARM)

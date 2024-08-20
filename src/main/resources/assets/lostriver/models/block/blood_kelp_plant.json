@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "lostriver:block/blood_kelp_plant"
+  }
+}

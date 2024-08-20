@@ -122,13 +122,24 @@ object B4546 {
                     Pair.of(
                         Climate.parameters(
                             0.3F,
-                            0.6F,
-                            0.3F,
+                            0.5F,
+                            0.5F,
                             0.6F,
                             0.0F,
                             0.0F,
                             0.1F),
                         biomeRegistry.getOrThrow(ModBiomes.DUNES)
+                    ),
+                    Pair.of(
+                        Climate.parameters(
+                            0.8F,
+                            0.4F,
+                            0.2F,
+                            0.6F,
+                            0.0F,
+                            0.0F,
+                            0.1F),
+                        biomeRegistry.getOrThrow(ModBiomes.BLOOD)
                     )
                 )
                 )

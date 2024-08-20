@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "lostriver:cyclop"
+    },
+    "title": "Ship Captain",
+    "description": "Craft a cyclop",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "lostriver:seamoth",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lostriver:cyclop"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

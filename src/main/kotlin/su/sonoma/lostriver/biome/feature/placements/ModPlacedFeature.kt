@@ -18,6 +18,7 @@ object ModPlacedFeature {
     val BLOODSAND: ResourceKey<PlacedFeature> = registerKey("blood_sand_place")
     val KELPSAND: ResourceKey<PlacedFeature> = registerKey("kelp_sand_place")
     val ACIDMUSHROOM: ResourceKey<PlacedFeature> = registerKey("acidmushroom_place")
+    val DEEPACIDMUSHROOM: ResourceKey<PlacedFeature> = registerKey("deepacidmushroom_place")
 
     val SAFESHALLOWMOSS: ResourceKey<PlacedFeature> = registerKey("safeshallowmoss_place")
     val PURPLEMOSS: ResourceKey<PlacedFeature> = registerKey("purplemoss_place")
@@ -26,8 +27,10 @@ object ModPlacedFeature {
     val VEINED: ResourceKey<PlacedFeature> = registerKey("veined_place")
     val BLUEPALM: ResourceKey<PlacedFeature> = registerKey("bluepalm_place")
     val YELLOWGRASS: ResourceKey<PlacedFeature> = registerKey("yellowgrass_place")
+    val BLOODKELP_MOSS: ResourceKey<PlacedFeature> = registerKey("bloodkelp_moss_place")
 
     val SAFESHALLOW: ResourceKey<PlacedFeature> = registerKey("ssafeshallow_place")
+    val TABLECORAL: ResourceKey<PlacedFeature> = registerKey("tablecoral_place")
     val CORALTUBE: ResourceKey<PlacedFeature> = registerKey("coraltube_place")
     val BLOODSTOLB: ResourceKey<PlacedFeature> = registerKey("bloodstolb_place")
 
@@ -36,12 +39,24 @@ object ModPlacedFeature {
     val LIMESTONE: ResourceKey<PlacedFeature> = registerKey("limestone")
     val SANDSTONE: ResourceKey<PlacedFeature> = registerKey("sandstone")
     val QUARTZ: ResourceKey<PlacedFeature> = registerKey("quartz")
+    val LITHIUM: ResourceKey<PlacedFeature> = registerKey("lithium_place")
+
+    val BLOOD_KELP: ResourceKey<PlacedFeature> = registerKey("blood_kelp")
 
     private fun placement(p_195234_: Int): List<PlacementModifier> {
         return java.util.List.of(
             InSquarePlacement.spread(),
             PlacementUtils.HEIGHTMAP_TOP_SOLID,
             CountPlacement.of(p_195234_),
+            BiomeFilter.biome()
+        )
+    }
+
+    private fun placementKelp(): List<PlacementModifier> {
+        return java.util.List.of(
+            NoiseBasedCountPlacement.of(80, 80.0, 0.0),
+            InSquarePlacement.spread(),
+            PlacementUtils.HEIGHTMAP_TOP_SOLID,
             BiomeFilter.biome()
         )
     }
@@ -55,6 +70,7 @@ object ModPlacedFeature {
         val reference3 = holdergetter.getOrThrow(ModFeatureConfigured.BLOODSAND)
         val reference5 = holdergetter.getOrThrow(ModFeatureConfigured.KELPSAND)
         val reference8 = holdergetter.getOrThrow(ModFeatureConfigured.ACIDMUSHROOM)
+        val reference24 = holdergetter.getOrThrow(ModFeatureConfigured.DEEPACIDMUSHROOM)
         val reference9 = holdergetter.getOrThrow(ModFeatureConfigured.GREENCOVERMOSS)
         val reference10 = holdergetter.getOrThrow(ModFeatureConfigured.PURPLEMOSS)
         val reference11 = holdergetter.getOrThrow(ModFeatureConfigured.SAFESHALLOWMOSS)
@@ -62,27 +78,37 @@ object ModPlacedFeature {
         val reference13 = holdergetter.getOrThrow(ModFeatureConfigured.VEINED)
         val reference18 = holdergetter.getOrThrow(ModFeatureConfigured.BLUEPALM)
         val reference19 = holdergetter.getOrThrow(ModFeatureConfigured.YELLOWGRASS)
+        val reference23 = holdergetter.getOrThrow(ModFeatureConfigured.BLOODKELP_MOSS)
 
         val reference14 = holdergetter.getOrThrow(ModFeatureConfigured.SAFESHALLOW)
         val reference15 = holdergetter.getOrThrow(ModFeatureConfigured.CORALTUBE)
+        val reference21 = holdergetter.getOrThrow(ModFeatureConfigured.TABLECORAL)
         val reference16 = holdergetter.getOrThrow(ModFeatureConfigured.BLOODSTOLB)
 
         val reference4 = holdergetter.getOrThrow(ModFeatureConfigured.LIMESTONE)
         val reference6 = holdergetter.getOrThrow(ModFeatureConfigured.SANDSTONE)
         val reference7 = holdergetter.getOrThrow(ModFeatureConfigured.QUARTZ)
+        val reference20 = holdergetter.getOrThrow(ModFeatureConfigured.LITHIUM)
+
+        val reference22 = holdergetter.getOrThrow(ModFeatureConfigured.BLOOD_KELP)
 
         val reference17 = holdergetter.getOrThrow(ModFeatureConfigured.MUSHROOM)
 
         register(p, BLOOD_GRASS, reference, placement(80))
         register(p, BLOOD_MOSS, reference1, placement(80))
+        register(p, BLOODKELP_MOSS, reference23, placement(40))
         register(p, BLOODSAND, reference3, placement(90))
         register(p, KELPSAND, reference5, placement(95))
         register(p, DOUBLEKELP, reference2, placement(20))
         register(p, ACIDMUSHROOM, reference8, placement(30))
+        register(p, DEEPACIDMUSHROOM, reference24, placement(30))
         register(p, BLUEPALM, reference18, placement(90))
         register(p, YELLOWGRASS, reference19, placement(90))
 
+        register(p, BLOOD_KELP, reference22, placementKelp())
+
         register(p, SAFESHALLOW, reference14, placement(90))
+        register(p, TABLECORAL, reference21, placement(90))
         register(p, CORALTUBE, reference15, placement(20))
         register(p, BLOODSTOLB, reference16, placement(5))
 
@@ -97,6 +123,7 @@ object ModPlacedFeature {
         register(p, LIMESTONE, reference4, placement(80))
         register(p, SANDSTONE, reference6, placement(80))
         register(p, QUARTZ, reference7, placement(50))
+        register(p, LITHIUM, reference20, placement(50))
     }
 
     private fun registerKey(name: String): ResourceKey<PlacedFeature> {
