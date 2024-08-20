@@ -1,10 +1,10 @@
 {
+  "replace": false,
   "values": [
     "lostriver:limestone",
     "lostriver:sandstone",
     "lostriver:quartz",
     "lostriver:coral",
-    "lostriver:portal",
     "lostriver:lithium",
     "lostriver:bloodstone"
   ]
