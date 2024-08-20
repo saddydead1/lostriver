@@ -261,11 +261,6 @@ object ModItems {
         )
     }
 
-    val PORTAL: RegistryObject<Item> = ITEMS.register("portal") {
-        BlockItem( ModBlocks.PORTAL.get(),
-            Item.Properties().stacksTo(64)
-        )
-    }
 
     val PURPLEMOSS: RegistryObject<Item> = ITEMS.register("purplemoss") {
         BlockItem( ModBlocks.PURPLEMOSS.get(),

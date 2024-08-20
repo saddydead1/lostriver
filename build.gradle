@@ -196,8 +196,6 @@ dependencies {
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
 
-    implementation fg.deobf('net.kyrptonaught.customportalapi:customportalapi-reforged:1.0.2')
-
     implementation(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
 
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")

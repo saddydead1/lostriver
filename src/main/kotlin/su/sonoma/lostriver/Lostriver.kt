@@ -1,7 +1,6 @@
 package su.sonoma.lostriver
 
 import com.mojang.logging.LogUtils
-import net.kyrptonaught.customportalapi.api.CustomPortalBuilder
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.ItemBlockRenderTypes
 import net.minecraft.client.renderer.RenderType
@@ -86,12 +85,6 @@ object Lostriver {
 
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber)
 
-        CustomPortalBuilder.beginPortal()
-            .frameBlock(ModBlocks.PORTAL.get())
-            .destDimID(ResourceLocation("lostriver:b4546"))
-            .tintColor(0, 66, 184)
-            .registerPortal()
-
         Config.items.forEach { item: Item -> LOGGER.info("ITEM >> {}", item.toString()) }
     }
 
@@ -160,7 +153,6 @@ object Lostriver {
             .icon { ModItems.PEEPER.get().defaultInstance }
             .title(Component.translatable(MODID + ".subtab"))
             .displayItems { parameters: ItemDisplayParameters?, output: CreativeModeTab.Output ->
-                output.accept(ModItems.PORTAL.get())
                output.accept(ModItems.PEEPER.get())
                 output.accept(ModItems.COOKED_PEEPER.get())
                 output.accept(ModItems.BOOMERANG.get())

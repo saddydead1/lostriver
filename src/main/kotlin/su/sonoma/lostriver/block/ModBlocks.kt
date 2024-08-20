@@ -63,11 +63,6 @@ object ModBlocks {
             BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val PORTAL: RegistryObject<Block> = BLOCKS.register("portal") {
-        Block(
-            BlockBehaviour.Properties.copy(Blocks.STONE))
-    }
-
     val MUSHROOM: RegistryObject<Block> = BLOCKS.register("mushroom") {
         SlabBlock(
             BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noOcclusion())
