@@ -39,7 +39,6 @@ import su.sonoma.lostriver.protocol.UnDockMessage
 import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
 
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(Lostriver.MODID)
 object Lostriver {
     const val MODID: String = "lostriver"
@@ -70,29 +69,19 @@ object Lostriver {
 
         MinecraftForge.EVENT_BUS.register(this)
 
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC)
-
         INSTANCE.registerMessage(DockMessage.id, DockMessage::class.java, DockMessage::toFriendlyByteBuf, DockMessage::toBoatMessage, DockMessage::handle)
         INSTANCE.registerMessage(UnDockMessage.id, UnDockMessage::class.java, UnDockMessage::toFriendlyByteBuf, UnDockMessage::toBoatMessage, UnDockMessage::handle)
     }
 
     private fun commonSetup(event: FMLCommonSetupEvent) {
-        // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP")
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT))
-
-        if (Config.logDirtBlock) LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT))
-
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber)
 
         CustomPortalBuilder.beginPortal()
             .frameBlock(ModBlocks.PORTAL.get())
             .destDimID(ResourceLocation("lostriver:b4546"))
             .tintColor(0, 66, 184)
             .registerPortal()
-
-        Config.items.forEach { item: Item -> LOGGER.info("ITEM >> {}", item.toString()) }
     }
 
 
