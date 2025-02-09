@@ -3,8 +3,6 @@ package su.sonoma.lostriver.protocol
 import net.minecraft.network.FriendlyByteBuf
 import net.minecraft.network.chat.Component
 import net.minecraft.world.InteractionHand
-import net.minecraftforge.network.NetworkDirection
-import net.minecraftforge.network.NetworkEvent
 import su.sonoma.lostriver.Lostriver
 import java.util.function.Supplier
 

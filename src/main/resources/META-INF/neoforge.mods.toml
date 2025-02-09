@@ -1,0 +1,44 @@
+modLoader="kotlinforforge"
+loaderVersion="[4,)"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+logoFile="lostriver.png"
+authors="${mod_authors}"
+description='''${mod_description}'''
+
+[[dependencies."${mod_id}"]]
+modId="neoforge"
+type="required"
+versionRange="${neo_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies."${mod_id}"]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies."${mod_id}"]]
+   modId="kotlinforforge"
+   type="required"
+   versionRange="[5.6,)"
+   ordering="NONE"
+   side="BOTH"
+[[dependencies."${mod_id}"]]
+   modId="geckolib"
+   type="required"
+   versionRange="[4.7.3,)"
+   ordering="NONE"
+   side="BOTH"
+[[dependencies."${mod_id}"]]
+   modId="cpapireforged"
+   type="required"
+   versionRange="[1.0.11,)"
+   ordering="NONE"
+   side="BOTH"

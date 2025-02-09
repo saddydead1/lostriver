@@ -1,20 +1,19 @@
 package su.sonoma.lostriver
 
 import net.minecraft.client.renderer.entity.EntityRendererProvider
-import net.minecraftforge.api.distmarker.Dist
-import net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers
-import net.minecraftforge.eventbus.api.SubscribeEvent
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus
+import net.neoforged.api.distmarker.Dist
+import net.neoforged.bus.api.SubscribeEvent
+import net.neoforged.fml.common.EventBusSubscriber
+import net.neoforged.neoforge.client.event.EntityRenderersEvent
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.client.renderer.*
 import su.sonoma.lostriver.entity.ModEntity
 
 
-@EventBusSubscriber(modid = MODID, bus = Bus.MOD, value = [Dist.CLIENT])
+@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = [Dist.CLIENT])
 object ClientListener {
     @SubscribeEvent
-    fun registerRenderers(event: RegisterRenderers) {
+    fun registerRenderers(event: EntityRenderersEvent.RegisterRenderers) {
         event.registerEntityRenderer(ModEntity.PEEPER.get()
         ) { context: EntityRendererProvider.Context? -> PeeperRenderer(context!!) }
 
