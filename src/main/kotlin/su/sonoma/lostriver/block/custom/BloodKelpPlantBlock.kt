@@ -1,7 +1,9 @@
 package su.sonoma.lostriver.block.custom
 
+import com.mojang.serialization.MapCodec
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
+import net.minecraft.world.entity.player.Player
 import net.minecraft.world.level.BlockGetter
 import net.minecraft.world.level.LevelAccessor
 import net.minecraft.world.level.block.GrowingPlantBodyBlock
@@ -20,15 +22,20 @@ class BloodKelpPlantBlock(p_54323_: Properties?) :
         return ModBlocks.BLOOD_KELP.get() as GrowingPlantHeadBlock
     }
 
+    override fun codec(): MapCodec<out GrowingPlantBodyBlock> {
+        TODO("Not yet implemented")
+    }
+
     override fun getFluidState(p_54336_: BlockState): FluidState {
         return Fluids.WATER.getSource(false)
     }
 
     override fun canPlaceLiquid(
+        player: Player?,
         p_54325_: BlockGetter,
         p_54326_: BlockPos,
         p_54327_: BlockState,
-        p_54328_: Fluid,
+        p_54328_: Fluid
     ): Boolean {
         return false
     }

@@ -1,7 +1,7 @@
 package su.sonoma.lostriver.biome.feature.placements
 
 import net.minecraft.core.registries.Registries
-import net.minecraft.data.worldgen.BootstapContext
+import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature
@@ -46,7 +46,7 @@ object ModFeatureConfigured {
 
     val BLOOD_KELP: ResourceKey<ConfiguredFeature<*, *>> = registerKey("blood_kelp")
 
-    fun bootstrap(p: BootstapContext<ConfiguredFeature<*, *>>) {
+    fun bootstrap(p: BootstrapContext<ConfiguredFeature<*, *>>) {
         register(
             p,
             BLOOD_GRASS,
@@ -202,12 +202,12 @@ object ModFeatureConfigured {
     fun registerKey(name: String?): ResourceKey<ConfiguredFeature<*, *>> {
         return ResourceKey.create(
             Registries.CONFIGURED_FEATURE,
-            ResourceLocation(MODID, name)
+            ResourceLocation.fromNamespaceAndPath(MODID, name)
         )
     }
 
     private fun <FC : FeatureConfiguration?, F : Feature<FC>?> register(
-        context: BootstapContext<ConfiguredFeature<*, *>>,
+        context: BootstrapContext<ConfiguredFeature<*, *>>,
         key: ResourceKey<ConfiguredFeature<*, *>>, feature: F, configuration: FC,
     ) {
         context.register(key, ConfiguredFeature(feature, configuration))

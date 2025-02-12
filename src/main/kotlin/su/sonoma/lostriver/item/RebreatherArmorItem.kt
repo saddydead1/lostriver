@@ -1,24 +1,25 @@
 package su.sonoma.lostriver.item
 
 import net.minecraft.client.model.HumanoidModel
+import net.minecraft.core.Holder
 import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.item.ArmorItem
 import net.minecraft.world.item.ArmorMaterial
 import net.minecraft.world.item.ItemStack
-import net.minecraftforge.client.extensions.common.IClientItemExtensions
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions
 import software.bernie.geckolib.animatable.GeoItem
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
+import software.bernie.geckolib.animation.AnimatableManager
+import software.bernie.geckolib.animation.AnimationController
 import software.bernie.geckolib.constant.DefaultAnimations
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
-import software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar
-import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.renderer.GeoArmorRenderer
 import software.bernie.geckolib.util.GeckoLibUtil
 import su.sonoma.lostriver.client.renderer.RebreatherRenderer
 import java.util.function.Consumer
 
 
-class RebreatherArmorItem(armorMaterial: ArmorMaterial?, type: Type?, properties: Properties?) :
+class RebreatherArmorItem(armorMaterial: Holder<ArmorMaterial?>, type: Type?, properties: Properties?) :
     ArmorItem(armorMaterial, type, properties), GeoItem {
     private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
 
@@ -44,7 +45,7 @@ class RebreatherArmorItem(armorMaterial: ArmorMaterial?, type: Type?, properties
         })
     }
 
-    override fun registerControllers(controllers: ControllerRegistrar) {
+    override fun registerControllers(controllers: AnimatableManager.ControllerRegistrar) {
         controllers.add(*arrayOf<AnimationController<*>>(DefaultAnimations.genericIdleController(this)))
     }
 

@@ -6,5 +6,5 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer
 import su.sonoma.lostriver.item.RebreatherArmorItem
 
 class RebreatherRenderer :
-    GeoArmorRenderer<RebreatherArmorItem>(DefaultedItemGeoModel(ResourceLocation("lostriver", "armor/rebreather")))
+    GeoArmorRenderer<RebreatherArmorItem>(DefaultedItemGeoModel(ResourceLocation.fromNamespaceAndPath("lostriver", "armor/rebreather")))
 

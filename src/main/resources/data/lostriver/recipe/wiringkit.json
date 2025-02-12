@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "lostriver:silver"
+    }
+  },
+  "pattern": [
+    "II"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lostriver:wiringkit"
+  }
+}

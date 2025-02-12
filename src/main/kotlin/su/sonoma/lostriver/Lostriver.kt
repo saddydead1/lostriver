@@ -11,46 +11,38 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters
 import net.minecraft.world.item.CreativeModeTabs
-import net.minecraft.world.item.Item
-import net.minecraft.world.level.block.Blocks
-import net.minecraftforge.api.distmarker.Dist
-import net.minecraftforge.common.MinecraftForge
-import net.minecraftforge.event.server.ServerStartingEvent
-import net.minecraftforge.eventbus.api.SubscribeEvent
-import net.minecraftforge.fml.ModLoadingContext
-import net.minecraftforge.fml.common.Mod
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber
-import net.minecraftforge.fml.config.ModConfig
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
-import net.minecraftforge.network.NetworkRegistry
-import net.minecraftforge.network.simple.SimpleChannel
-import net.minecraftforge.registries.DeferredRegister
-import net.minecraftforge.registries.ForgeRegistries
-import net.minecraftforge.registries.RegistryObject
+import net.neoforged.api.distmarker.Dist
+import net.neoforged.fml.common.EventBusSubscriber
+import net.neoforged.bus.api.SubscribeEvent
+import net.neoforged.fml.common.Mod
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent
+import net.neoforged.neoforge.common.NeoForge.EVENT_BUS
+import net.neoforged.neoforge.event.server.ServerStartingEvent
+import net.neoforged.neoforge.network.registration.NetworkRegistry
+import net.neoforged.neoforge.registries.DeferredHolder
+import net.neoforged.neoforge.registries.DeferredRegister
 import org.slf4j.Logger
 import su.sonoma.lostriver.biome.feature.ModFeature
 import su.sonoma.lostriver.block.ModBlocks
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
-import su.sonoma.lostriver.protocol.DockMessage
-import su.sonoma.lostriver.protocol.UnDockMessage
-import thedarkcolour.kotlinforforge.forge.MOD_BUS as modEventBus
+import java.util.function.Supplier
+import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS as modEventBus
 
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(Lostriver.MODID)
 object Lostriver {
     const val MODID: String = "lostriver"
     const val PROTOCOL_VERSION = "1"
 
-    val INSTANCE: SimpleChannel = NetworkRegistry.newSimpleChannel(
-        ResourceLocation(MODID, "main"),
-        { PROTOCOL_VERSION },
-         PROTOCOL_VERSION::equals ,
-         PROTOCOL_VERSION::equals
-    )
+//    val INSTANCE = NetworkRegistry.newSimpleChannel(
+//        ResourceLocation(MODID, "main"),
+//        { PROTOCOL_VERSION },
+//         PROTOCOL_VERSION::equals ,
+//         PROTOCOL_VERSION::equals
+//    )
 
     val LOGGER: Logger = LogUtils.getLogger()
 
@@ -60,7 +52,7 @@ object Lostriver {
     init {
         modEventBus.addListener { event: FMLCommonSetupEvent -> this.commonSetup(event) }
 
-        ModFeature.FEATURES!!.register(modEventBus)
+        ModFeature.FEATURES.register(modEventBus)
         ModBlocks.BLOCKS.register(modEventBus)
         ModItems.ITEMS.register(modEventBus)
         Sounds.SOUNDS.register(modEventBus)
@@ -68,31 +60,19 @@ object Lostriver {
 
         CREATIVE_MODE_TABS.register(modEventBus)
 
-        MinecraftForge.EVENT_BUS.register(this)
+        EVENT_BUS.register(this)
 
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC)
-
-        INSTANCE.registerMessage(DockMessage.id, DockMessage::class.java, DockMessage::toFriendlyByteBuf, DockMessage::toBoatMessage, DockMessage::handle)
-        INSTANCE.registerMessage(UnDockMessage.id, UnDockMessage::class.java, UnDockMessage::toFriendlyByteBuf, UnDockMessage::toBoatMessage, UnDockMessage::handle)
+        //INSTANCE.registerMessage(DockMessage.id, DockMessage::class.java, DockMessage::toFriendlyByteBuf, DockMessage::toBoatMessage, DockMessage::handle)
+        //INSTANCE.registerMessage(UnDockMessage.id, UnDockMessage::class.java, UnDockMessage::toFriendlyByteBuf, UnDockMessage::toBoatMessage, UnDockMessage::handle)
     }
 
     private fun commonSetup(event: FMLCommonSetupEvent) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP")
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT))
-
-        if (Config.logDirtBlock) LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT))
-
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber)
 
         CustomPortalBuilder.beginPortal()
             .frameBlock(ModBlocks.PORTAL.get())
-            .destDimID(ResourceLocation("lostriver:b4546"))
+            .destDimID(ResourceLocation.fromNamespaceAndPath(MODID,"b4546"))
             .tintColor(0, 66, 184)
             .registerPortal()
-
-        Config.items.forEach { item: Item -> LOGGER.info("ITEM >> {}", item.toString()) }
     }
 
 
@@ -154,7 +134,9 @@ object Lostriver {
         }
     }
 
-    val EXAMPLE_TAB: RegistryObject<CreativeModeTab> = CREATIVE_MODE_TABS.register("tab") {
+    val EXAMPLE_TAB: DeferredHolder<CreativeModeTab, CreativeModeTab> = CREATIVE_MODE_TABS.register<CreativeModeTab>(
+        "tab",
+        Supplier<CreativeModeTab>{
         CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon { ModItems.PEEPER.get().defaultInstance }
@@ -220,14 +202,15 @@ object Lostriver {
                 output.accept(ModItems.REAPER_HELMET.get())
                 output.accept(ModItems.REBREATHER.get())
                 output.accept(ModItems.FINS.get())
-                output.accept(ModItems.OXYGENTANK.get())
-                output.accept(ModItems.HIGHOXYGENTANK.get())
-                output.accept(ModItems.SEAMOTHFRAGMENT.get())
-                output.accept(ModItems.SEAMOTHBLUEPRINT.get())
-                output.accept(ModItems.SEAMOTH.get())
-                output.accept(ModItems.CYCLOPBLUEPRINT.get())
-                output.accept(ModItems.CYCLOP.get())
+//                output.accept(ModItems.OXYGENTANK.get())
+//                output.accept(ModItems.HIGHOXYGENTANK.get())
+//                output.accept(ModItems.SEAMOTHFRAGMENT.get())
+//                output.accept(ModItems.SEAMOTHBLUEPRINT.get())
+//                output.accept(ModItems.SEAMOTH.get())
+//                output.accept(ModItems.CYCLOPBLUEPRINT.get())
+//                output.accept(ModItems.CYCLOP.get())
             }.build()
-    }
+        }
+    )
 
 }

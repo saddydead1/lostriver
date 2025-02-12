@@ -10,7 +10,7 @@ import su.sonoma.lostriver.entity.GhostLeviathanEntity
 class GhostLeviathanRenderer(renderManager: EntityRendererProvider.Context) :
     GeoEntityRenderer<GhostLeviathanEntity>(
         renderManager,
-        DefaultedEntityGeoModel(ResourceLocation(MODID, "ghost_leviathan"))
+        DefaultedEntityGeoModel(ResourceLocation.fromNamespaceAndPath(MODID, "ghost_leviathan"))
     ){
     init {
         this.shadowRadius = 0.25f

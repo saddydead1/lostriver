@@ -10,7 +10,7 @@ import su.sonoma.lostriver.entity.StalkerEntity
 class StalkerRenderer(renderManager: EntityRendererProvider.Context) :
     GeoEntityRenderer<StalkerEntity>(
         renderManager,
-        DefaultedEntityGeoModel(ResourceLocation(MODID, "stalker"))
+        DefaultedEntityGeoModel(ResourceLocation.fromNamespaceAndPath(MODID, "stalker"))
     ){
     init {
         this.shadowRadius = 0.25f

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "lostriver:bladderfish"
+    }
+  },
+  "pattern": [
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lostriver:water"
+  }
+}

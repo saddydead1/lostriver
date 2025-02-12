@@ -14,10 +14,10 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.LevelReader
 import software.bernie.geckolib.animatable.GeoEntity
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
+import software.bernie.geckolib.animation.AnimatableManager
+import software.bernie.geckolib.animation.AnimationController
 import software.bernie.geckolib.constant.DefaultAnimations
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
-import software.bernie.geckolib.core.animation.AnimatableManager
-import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.util.GeckoLibUtil
 import su.sonoma.lostriver.event.Sounds
 
@@ -38,9 +38,6 @@ class GhostLeviathanEntity(pEntityType: EntityType<out AbstractSchoolingFish>, p
         return SoundEvents.DOLPHIN_AMBIENT
     }
 
-    override fun canBreatheUnderwater(): Boolean {
-        return true
-    }
 
     override fun registerGoals() {
         goalSelector.addGoal(1, MeleeAttackGoal(this, 2.0, false))

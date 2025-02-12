@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "lostriver:plasteelingot"
+    },
+    "L": {
+      "tag": "forge:lead"
+    },
+    "U": {
+      "item": "lostriver:lubricant"
+    },
+    "E": {
+      "item": "lostriver:emaled_glass"
+    },
+    "A": {
+      "item": "lostriver:advancedwiringkit"
+    },
+    "B": {
+      "item": "lostriver:cyclop_blueprint"
+    }
+  },
+  "pattern": [
+    "PAP",
+    "LBL",
+    "EUE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lostriver:cyclop"
+  }
+}

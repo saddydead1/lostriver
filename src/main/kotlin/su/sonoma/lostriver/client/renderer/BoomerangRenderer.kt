@@ -10,7 +10,7 @@ import su.sonoma.lostriver.entity.BoomerangEntity
 class BoomerangRenderer(renderManager: EntityRendererProvider.Context) :
     GeoEntityRenderer<BoomerangEntity>(
         renderManager,
-        DefaultedEntityGeoModel(ResourceLocation(MODID, "boomerang"))
+        DefaultedEntityGeoModel(ResourceLocation.fromNamespaceAndPath(MODID, "boomerang"))
     ){
     init {
         this.shadowRadius = 0.25f

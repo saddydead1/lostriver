@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "lostriver:acidmushroom"
+    },
+    "C": {
+      "tag": "forge:copper"
+    }
+  },
+  "pattern": [
+    "ACA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lostriver:battery"
+  }
+}

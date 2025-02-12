@@ -14,10 +14,10 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.LevelReader
 import software.bernie.geckolib.animatable.GeoEntity
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache
+import software.bernie.geckolib.animation.AnimatableManager
+import software.bernie.geckolib.animation.AnimationController
 import software.bernie.geckolib.constant.DefaultAnimations
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
-import software.bernie.geckolib.core.animation.AnimatableManager
-import software.bernie.geckolib.core.animation.AnimationController
 import software.bernie.geckolib.util.GeckoLibUtil
 import su.sonoma.lostriver.event.Sounds
 
@@ -36,10 +36,6 @@ class ReaperEntity(pEntityType: EntityType<out AbstractSchoolingFish>, pLevel: L
 
     override fun getFlopSound(): SoundEvent {
         return SoundEvents.DOLPHIN_AMBIENT
-    }
-
-    override fun canBreatheUnderwater(): Boolean {
-        return true
     }
 
     override fun registerGoals() {

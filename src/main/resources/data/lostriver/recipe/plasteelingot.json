@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "forge:lithium"
+    },
+    "C": {
+      "tag": "forge:titan_ingot"
+    }
+  },
+  "pattern": [
+    "ACA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lostriver:plasteelingot"
+  }
+}
