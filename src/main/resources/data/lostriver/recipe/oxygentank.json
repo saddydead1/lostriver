@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+    "key": {
+      "I": {
+        "item": "lostriver:titan"
+      }
+    },
+    "pattern": [
+      "I",
+      "I",
+      "I"
+    ],
+    "result": {
+      "count": 1,
+      "id": "lostriver:oxygentank"
+    }
+  }

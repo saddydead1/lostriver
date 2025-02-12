@@ -76,17 +76,17 @@ object ModItems {
 
     }
 
-    val SEAMOTHFRAGMENT: Supplier<Item> = ITEMS.registerItem("seamoth_fragment") {
-        Item(
-            Item.Properties().stacksTo(64))
-
-    }
-
-    val SEAMOTHBLUEPRINT: Supplier<Item> = ITEMS.registerItem("seamoth_blueprint") {
-        BlueprintItem(
-            Item.Properties().stacksTo(64))
-
-    }
+//    val SEAMOTHFRAGMENT: Supplier<Item> = ITEMS.registerItem("seamoth_fragment") {
+//        Item(
+//            Item.Properties().stacksTo(64))
+//
+//    }
+//
+//    val SEAMOTHBLUEPRINT: Supplier<Item> = ITEMS.registerItem("seamoth_blueprint") {
+//        BlueprintItem(
+//            Item.Properties().stacksTo(64))
+//
+//    }
 
     val SILICONE: Supplier<Item> = ITEMS.registerItem("silicone") {
         Item(
@@ -165,11 +165,11 @@ object ModItems {
 
     }
 
-    val CYCLOPBLUEPRINT: Supplier<Item> = ITEMS.registerItem("cyclop_blueprint") {
-        BlueprintItem(
-            Item.Properties().stacksTo(64))
-
-    }
+//    val CYCLOPBLUEPRINT: Supplier<Item> = ITEMS.registerItem("cyclop_blueprint") {
+//        BlueprintItem(
+//            Item.Properties().stacksTo(64))
+//
+//    }
 
     val EMALEDGLASS: Supplier<Item> = ITEMS.registerItem("emaled_glass") {
         Item(
@@ -390,11 +390,11 @@ object ModItems {
     val REAPER_HELMET = ITEMS.registerItem("reaper_helmet")
     { ReaperArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, Item.Properties()) }
 
-    val OXYGENTANK = ITEMS.registerItem("oxygentank")
-    { OxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
-
-    val HIGHOXYGENTANK = ITEMS.registerItem("highoxygentank")
-    { HighOxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
+//    val OXYGENTANK = ITEMS.registerItem("oxygentank")
+//    { OxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
+//
+//    val HIGHOXYGENTANK = ITEMS.registerItem("highoxygentank")
+//    { HighOxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
 
     val REBREATHER = ITEMS.registerItem("rebreather")
     { RebreatherArmorItem(ArmorMaterials.IRON, ArmorItem.Type.HELMET, Item.Properties()) }

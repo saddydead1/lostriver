@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "forge:gold"
+    },
+    "K": {
+      "item": "lostriver:wiringkit"
+    },
+    "C": {
+      "item": "lostriver:computerchip"
+    }
+  },
+  "pattern": [
+    "GG",
+    "KC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lostriver:advancedwiringkit"
+  }
+}
