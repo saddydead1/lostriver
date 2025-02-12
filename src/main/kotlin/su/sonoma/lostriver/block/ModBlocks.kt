@@ -5,9 +5,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument
 import net.minecraft.world.level.material.MapColor
 import net.minecraft.world.level.material.PushReaction
-import net.minecraftforge.registries.DeferredRegister
-import net.minecraftforge.registries.ForgeRegistries
-import net.minecraftforge.registries.RegistryObject
+import net.neoforged.neoforge.registries.DeferredBlock
+import net.neoforged.neoforge.registries.DeferredRegister
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.block.custom.BloodKelpBlock
 import su.sonoma.lostriver.block.custom.BloodKelpPlantBlock
@@ -16,169 +15,169 @@ import su.sonoma.lostriver.block.custom.ModSandBlock
 
 
 object ModBlocks {
-    val BLOCKS: DeferredRegister<Block> = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID)
+    val BLOCKS: DeferredRegister.Blocks = DeferredRegister.createBlocks(MODID)
 
-    val SAND: RegistryObject<Block> = BLOCKS.register("sand") {
+    val SAND: DeferredBlock<Block> = BLOCKS.registerBlock("sand") {
         ModSandBlock(
-        BlockBehaviour.Properties.copy(Blocks.DIRT))
+        BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT))
     }
 
-    val BLOOD_SAND: RegistryObject<Block> = BLOCKS.register("bloodsand") {
+    val BLOOD_SAND: DeferredBlock<Block> = BLOCKS.registerBlock("bloodsand") {
         ModSandBlock(
-            BlockBehaviour.Properties.copy(Blocks.DIRT))
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT))
     }
 
-    val KELP_SAND: RegistryObject<Block> = BLOCKS.register("kelpsand") {
+    val KELP_SAND: DeferredBlock<Block> = BLOCKS.registerBlock("kelpsand") {
         ModSandBlock(
-            BlockBehaviour.Properties.copy(Blocks.DIRT))
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT))
     }
 
-    val PURPLEBLOCK: RegistryObject<Block> = BLOCKS.register("purpleblock") {
+    val PURPLEBLOCK: DeferredBlock<Block> = BLOCKS.registerBlock("purpleblock") {
         ModSandBlock(
-            BlockBehaviour.Properties.copy(Blocks.DIRT))
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT))
     }
 
-    val ROYALBLOCK: RegistryObject<Block> = BLOCKS.register("royalblock") {
+    val ROYALBLOCK: DeferredBlock<Block> = BLOCKS.registerBlock("royalblock") {
         ModSandBlock(
-            BlockBehaviour.Properties.copy(Blocks.DIRT))
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT))
     }
 
-    val BLOOD_GRASS: RegistryObject<Block> = BLOCKS.register("blood_grass") {
+    val BLOOD_GRASS: DeferredBlock<Block> = BLOCKS.registerBlock("blood_grass") {
         SeagrassBlock(
-        BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+        BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val BLUEPALM: RegistryObject<Block> = BLOCKS.register("bluepalm") {
+    val BLUEPALM: DeferredBlock<Block> = BLOCKS.registerBlock("bluepalm") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val YELLOWGRASS: RegistryObject<Block> = BLOCKS.register("yellowgrass") {
+    val YELLOWGRASS: DeferredBlock<Block> = BLOCKS.registerBlock("yellowgrass") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val PURPLEMOSS: RegistryObject<Block> = BLOCKS.register("purplemoss") {
+    val PURPLEMOSS: DeferredBlock<Block> = BLOCKS.registerBlock("purplemoss") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val PORTAL: RegistryObject<Block> = BLOCKS.register("portal") {
+    val PORTAL: DeferredBlock<Block> = BLOCKS.registerBlock("portal") {
         Block(
-            BlockBehaviour.Properties.copy(Blocks.STONE))
+            BlockBehaviour.Properties.ofFullCopy(Blocks.STONE))
     }
 
-    val MUSHROOM: RegistryObject<Block> = BLOCKS.register("mushroom") {
+    val MUSHROOM: DeferredBlock<Block> = BLOCKS.registerBlock("mushroom") {
         SlabBlock(
-            BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).noOcclusion())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.MUSHROOM_STEM).noOcclusion())
     }
 
-    val MUSHROOMSTEW: RegistryObject<Block> = BLOCKS.register("mushroomstew") {
+    val MUSHROOMSTEW: DeferredBlock<Block> = BLOCKS.registerBlock("mushroomstew") { // its not stew lmao its stem
         Block(
-            BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM))
+            BlockBehaviour.Properties.ofFullCopy(Blocks.MUSHROOM_STEM))
     }
 
-    val ROYALMOSS: RegistryObject<Block> = BLOCKS.register("royalmoss") {
+    val ROYALMOSS: DeferredBlock<Block> = BLOCKS.registerBlock("royalmoss") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val BASKET: RegistryObject<Block> = BLOCKS.register("basket") {
+    val BASKET: DeferredBlock<Block> = BLOCKS.registerBlock("basket") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val PAPYRUS: RegistryObject<Block> = BLOCKS.register("papyrus") {
+    val PAPYRUS: DeferredBlock<Block> = BLOCKS.registerBlock("papyrus") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val GREENCOVERMOSS: RegistryObject<Block> = BLOCKS.register("greencovermoss") {
+    val GREENCOVERMOSS: DeferredBlock<Block> = BLOCKS.registerBlock("greencovermoss") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val SAFESHALLOWMOSS: RegistryObject<Block> = BLOCKS.register("safeshallowmoss") {
+    val SAFESHALLOWMOSS: DeferredBlock<Block> = BLOCKS.registerBlock("safeshallowmoss") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val VEINED: RegistryObject<Block> = BLOCKS.register("veined") {
+    val VEINED: DeferredBlock<Block> = BLOCKS.registerBlock("veined") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val ACIDMUSHROOM: RegistryObject<Block> = BLOCKS.register("acidmushroom") {
+    val ACIDMUSHROOM: DeferredBlock<Block> = BLOCKS.registerBlock("acidmushroom") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val DEEPACIDMUSHROOM: RegistryObject<Block> = BLOCKS.register("deepacidmushroom") {
+    val DEEPACIDMUSHROOM: DeferredBlock<Block> = BLOCKS.registerBlock("deepacidmushroom") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val BLOOD_MOSS: RegistryObject<Block> = BLOCKS.register("bloodmoss") {
+    val BLOOD_MOSS: DeferredBlock<Block> = BLOCKS.registerBlock("bloodmoss") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val BLOODKELP_MOSS: RegistryObject<Block> = BLOCKS.register("bloodkelpmoss") {
+    val BLOODKELP_MOSS: DeferredBlock<Block> = BLOCKS.registerBlock("bloodkelpmoss") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val DOUBLEKELP: RegistryObject<Block> = BLOCKS.register("double_kelp") {
+    val DOUBLEKELP: DeferredBlock<Block> = BLOCKS.registerBlock("double_kelp") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val LIMESTONE: RegistryObject<Block> = BLOCKS.register("limestone") {
+    val LIMESTONE: DeferredBlock<Block> = BLOCKS.registerBlock("limestone") {
         ModOreBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
                 .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
         )
     }
 
-    val CORAL: RegistryObject<Block> = BLOCKS.register("coral") {
+    val CORAL: DeferredBlock<Block> = BLOCKS.registerBlock("coral") {
         ModSandBlock(
-            BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops().sound(SoundType.CORAL_BLOCK)
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).requiresCorrectToolForDrops().sound(SoundType.CORAL_BLOCK)
         )
     }
 
-    val BLOODSTONE: RegistryObject<Block> = BLOCKS.register("bloodstone") {
+    val BLOODSTONE: DeferredBlock<Block> = BLOCKS.registerBlock("bloodstone") {
         ModSandBlock(
-            BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)
         )
     }
 
-    val QUARTZ: RegistryObject<Block> = BLOCKS.register("quartz") {
+    val QUARTZ: DeferredBlock<Block> = BLOCKS.registerBlock("quartz") {
         ModOreBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
                 .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
         )
     }
 
-    val SANDSTONE: RegistryObject<Block> = BLOCKS.register("sandstone") {
+    val SANDSTONE: DeferredBlock<Block> = BLOCKS.registerBlock("sandstone") {
         ModOreBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
                 .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
         )
     }
 
-    val TABLECORAL: RegistryObject<Block> = BLOCKS.register("tablecoral") {
+    val TABLECORAL: DeferredBlock<Block> = BLOCKS.registerBlock("tablecoral") {
         SeagrassBlock(
-            BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion().noCollission())
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion().noCollission())
     }
 
-    val LITHIUM: RegistryObject<Block> = BLOCKS.register("lithium") {
+    val LITHIUM: DeferredBlock<Block> = BLOCKS.registerBlock("lithium") {
         ModOreBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
                 .requiresCorrectToolForDrops().strength(1.5f, 6.0f).noOcclusion()
         )
     }
 
-    val BLOOD_KELP_PLANT: RegistryObject<Block> = BLOCKS.register(
+    val BLOOD_KELP_PLANT: DeferredBlock<Block> = BLOCKS.registerBlock(
         "blood_kelp_plant") {
         BloodKelpPlantBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(
@@ -187,7 +186,7 @@ object ModBlocks {
         )
     }
 
-    val BLOOD_KELP: RegistryObject<Block> = BLOCKS.register(
+    val BLOOD_KELP: DeferredBlock<Block> = BLOCKS.registerBlock(
         "blood_kelp") {
         BloodKelpBlock(
             BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().randomTicks().instabreak().sound(

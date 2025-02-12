@@ -1,14 +1,14 @@
 package su.sonoma.lostriver.event
 
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent
-import net.minecraftforge.eventbus.api.SubscribeEvent
-import net.minecraftforge.fml.common.Mod
+import net.neoforged.bus.api.SubscribeEvent
+import net.neoforged.fml.common.EventBusSubscriber
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.entity.*
 
 
 class ModEvents {
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
     object ModEventBusEvents {
         @SubscribeEvent
         fun entityAttributeEvent(event: EntityAttributeCreationEvent) {

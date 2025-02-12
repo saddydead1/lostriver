@@ -58,11 +58,11 @@ class FinsArmorItem(armorMaterial: Holder<ArmorMaterial?>, type: Type?, properti
         })
     }
 
-    override fun onArmorTick(stack: ItemStack, level: Level, player: Player) {
-        if(player.isInWater()) {
-            player.addEffect(MobEffectInstance(MobEffect.byId(30)))
-        }
-    }
+//    override fun onArmorTick(stack: ItemStack, level: Level, player: Player) {
+//        if(player.isInWater()) {
+//            player.addEffect(MobEffectInstance(MobEffect.byId(30)))
+//        }
+//    }
 
     override fun registerControllers(controllers: AnimatableManager.ControllerRegistrar) {
         controllers.add(*arrayOf<AnimationController<*>>(DefaultAnimations.genericIdleController(this)))

@@ -21,3 +21,4 @@ run-data
 run
 runs
 .kotlin
+/src/generated/resources/.cache

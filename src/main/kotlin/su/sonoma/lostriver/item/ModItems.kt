@@ -1,404 +1,404 @@
 package su.sonoma.lostriver.item
 
+import net.minecraft.core.Holder
+import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.food.Foods
 import net.minecraft.world.item.*
-import net.minecraftforge.registries.DeferredRegister
-import net.minecraftforge.registries.ForgeRegistries
-import net.minecraftforge.registries.RegistryObject
+import net.neoforged.neoforge.registries.DeferredItem
+import net.neoforged.neoforge.registries.DeferredRegister
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.block.ModBlocks
+import java.util.function.Supplier
 
 object ModItems {
-    val ITEMS: DeferredRegister<Item> = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    val ITEMS: DeferredRegister.Items = DeferredRegister.createItems(MODID);
 
-    val PEEPER: RegistryObject<Item> = ITEMS.register("peeper") {
+    val PEEPER: Supplier<Item> = ITEMS.registerItem("peeper") {
         Item(
             Item.Properties().stacksTo(64)
-                    .food(FoodProperties.Builder().nutrition(5).saturationMod(0.2f)
+                    .food(FoodProperties.Builder().nutrition(5)
                     .effect(MobEffectInstance(MobEffects.HUNGER, 400, 1), 1.0f)
                     .build())
         )
     }
 
-    val COOKED_PEEPER: RegistryObject<Item> = ITEMS.register("cooked_peeper") {
+    val COOKED_PEEPER: Supplier<Item> = ITEMS.registerItem("cooked_peeper") {
         Item(
             Item.Properties().stacksTo(64)
                 .food(Foods.COOKED_SALMON)
         )
     }
 
-    val BOOMERANG: RegistryObject<Item> = ITEMS.register("boomerang") {
+    val BOOMERANG: Supplier<Item> = ITEMS.registerItem("boomerang") {
         Item(
             Item.Properties().stacksTo(64)
-                .food(FoodProperties.Builder().nutrition(5).saturationMod(0.2f)
+                .food(FoodProperties.Builder().nutrition(5)
                     .effect(MobEffectInstance(MobEffects.HUNGER, 400, 1), 1.0f)
                     .build())
         )
     }
 
-    val COOKED_BOOMERANG: RegistryObject<Item> = ITEMS.register("cooked_boomerang") {
+    val COOKED_BOOMERANG: Supplier<Item> = ITEMS.registerItem("cooked_boomerang") {
         Item(
             Item.Properties().stacksTo(64)
                 .food(Foods.COOKED_SALMON)
         )
     }
 
-    val BLADDER: RegistryObject<Item> = ITEMS.register("bladderfish") {
+    val BLADDER: Supplier<Item> = ITEMS.registerItem("bladderfish") {
         Item(
             Item.Properties().stacksTo(64)
-                .food(FoodProperties.Builder().nutrition(5).saturationMod(0.2f)
+                .food(FoodProperties.Builder().nutrition(5)
                     .effect(MobEffectInstance(MobEffects.HUNGER, 400, 1), 1.0f)
                     .build())
         )
     }
 
-    val COOKED_BLADDERFISH: RegistryObject<Item> = ITEMS.register("cooked_bladderfish") {
+    val COOKED_BLADDERFISH: Supplier<Item> = ITEMS.registerItem("cooked_bladderfish") {
         Item(
             Item.Properties().stacksTo(64)
                 .food(Foods.COOKED_SALMON)
         )
     }
 
-    val TOOTH: RegistryObject<Item> = ITEMS.register("tooth") {
+    val TOOTH: Supplier<Item> = ITEMS.registerItem("tooth") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val WATER: RegistryObject<Item> = ITEMS.register("water") {
+    val WATER: Supplier<Item> = ITEMS.registerItem("water") {
         PotionItem(
             Item.Properties().stacksTo(64))
 
     }
 
-    val SEAMOTHFRAGMENT: RegistryObject<Item> = ITEMS.register("seamoth_fragment") {
+    val SEAMOTHFRAGMENT: Supplier<Item> = ITEMS.registerItem("seamoth_fragment") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val SEAMOTHBLUEPRINT: RegistryObject<Item> = ITEMS.register("seamoth_blueprint") {
+    val SEAMOTHBLUEPRINT: Supplier<Item> = ITEMS.registerItem("seamoth_blueprint") {
         BlueprintItem(
             Item.Properties().stacksTo(64))
 
     }
 
-    val SILICONE: RegistryObject<Item> = ITEMS.register("silicone") {
+    val SILICONE: Supplier<Item> = ITEMS.registerItem("silicone") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val TITAN: RegistryObject<Item> = ITEMS.register("titan") {
+    val TITAN: Supplier<Item> = ITEMS.registerItem("titan") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val COPPER: RegistryObject<Item> = ITEMS.register("copper") {
+    val COPPER: Supplier<Item> = ITEMS.registerItem("copper") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val SILVER: RegistryObject<Item> = ITEMS.register("silver") {
+    val SILVER: Supplier<Item> = ITEMS.registerItem("silver") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
-    val GOLD: RegistryObject<Item> = ITEMS.register("gold") {
-        Item(
-            Item.Properties().stacksTo(64))
-
-    }
-
-    val LEAD: RegistryObject<Item> = ITEMS.register("lead") {
+    val GOLD: Supplier<Item> = ITEMS.registerItem("gold") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val QUARTZ: RegistryObject<Item> = ITEMS.register("quartz") {
+    val LEAD: Supplier<Item> = ITEMS.registerItem("lead") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val LITHIUM: RegistryObject<Item> = ITEMS.register("lithium") {
+    val QUARTZ: Supplier<Item> = ITEMS.registerItem("quartz") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val TABLECORAL: RegistryObject<Item> = ITEMS.register("tablecoral") {
+    val LITHIUM: Supplier<Item> = ITEMS.registerItem("lithium") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val COPPERWIRE: RegistryObject<Item> = ITEMS.register("copperwire") {
+    val TABLECORAL: Supplier<Item> = ITEMS.registerItem("tablecoral") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val COMPUTERCHIP: RegistryObject<Item> = ITEMS.register("computerchip") {
+    val COPPERWIRE: Supplier<Item> = ITEMS.registerItem("copperwire") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val PLASTEELINGOT: RegistryObject<Item> = ITEMS.register("plasteelingot") {
+    val COMPUTERCHIP: Supplier<Item> = ITEMS.registerItem("computerchip") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val ADVANCEDWIRINGKIT: RegistryObject<Item> = ITEMS.register("advancedwiringkit") {
+    val PLASTEELINGOT: Supplier<Item> = ITEMS.registerItem("plasteelingot") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val CYCLOPBLUEPRINT: RegistryObject<Item> = ITEMS.register("cyclop_blueprint") {
+    val ADVANCEDWIRINGKIT: Supplier<Item> = ITEMS.registerItem("advancedwiringkit") {
+        Item(
+            Item.Properties().stacksTo(64))
+
+    }
+
+    val CYCLOPBLUEPRINT: Supplier<Item> = ITEMS.registerItem("cyclop_blueprint") {
         BlueprintItem(
             Item.Properties().stacksTo(64))
 
     }
 
-    val EMALEDGLASS: RegistryObject<Item> = ITEMS.register("emaled_glass") {
+    val EMALEDGLASS: Supplier<Item> = ITEMS.registerItem("emaled_glass") {
         Item(
             Item.Properties().stacksTo(64))
 
     }
 
-    val KNIFE: RegistryObject<Item> = ITEMS.register("knife") {
+    val KNIFE: Supplier<Item> = ITEMS.registerItem("knife") {
         SwordItem(
             Tiers.IRON,
-            2,
-            0.1f,
             Item.Properties().stacksTo(1)
         )
     }
 
-    val SAND: RegistryObject<Item> = ITEMS.register("sand") {
+    val SAND: Supplier<Item> = ITEMS.registerItem("sand") {
         BlockItem( ModBlocks.SAND.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val BLOODSTONE: RegistryObject<Item> = ITEMS.register("bloodstone") {
+    val BLOODSTONE: Supplier<Item> = ITEMS.registerItem("bloodstone") {
         BlockItem( ModBlocks.BLOODSTONE.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val MUSHROOM: RegistryObject<Item> = ITEMS.register("mushroom") {
+    val MUSHROOM: Supplier<Item> = ITEMS.registerItem("mushroom") {
         BlockItem( ModBlocks.MUSHROOM.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val BLUEPALM: RegistryObject<Item> = ITEMS.register("bluepalm") {
+    val BLUEPALM: Supplier<Item> = ITEMS.registerItem("bluepalm") {
         BlockItem( ModBlocks.BLUEPALM.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val YELLOWGRASS: RegistryObject<Item> = ITEMS.register("yellowgrass") {
+    val YELLOWGRASS: Supplier<Item> = ITEMS.registerItem("yellowgrass") {
         BlockItem( ModBlocks.YELLOWGRASS.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val MUSHROOMSTEW: RegistryObject<Item> = ITEMS.register("mushroomstew") {
+    val MUSHROOMSTEW: Supplier<Item> = ITEMS.registerItem("mushroomstew") {
         BlockItem( ModBlocks.MUSHROOMSTEW.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val LIMESTONE: RegistryObject<Item> = ITEMS.register("limestone") {
+    val LIMESTONE: Supplier<Item> = ITEMS.registerItem("limestone") {
         BlockItem( ModBlocks.LIMESTONE.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val SANDSTONE: RegistryObject<Item> = ITEMS.register("sandstone") {
+    val SANDSTONE: Supplier<Item> = ITEMS.registerItem("sandstone") {
         BlockItem( ModBlocks.SANDSTONE.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val BLOOD_SAND: RegistryObject<Item> = ITEMS.register("bloodsand") {
+    val BLOOD_SAND: Supplier<Item> = ITEMS.registerItem("bloodsand") {
         BlockItem( ModBlocks.BLOOD_SAND.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val KELP_SAND: RegistryObject<Item> = ITEMS.register("kelpsand") {
+    val KELP_SAND: Supplier<Item> = ITEMS.registerItem("kelpsand") {
         BlockItem( ModBlocks.KELP_SAND.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val BLOOD_GRASS: RegistryObject<Item> = ITEMS.register("blood_grass") {
+    val BLOOD_GRASS: Supplier<Item> = ITEMS.registerItem("blood_grass") {
         BlockItem( ModBlocks.BLOOD_GRASS.get(),
             Item.Properties().stacksTo(64)
         )
     }
-    val BLOOD_MOSS: RegistryObject<Item> = ITEMS.register("bloodmoss") {
+    val BLOOD_MOSS: Supplier<Item> = ITEMS.registerItem("bloodmoss") {
         BlockItem( ModBlocks.BLOOD_MOSS.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val BLOODKELP_MOSS: RegistryObject<Item> = ITEMS.register("bloodkelpmoss") {
+    val BLOODKELP_MOSS: Supplier<Item> = ITEMS.registerItem("bloodkelpmoss") {
         BlockItem( ModBlocks.BLOODKELP_MOSS.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val PORTAL: RegistryObject<Item> = ITEMS.register("portal") {
+    val PORTAL: Supplier<Item> = ITEMS.registerItem("portal") {
         BlockItem( ModBlocks.PORTAL.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val PURPLEMOSS: RegistryObject<Item> = ITEMS.register("purplemoss") {
+    val PURPLEMOSS: Supplier<Item> = ITEMS.registerItem("purplemoss") {
         BlockItem( ModBlocks.PURPLEMOSS.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val PURPLEBLOCK: RegistryObject<Item> = ITEMS.register("purpleblock") {
+    val PURPLEBLOCK: Supplier<Item> = ITEMS.registerItem("purpleblock") {
         BlockItem( ModBlocks.PURPLEBLOCK.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val ROYALBLOCK: RegistryObject<Item> = ITEMS.register("royalblock") {
+    val ROYALBLOCK: Supplier<Item> = ITEMS.registerItem("royalblock") {
         BlockItem( ModBlocks.ROYALBLOCK.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val BASKET: RegistryObject<Item> = ITEMS.register("basket") {
+    val BASKET: Supplier<Item> = ITEMS.registerItem("basket") {
         BlockItem( ModBlocks.BASKET.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val PAPYRUS: RegistryObject<Item> = ITEMS.register("papyrus") {
+    val PAPYRUS: Supplier<Item> = ITEMS.registerItem("papyrus") {
         BlockItem( ModBlocks.PAPYRUS.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val GREENCOVERMOSS: RegistryObject<Item> = ITEMS.register("greencovermoss") {
+    val GREENCOVERMOSS: Supplier<Item> = ITEMS.registerItem("greencovermoss") {
         BlockItem( ModBlocks.GREENCOVERMOSS.get(),
             Item.Properties().stacksTo(64)
         )
     }
-    val ROYALMOSS: RegistryObject<Item> = ITEMS.register("royalmoss") {
+    val ROYALMOSS: Supplier<Item> = ITEMS.registerItem("royalmoss") {
         BlockItem( ModBlocks.ROYALMOSS.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val CORAL: RegistryObject<Item> = ITEMS.register("coral") {
+    val CORAL: Supplier<Item> = ITEMS.registerItem("coral") {
         BlockItem( ModBlocks.CORAL.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
 
-    val SAFESHALLOWMOSS: RegistryObject<Item> = ITEMS.register("safeshallowmoss") {
+    val SAFESHALLOWMOSS: Supplier<Item> = ITEMS.registerItem("safeshallowmoss") {
         BlockItem( ModBlocks.SAFESHALLOWMOSS.get(),
             Item.Properties().stacksTo(64)
         )
     }
-    val VEINED: RegistryObject<Item> = ITEMS.register("veined") {
+    val VEINED: Supplier<Item> = ITEMS.registerItem("veined") {
         BlockItem( ModBlocks.VEINED.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val DOUBLEKELP: RegistryObject<Item> = ITEMS.register("double_kelp") {
+    val DOUBLEKELP: Supplier<Item> = ITEMS.registerItem("double_kelp") {
         BlockItem( ModBlocks.DOUBLEKELP.get(),
             Item.Properties().stacksTo(64)
         )
     }
 
-    val REAPER_FRAGMENT: RegistryObject<Item> = ITEMS.register("reaper_fragment") {
+    val REAPER_FRAGMENT: Supplier<Item> = ITEMS.registerItem("reaper_fragment") {
         Item(
             Item.Properties().stacksTo(64))
     }
 
-    val WIRINGKIT: RegistryObject<Item> = ITEMS.register("wiringkit") {
+    val WIRINGKIT: Supplier<Item> = ITEMS.registerItem("wiringkit") {
         Item(
             Item.Properties().stacksTo(64))
     }
 
-    val FIBERMESH: RegistryObject<Item> = ITEMS.register("fibermesh") {
+    val FIBERMESH: Supplier<Item> = ITEMS.registerItem("fibermesh") {
         Item(
             Item.Properties().stacksTo(64))
     }
 
-    val TITANINGOT: RegistryObject<Item> = ITEMS.register("titan_ingot") {
+    val TITANINGOT: Supplier<Item> = ITEMS.registerItem("titan_ingot") {
         Item(
             Item.Properties().stacksTo(64))
     }
 
-    val BATTERY: RegistryObject<Item> = ITEMS.register("battery") {
+    val BATTERY: Supplier<Item> = ITEMS.registerItem("battery") {
         Item(
             Item.Properties().stacksTo(64))
     }
 
-    val ACIDMUSHROOM: RegistryObject<Item> = ITEMS.register("acidmushroom") {
+    val ACIDMUSHROOM: Supplier<Item> = ITEMS.registerItem("acidmushroom") {
         BlockItem( ModBlocks.ACIDMUSHROOM.get(),
             Item.Properties().stacksTo(64))
     }
 
-    val DEEPACIDMUSHROOM: RegistryObject<Item> = ITEMS.register("deepacidmushroom") {
+    val DEEPACIDMUSHROOM: Supplier<Item> = ITEMS.registerItem("deepacidmushroom") {
         BlockItem( ModBlocks.DEEPACIDMUSHROOM.get(),
             Item.Properties().stacksTo(64))
     }
 
-    val POWERCELL: RegistryObject<Item> = ITEMS.register("powercell") {
+    val POWERCELL: Supplier<Item> = ITEMS.registerItem("powercell") {
         Item(
             Item.Properties().stacksTo(64))
     }
 
-    val LUBRICANT: RegistryObject<Item> = ITEMS.register("lubricant") {
+    val LUBRICANT: Supplier<Item> = ITEMS.registerItem("lubricant") {
         Item(
             Item.Properties().stacksTo(64))
     }
 
-    val SEAMOTH: RegistryObject<Item> = ITEMS.register("seamoth") {
-        SeamothItem(
-            Item.Properties().stacksTo(1))
-    }
+//    val SEAMOTH: Supplier<Item> = ITEMS.registerItem("seamoth") {
+//        SeamothItem(
+//            Item.Properties().stacksTo(1))
+//    }
+//
+//    val CYCLOP: Supplier<Item> = ITEMS.registerItem("cyclop") {
+//        CyclopItem(
+//            Item.Properties().stacksTo(1))
+//    }
 
-    val CYCLOP: RegistryObject<Item> = ITEMS.register("cyclop") {
-        CyclopItem(
-            Item.Properties().stacksTo(1))
-    }
-
-    val REAPER_HELMET = ITEMS.register("reaper_helmet")
+    val REAPER_HELMET = ITEMS.registerItem("reaper_helmet")
     { ReaperArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, Item.Properties()) }
 
-    val OXYGENTANK = ITEMS.register("oxygentank")
+    val OXYGENTANK = ITEMS.registerItem("oxygentank")
     { OxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
 
-    val HIGHOXYGENTANK = ITEMS.register("highoxygentank")
+    val HIGHOXYGENTANK = ITEMS.registerItem("highoxygentank")
     { HighOxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
 
-    val REBREATHER = ITEMS.register("rebreather")
+    val REBREATHER = ITEMS.registerItem("rebreather")
     { RebreatherArmorItem(ArmorMaterials.IRON, ArmorItem.Type.HELMET, Item.Properties()) }
 
-    val FINS = ITEMS.register("fins")
+    val FINS = ITEMS.registerItem("fins")
     { FinsArmorItem(ArmorMaterials.IRON, ArmorItem.Type.BOOTS, Item.Properties()) }
 }

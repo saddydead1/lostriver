@@ -10,7 +10,7 @@ import su.sonoma.lostriver.entity.ReaperEntity
 class ReaperRenderer(renderManager: EntityRendererProvider.Context) :
     GeoEntityRenderer<ReaperEntity>(
         renderManager,
-        DefaultedEntityGeoModel(ResourceLocation(MODID, "reaper"))
+        DefaultedEntityGeoModel(ResourceLocation.fromNamespaceAndPath(MODID, "reaper"))
     ){
     init {
         this.shadowRadius = 0.25f

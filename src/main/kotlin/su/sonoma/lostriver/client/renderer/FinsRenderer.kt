@@ -6,5 +6,5 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer
 import su.sonoma.lostriver.item.FinsArmorItem
 
 class FinsRenderer :
-    GeoArmorRenderer<FinsArmorItem>(DefaultedItemGeoModel(ResourceLocation("lostriver", "armor/fins")))
+    GeoArmorRenderer<FinsArmorItem>(DefaultedItemGeoModel(ResourceLocation.fromNamespaceAndPath("lostriver", "armor/fins")))
 

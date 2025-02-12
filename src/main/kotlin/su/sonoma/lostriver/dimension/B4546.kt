@@ -4,7 +4,7 @@ import com.mojang.datafixers.util.Pair
 import net.minecraft.core.Holder
 import net.minecraft.core.HolderOwner
 import net.minecraft.core.registries.Registries
-import net.minecraft.data.worldgen.BootstapContext
+import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.BlockTags
@@ -27,25 +27,25 @@ object B4546 {
 
     val B4546_KEY: ResourceKey<LevelStem?> = ResourceKey.create(
         Registries.LEVEL_STEM ,
-        ResourceLocation(MODID, "b4546")
+        ResourceLocation.fromNamespaceAndPath(MODID, "b4546")
     )
 
     val B4546_LEVEL_KEY: ResourceKey<Level> = ResourceKey.create(
         Registries.DIMENSION,
-        ResourceLocation(MODID, "b4546")
+        ResourceLocation.fromNamespaceAndPath(MODID, "b4546")
     )
 
     val B4546_TYPE: ResourceKey<DimensionType> = ResourceKey.create(
         Registries.DIMENSION_TYPE,
-        ResourceLocation(MODID, "b4546")
+        ResourceLocation.fromNamespaceAndPath(MODID, "b4546")
     )
 
     val B4546_NOISE_SETTINGS: ResourceKey<NoiseGeneratorSettings> = ResourceKey.create(
         Registries.NOISE_SETTINGS,
-        ResourceLocation(MODID, "b4546")
+        ResourceLocation.fromNamespaceAndPath(MODID, "b4546")
     )
 
-    fun bootstapType(context: BootstapContext<DimensionType>) {
+    fun bootstapType(context: BootstrapContext<DimensionType>) {
         context.register(B4546_TYPE, DimensionType(
             OptionalLong.of(12000),
             true,
@@ -67,7 +67,7 @@ object B4546 {
     }
 
 
-    fun bootstrapStem(context: BootstapContext<LevelStem?>) {
+    fun bootstrapStem(context: BootstrapContext<LevelStem?>) {
         val biomeRegistry = context.lookup(Registries.BIOME)
         val dimTypes = context.lookup(Registries.DIMENSION_TYPE)
         val noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS)

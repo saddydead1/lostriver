@@ -2,7 +2,7 @@ package su.sonoma.lostriver.biome.feature.placements
 
 import net.minecraft.core.Holder
 import net.minecraft.core.registries.Registries
-import net.minecraft.data.worldgen.BootstapContext
+import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.data.worldgen.placement.PlacementUtils
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
@@ -61,7 +61,7 @@ object ModPlacedFeature {
         )
     }
 
-    fun bootstrap(p: BootstapContext<PlacedFeature>) {
+    fun bootstrap(p: BootstrapContext<PlacedFeature>) {
         val holdergetter = p.lookup(Registries.CONFIGURED_FEATURE)
 
         val reference = holdergetter.getOrThrow(ModFeatureConfigured.BLOOD_GRASS)
@@ -127,11 +127,11 @@ object ModPlacedFeature {
     }
 
     private fun registerKey(name: String): ResourceKey<PlacedFeature> {
-        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation(MODID, name))
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MODID, name))
     }
 
     private fun register(
-        context: BootstapContext<PlacedFeature>,
+        context: BootstrapContext<PlacedFeature>,
         key: ResourceKey<PlacedFeature>,
         configuration: Holder<ConfiguredFeature<*, *>>,
         modifiers: List<PlacementModifier>,

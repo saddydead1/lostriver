@@ -10,7 +10,7 @@ import su.sonoma.lostriver.entity.BladderEntity
 class BladderRenderer(renderManager: EntityRendererProvider.Context) :
     GeoEntityRenderer<BladderEntity>(
         renderManager,
-        DefaultedEntityGeoModel(ResourceLocation(MODID, "bladderfish"))
+        DefaultedEntityGeoModel(ResourceLocation.fromNamespaceAndPath(MODID, "bladderfish"))
     ){
     init {
         this.shadowRadius = 0.25f

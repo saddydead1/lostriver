@@ -11,7 +11,7 @@ import su.sonoma.lostriver.entity.JellyrayEntity
 class JellyrayRenderer(renderManager: EntityRendererProvider.Context) :
     GeoEntityRenderer<JellyrayEntity>(
         renderManager,
-        DefaultedEntityGeoModel(ResourceLocation(MODID, "jellyray"))
+        DefaultedEntityGeoModel(ResourceLocation.fromNamespaceAndPath(MODID, "jellyray"))
     ){
     init {
         this.shadowRadius = 0.25f

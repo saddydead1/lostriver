@@ -2,7 +2,7 @@ package su.sonoma.lostriver.biome
 
 import net.minecraft.core.registries.Registries
 import net.minecraft.data.worldgen.BiomeDefaultFeatures
-import net.minecraft.data.worldgen.BootstapContext
+import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.data.worldgen.placement.AquaticPlacements
 import net.minecraft.data.worldgen.placement.VegetationPlacements
 import net.minecraft.resources.ResourceKey
@@ -20,35 +20,35 @@ import su.sonoma.lostriver.entity.ModEntity
 object ModBiomes {
     val SAFE_SHALLOWS: ResourceKey<Biome> = ResourceKey.create(
         Registries.BIOME,
-        ResourceLocation(MODID, "safe_shallows")
+        ResourceLocation.fromNamespaceAndPath(MODID, "safe_shallows")
     )
 
     val KELP_FOREST: ResourceKey<Biome> = ResourceKey.create(
         Registries.BIOME,
-        ResourceLocation(MODID, "kelp_forest")
+        ResourceLocation.fromNamespaceAndPath(MODID, "kelp_forest")
     )
 
     val BLOOD_KELP: ResourceKey<Biome> = ResourceKey.create(
         Registries.BIOME,
-        ResourceLocation(MODID, "glassy_plateaus")
+        ResourceLocation.fromNamespaceAndPath(MODID, "glassy_plateaus")
     )
 
     val DUNES: ResourceKey<Biome> = ResourceKey.create(
         Registries.BIOME,
-        ResourceLocation(MODID, "dunes")
+        ResourceLocation.fromNamespaceAndPath(MODID, "dunes")
     )
 
     val MUSHROOMFOREST: ResourceKey<Biome> = ResourceKey.create(
         Registries.BIOME,
-        ResourceLocation(MODID, "mushroom_forest")
+        ResourceLocation.fromNamespaceAndPath(MODID, "mushroom_forest")
     )
 
     val BLOOD: ResourceKey<Biome> = ResourceKey.create(
         Registries.BIOME,
-        ResourceLocation(MODID, "blood_kelp")
+        ResourceLocation.fromNamespaceAndPath(MODID, "blood_kelp")
     )
 
-    fun bootstrap(context: BootstapContext<Biome>) {
+    fun bootstrap(context: BootstrapContext<Biome>) {
         context.register(SAFE_SHALLOWS, testBiome(context))
         context.register(KELP_FOREST, kelp(context))
         context.register(BLOOD_KELP, blood_kelp(context))
@@ -67,7 +67,7 @@ object ModBiomes {
 //    }
 
 
-    fun mushroom(context: BootstapContext<Biome>): Biome {
+    fun mushroom(context: BootstrapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.JELLYRAY.get(), 40, 3, 5))
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 20, 1, 15))
@@ -120,7 +120,7 @@ object ModBiomes {
             .build()
     }
 
-    fun blood(context: BootstapContext<Biome>): Biome {
+    fun blood(context: BootstrapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.GHOST_LEVIATHAN.get(), 20, 1, 2))
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BLADDER.get(), 80, 1, 15))
@@ -164,7 +164,7 @@ object ModBiomes {
             .build()
     }
 
-    fun testBiome(context: BootstapContext<Biome>): Biome {
+    fun testBiome(context: BootstrapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 25, 1, 15))
@@ -217,7 +217,7 @@ object ModBiomes {
             .build()
     }
 
-    fun dunes(context: BootstapContext<Biome>): Biome {
+    fun dunes(context: BootstrapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 25, 1, 15))
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BLADDER.get(), 25, 1, 15))
@@ -258,7 +258,7 @@ object ModBiomes {
             .build()
     }
 
-    fun blood_kelp(context: BootstapContext<Biome>): Biome {
+    fun blood_kelp(context: BootstrapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 50, 1, 15))
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 25, 1, 15))
@@ -308,7 +308,7 @@ object ModBiomes {
             .build()
     }
 
-    fun kelp(context: BootstapContext<Biome>): Biome {
+    fun kelp(context: BootstrapContext<Biome>): Biome {
         val spawnBuilder = MobSpawnSettings.Builder()
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.PEEPER.get(), 25, 1, 15))
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, SpawnerData(ModEntity.BOOMERANG.get(), 25, 1, 15))

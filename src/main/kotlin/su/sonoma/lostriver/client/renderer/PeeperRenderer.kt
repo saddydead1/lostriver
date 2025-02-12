@@ -10,7 +10,7 @@ import su.sonoma.lostriver.entity.PeeperEntity
 class PeeperRenderer(renderManager: EntityRendererProvider.Context) :
     GeoEntityRenderer<PeeperEntity>(
         renderManager,
-        DefaultedEntityGeoModel(ResourceLocation(MODID, "peeper"))
+        DefaultedEntityGeoModel(ResourceLocation.fromNamespaceAndPath(MODID, "peeper"))
     ){
     init {
         this.shadowRadius = 0.25f

@@ -28,8 +28,6 @@ import su.sonoma.lostriver.block.ModBlocks
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
-import su.sonoma.lostriver.protocol.DockMessage
-import su.sonoma.lostriver.protocol.UnDockMessage
 import java.util.function.Supplier
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS as modEventBus
 
@@ -54,7 +52,7 @@ object Lostriver {
     init {
         modEventBus.addListener { event: FMLCommonSetupEvent -> this.commonSetup(event) }
 
-        ModFeature.FEATURES!!.register(modEventBus)
+        ModFeature.FEATURES.register(modEventBus)
         ModBlocks.BLOCKS.register(modEventBus)
         ModItems.ITEMS.register(modEventBus)
         Sounds.SOUNDS.register(modEventBus)
@@ -72,7 +70,7 @@ object Lostriver {
 
         CustomPortalBuilder.beginPortal()
             .frameBlock(ModBlocks.PORTAL.get())
-            .destDimID(ResourceLocation(MODID,"b4546"))
+            .destDimID(ResourceLocation.fromNamespaceAndPath(MODID,"b4546"))
             .tintColor(0, 66, 184)
             .registerPortal()
     }
@@ -208,9 +206,9 @@ object Lostriver {
                 output.accept(ModItems.HIGHOXYGENTANK.get())
                 output.accept(ModItems.SEAMOTHFRAGMENT.get())
                 output.accept(ModItems.SEAMOTHBLUEPRINT.get())
-                output.accept(ModItems.SEAMOTH.get())
+//                output.accept(ModItems.SEAMOTH.get())
                 output.accept(ModItems.CYCLOPBLUEPRINT.get())
-                output.accept(ModItems.CYCLOP.get())
+//                output.accept(ModItems.CYCLOP.get())
             }.build()
         }
     )
