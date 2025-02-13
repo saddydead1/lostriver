@@ -7,7 +7,6 @@ import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.food.Foods
 import net.minecraft.world.item.*
-import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.block.ModBlocks

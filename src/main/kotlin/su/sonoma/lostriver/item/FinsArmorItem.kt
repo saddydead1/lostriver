@@ -10,6 +10,8 @@ import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.core.Holder
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffectInstance
+import net.minecraft.world.effect.MobEffects
+import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
@@ -58,11 +60,15 @@ class FinsArmorItem(armorMaterial: Holder<ArmorMaterial?>, type: Type?, properti
         })
     }
 
-//    override fun onArmorTick(stack: ItemStack, level: Level, player: Player) {
-//        if(player.isInWater()) {
-//            player.addEffect(MobEffectInstance(MobEffect.byId(30)))
-//        }
-//    }
+    override fun inventoryTick(stack: ItemStack, level: Level, entity: Entity, slotId: Int, isSelected: Boolean) {
+        if(entity is Player) {
+            if(entity.isInWater()) {
+                if (entity.inventory.armor.get(0).item == ModItems.FINS.get()) {
+                    entity.addEffect(MobEffectInstance(MobEffects.DOLPHINS_GRACE))
+                }
+            }
+        }
+    }
 
     override fun registerControllers(controllers: AnimatableManager.ControllerRegistrar) {
         controllers.add(*arrayOf<AnimationController<*>>(DefaultAnimations.genericIdleController(this)))
