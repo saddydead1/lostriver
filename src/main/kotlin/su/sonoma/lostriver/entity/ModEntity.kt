@@ -36,19 +36,19 @@ object ModEntity {
     val JELLYRAY: Supplier<EntityType<JellyrayEntity>> =
         registerMob("jellyray", ::JellyrayEntity,2F, 0.5F, MobCategory.WATER_AMBIENT)
 
-//    val SEAMOTH: Supplier<EntityType<SeamothEntity>> =
-//        registerBoat("seamoth", EntityType.Builder.of(::SeamothEntity , MobCategory.MISC
-//        ).sized(1.6f, 1.6f).clientTrackingRange(1)
-//        )
+    val SEAMOTH: Supplier<EntityType<SeamothEntity>> =
+        registerBoat("seamoth", EntityType.Builder.of(::SeamothEntity , MobCategory.MISC
+        ).sized(1.6f, 1.6f).clientTrackingRange(1)
+        )
 
-//    val CYCLOP: Supplier<EntityType<CyclopEntity>> =
-//        registerBoat("cyclop", EntityType.Builder.of(::CyclopEntity , MobCategory.MISC
-//        ).sized(1.6f, 1.6f).clientTrackingRange(1)
-//        )
+    val CYCLOP: Supplier<EntityType<CyclopEntity>> =
+        registerBoat("cyclop", EntityType.Builder.of(::CyclopEntity , MobCategory.MISC
+        ).sized(1.6f, 1.6f).clientTrackingRange(1)
+        )
 
-//    private fun <T : Entity?> registerBoat(name: String, builder: EntityType.Builder<T>): Supplier<EntityType<T>> {
-//        return ENTITY_TYPES.register(name) { builder.build("lostriver:$name") }
-//    }
+    private fun <T : Entity?> registerBoat(name: String, builder: EntityType.Builder<T>): Supplier<EntityType<T>> {
+        return ENTITY_TYPES.register(name, Supplier { builder.build("lostriver:$name") } )
+    }
     
 
     fun <T : Mob> registerMob(

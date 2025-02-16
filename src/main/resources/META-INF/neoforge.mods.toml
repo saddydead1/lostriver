@@ -42,3 +42,6 @@ side="BOTH"
    versionRange="[1.0.11,)"
    ordering="NONE"
    side="BOTH"
+
+[[mixins]]
+config = "lostriver.mixins.json"
