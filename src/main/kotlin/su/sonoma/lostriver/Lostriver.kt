@@ -25,6 +25,7 @@ import net.neoforged.neoforge.registries.DeferredRegister
 import org.slf4j.Logger
 import su.sonoma.lostriver.biome.feature.ModFeature
 import su.sonoma.lostriver.block.ModBlocks
+import su.sonoma.lostriver.datacomponent.ModDataComponents
 import su.sonoma.lostriver.entity.ModEntity
 import su.sonoma.lostriver.event.Sounds
 import su.sonoma.lostriver.item.ModItems
@@ -55,6 +56,7 @@ object Lostriver {
         ModFeature.FEATURES.register(modEventBus)
         ModBlocks.BLOCKS.register(modEventBus)
         ModItems.ITEMS.register(modEventBus)
+        ModDataComponents.DATA_COMPONENT_TYPES.register(modEventBus)
         Sounds.SOUNDS.register(modEventBus)
         ModEntity.ENTITY_TYPES.register(modEventBus)
 
@@ -202,8 +204,8 @@ object Lostriver {
                 output.accept(ModItems.REAPER_HELMET.get())
                 output.accept(ModItems.REBREATHER.get())
                 output.accept(ModItems.FINS.get())
-//                output.accept(ModItems.OXYGENTANK.get())
-//                output.accept(ModItems.HIGHOXYGENTANK.get())
+                output.accept(ModItems.OXYGENTANK.get())
+                output.accept(ModItems.HIGHOXYGENTANK.get())
 //                output.accept(ModItems.SEAMOTHFRAGMENT.get())
 //                output.accept(ModItems.SEAMOTHBLUEPRINT.get())
 //                output.accept(ModItems.SEAMOTH.get())

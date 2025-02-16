@@ -4,6 +4,8 @@
   "lostriver.cannotundock": "Мотылёк не пристыкован",
   "lostriver.cannotdock": "Мотылёк уже пристыкован",
 
+  "death.attack.oxygen": "%1$s спустился слишком глубоко",
+
   "item.lostriver.peeper": "Пипер",
   "item.lostriver.boomerang": "Рыба-Бумеранг",
   "item.lostriver.knife": "Нож",

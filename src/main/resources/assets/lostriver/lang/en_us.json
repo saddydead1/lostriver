@@ -4,6 +4,8 @@
   "lostriver.cannotundock": "Seamoth is not docked",
   "lostriver.cannotdock": "Seamoth is already docked",
 
+  "death.attack.oxygen": "%1$s went too deep",
+
   "item.lostriver.peeper": "Peeper",
   "item.lostriver.boomerang": "Boomerang",
   "item.lostriver.knife": "Knife",

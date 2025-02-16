@@ -1,6 +1,7 @@
 package su.sonoma.lostriver.item
 
 import net.minecraft.core.Holder
+import net.minecraft.core.component.DataComponents
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.effect.MobEffects
@@ -10,6 +11,7 @@ import net.minecraft.world.item.*
 import net.neoforged.neoforge.registries.DeferredRegister
 import su.sonoma.lostriver.Lostriver.MODID
 import su.sonoma.lostriver.block.ModBlocks
+import su.sonoma.lostriver.datacomponent.ModDataComponents
 import java.util.function.Supplier
 
 object ModItems {
@@ -179,7 +181,7 @@ object ModItems {
     val KNIFE: Supplier<Item> = ITEMS.registerItem("knife") {
         SwordItem(
             Tiers.IRON,
-            Item.Properties().stacksTo(1)
+            Item.Properties().stacksTo(1).attributes(SwordItem.createAttributes(Tiers.IRON, 3, -2.4f))
         )
     }
 
@@ -389,11 +391,23 @@ object ModItems {
     val REAPER_HELMET = ITEMS.registerItem("reaper_helmet")
     { ReaperArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, Item.Properties()) }
 
-//    val OXYGENTANK = ITEMS.registerItem("oxygentank")
-//    { OxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
-//
-//    val HIGHOXYGENTANK = ITEMS.registerItem("highoxygentank")
-//    { HighOxygenTankArmorItem(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE, Item.Properties()) }
+    val OXYGENTANK = ITEMS.registerItem("oxygentank")
+    { OxygenTankArmorItem(
+        75,
+        ArmorMaterials.IRON,
+        ArmorItem.Type.CHESTPLATE,
+        Item.Properties().stacksTo(1).component(ModDataComponents.OXYGEN.get(), OxygenTankArmorItem.Oxygen(75))
+    )
+    }
+
+    val HIGHOXYGENTANK = ITEMS.registerItem("highoxygentank")
+    { OxygenTankArmorItem(
+        135,
+        ArmorMaterials.IRON,
+        ArmorItem.Type.CHESTPLATE,
+        Item.Properties().stacksTo(1).component(ModDataComponents.OXYGEN.get(), OxygenTankArmorItem.Oxygen(135))
+    )
+    }
 
     val REBREATHER = ITEMS.registerItem("rebreather")
     { RebreatherArmorItem(ArmorMaterials.IRON, ArmorItem.Type.HELMET, Item.Properties()) }
