@@ -1,11 +1,11 @@
-package su.sonoma.lostriver.protocol
-
-import net.minecraft.network.FriendlyByteBuf
-import net.minecraft.network.chat.Component
-import net.minecraft.world.InteractionHand
-import su.sonoma.lostriver.Lostriver
-import java.util.function.Supplier
-
+//package su.sonoma.lostriver.protocol
+//
+//import net.minecraft.network.FriendlyByteBuf
+//import net.minecraft.network.chat.Component
+//import net.minecraft.world.InteractionHand
+//import su.sonoma.lostriver.Lostriver
+//import java.util.function.Supplier
+//
 //data class DockMessage(
 //    val boat: Int
 //) {
