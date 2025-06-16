@@ -133,6 +133,10 @@ object Lostriver {
                 ModBlocks.BLOODKELP_MOSS.get(),
                 RenderType.cutout()
             )
+            ItemBlockRenderTypes.setRenderLayer(
+                ModBlocks.TABLECORAL.get(),
+                RenderType.cutout()
+            )
         }
     }
 

@@ -17,6 +17,7 @@
 /build/resources
 /build/tmp
 /build/
+.eclipse
 run-data
 run
 runs
